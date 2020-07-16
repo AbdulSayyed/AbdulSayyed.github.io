@@ -7,46 +7,50 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
   <loc>https://AbdulSayyed.github.io/categories/cat_neuroscience.xml</loc>
-  <lastmod>2020-07-16T12:49:00Z</lastmod>
+  <lastmod>2020-07-16T15:52:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://AbdulSayyed.github.io/categories/cat_nikola.xml</loc>
-  <lastmod>2020-07-16T12:49:00Z</lastmod>
+  <lastmod>2020-07-16T15:52:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://AbdulSayyed.github.io/categories/cat_nipype.xml</loc>
-  <lastmod>2020-07-16T12:49:00Z</lastmod>
+  <lastmod>2020-07-16T15:52:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://AbdulSayyed.github.io/categories/cat_python.xml</loc>
-  <lastmod>2020-07-16T12:49:00Z</lastmod>
+  <lastmod>2020-07-16T15:52:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://AbdulSayyed.github.io/categories/jupyter.xml</loc>
-  <lastmod>2020-07-16T12:49:00Z</lastmod>
+  <lastmod>2020-07-16T15:52:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://AbdulSayyed.github.io/categories/neuro.xml</loc>
+  <lastmod>2020-07-16T15:52:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://AbdulSayyed.github.io/categories/nikola.xml</loc>
-  <lastmod>2020-07-16T12:49:00Z</lastmod>
+  <lastmod>2020-07-16T15:52:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://AbdulSayyed.github.io/categories/nipype.xml</loc>
-  <lastmod>2020-07-16T12:49:00Z</lastmod>
+  <lastmod>2020-07-16T15:52:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://AbdulSayyed.github.io/categories/python.xml</loc>
-  <lastmod>2020-07-16T12:49:00Z</lastmod>
+  <lastmod>2020-07-16T15:52:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://AbdulSayyed.github.io/categories/static-site-generator.xml</loc>
-  <lastmod>2020-07-16T12:49:00Z</lastmod>
+  <lastmod>2020-07-16T15:52:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://AbdulSayyed.github.io/rss.xml</loc>
-  <lastmod>2020-07-16T12:49:00Z</lastmod>
+  <lastmod>2020-07-16T15:52:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://AbdulSayyed.github.io/sitemap.xml</loc>
-  <lastmod>2020-07-16T12:49:00Z</lastmod>
+  <lastmod>2020-07-16T15:52:00Z</lastmod>
  </sitemap>
 </sitemapindex>
