@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sayyed's blog (Posts about python)</title><link>https://AbdulSayyed.github.io/mysite/</link><description></description><atom:link href="https://AbdulSayyed.github.io/mysite/categories/python.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:neuro.sayyed@gmail.com"&gt;Abdul Sayyed&lt;/a&gt; </copyright><lastBuildDate>Thu, 16 Jul 2020 11:28:46 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>001_intro</title><link>https://AbdulSayyed.github.io/mysite/notebooks/001_intro/</link><dc:creator>Abdul Sayyed</dc:creator><description>&lt;div&gt;&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sayyed's blog (Posts about python)</title><link>https://AbdulSayyed.github.io/</link><description></description><atom:link href="https://AbdulSayyed.github.io/categories/python.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:neuro.sayyed@gmail.com"&gt;Abdul Sayyed&lt;/a&gt; </copyright><lastBuildDate>Thu, 16 Jul 2020 12:49:15 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>001_intro</title><link>https://AbdulSayyed.github.io/notebooks/001_intro/</link><dc:creator>Abdul Sayyed</dc:creator><description>&lt;div&gt;&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="Jupyter-note-book-basics"&gt;Jupyter note book basics&lt;a class="anchor-link" href="https://AbdulSayyed.github.io/mysite/notebooks/001_intro/#Jupyter-note-book-basics"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id="Jupyter-note-book-basics"&gt;Jupyter note book basics&lt;a class="anchor-link" href="https://AbdulSayyed.github.io/notebooks/001_intro/#Jupyter-note-book-basics"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -54,7 +54,7 @@
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;/div&gt;&lt;/div&gt;</description><category>jupyter</category><category>nipype</category><category>python</category><guid>https://AbdulSayyed.github.io/mysite/notebooks/001_intro/</guid><pubDate>Fri, 10 Jul 2020 14:43:54 GMT</pubDate></item><item><title>python-basics</title><link>https://AbdulSayyed.github.io/mysite/posts/python/python-basics/</link><dc:creator>Abdul Sayyed</dc:creator><description>&lt;div&gt;&lt;h3&gt;An introductory book on Python by Allen &lt;a href="https://AbdulSayyed.github.io/mysite/files/thinkpython2.pdf"&gt;Think Python&lt;/a&gt;&lt;/h3&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>jupyter</category><category>nipype</category><category>python</category><guid>https://AbdulSayyed.github.io/notebooks/001_intro/</guid><pubDate>Fri, 10 Jul 2020 14:43:54 GMT</pubDate></item><item><title>python-basics</title><link>https://AbdulSayyed.github.io/posts/python/python-basics/</link><dc:creator>Abdul Sayyed</dc:creator><description>&lt;div&gt;&lt;h3&gt;An introductory book on Python by Allen &lt;a href="https://AbdulSayyed.github.io/files/thinkpython2.pdf"&gt;Think Python&lt;/a&gt;&lt;/h3&gt;
 &lt;h3&gt;Languages primitive data&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -232,7 +232,7 @@
 &lt;/code&gt;&lt;/pre&gt;
 
 
-&lt;p&gt;&lt;img alt="operator-precedence.png" src="https://AbdulSayyed.github.io/mysite/images/python/operator-precedence.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="operator-precedence.png" src="https://AbdulSayyed.github.io/images/python/operator-precedence.jpg"&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Would you write this if &lt;code&gt;not 1 + 1 == y or x == 4 and 7 == 8:&lt;/code&gt; in your code ? The answer is no, not at all because it is not clear. Though if given we can take help from precedence order but the wise thing to do is to write it with clear parentheses so when you see your own code after a month you know exactly what you want.&lt;/li&gt;
 &lt;li&gt;All comparison operations in Python have the same priority. &lt;/li&gt;
@@ -1533,7 +1533,7 @@ For example, we can do the following:&lt;/li&gt;
 &lt;li&gt;Programmers often place assertions at the start of a function to check for valid input, and after a function call to check for valid output.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Microsoft Curriculum (image from coursera)&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="Fundamentals.png" src="https://AbdulSayyed.github.io/mysite/images/python/Fundamentals.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Fundamentals.png" src="https://AbdulSayyed.github.io/images/python/Fundamentals.png"&gt;&lt;/p&gt;
 &lt;h3&gt;Numbers&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;There are two types of numbers in Python: integer and floating point. In Python, an integer is an object of type int, and a float is an object of type float.&lt;/li&gt;
@@ -1653,4 +1653,4 @@ The % operator on numbers gives you the remainder of integer division (also know
  &lt;span class="o"&gt;+---+---+---+---+---+---+&lt;/span&gt;
  &lt;span class="mi"&gt;0&lt;/span&gt;   &lt;span class="mi"&gt;1&lt;/span&gt;   &lt;span class="mi"&gt;2&lt;/span&gt;   &lt;span class="mi"&gt;3&lt;/span&gt;   &lt;span class="mi"&gt;4&lt;/span&gt;   &lt;span class="mi"&gt;5&lt;/span&gt;   &lt;span class="mi"&gt;6&lt;/span&gt;
 &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt;  &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;  &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;  &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;  &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;  &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description><category>python</category><guid>https://AbdulSayyed.github.io/mysite/posts/python/python-basics/</guid><pubDate>Thu, 08 Aug 2019 19:53:11 GMT</pubDate></item></channel></rss>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description><category>python</category><guid>https://AbdulSayyed.github.io/posts/python/python-basics/</guid><pubDate>Thu, 08 Aug 2019 19:53:11 GMT</pubDate></item></channel></rss>

@@ -1,4 +1,4 @@
-Sitemap: https://AbdulSayyed.github.io/mysite/sitemapindex.xml
+Sitemap: https://AbdulSayyed.github.io/sitemapindex.xml
 
 User-Agent: *
 Host: AbdulSayyed.github.io
