@@ -6,15 +6,47 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
-  <loc>https://AbdulSayyed.github.io/mysite/galleries/rss.xml</loc>
-  <lastmod>2020-07-10T01:42:00Z</lastmod>
+  <loc>https://AbdulSayyed.github.io/mysite/categories/cat_neuroscience.xml</loc>
+  <lastmod>2020-07-16T11:28:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://AbdulSayyed.github.io/mysite/categories/cat_nikola.xml</loc>
+  <lastmod>2020-07-16T11:28:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://AbdulSayyed.github.io/mysite/categories/cat_nipype.xml</loc>
+  <lastmod>2020-07-16T11:28:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://AbdulSayyed.github.io/mysite/categories/cat_python.xml</loc>
+  <lastmod>2020-07-16T11:28:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://AbdulSayyed.github.io/mysite/categories/jupyter.xml</loc>
+  <lastmod>2020-07-16T11:28:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://AbdulSayyed.github.io/mysite/categories/nikola.xml</loc>
+  <lastmod>2020-07-16T11:28:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://AbdulSayyed.github.io/mysite/categories/nipype.xml</loc>
+  <lastmod>2020-07-16T11:28:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://AbdulSayyed.github.io/mysite/categories/python.xml</loc>
+  <lastmod>2020-07-16T11:28:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://AbdulSayyed.github.io/mysite/categories/static-site-generator.xml</loc>
+  <lastmod>2020-07-16T11:28:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://AbdulSayyed.github.io/mysite/rss.xml</loc>
-  <lastmod>2020-07-10T01:42:00Z</lastmod>
+  <lastmod>2020-07-16T12:00:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://AbdulSayyed.github.io/mysite/sitemap.xml</loc>
-  <lastmod>2020-07-10T01:42:00Z</lastmod>
+  <lastmod>2020-07-16T12:00:00Z</lastmod>
  </sitemap>
 </sitemapindex>

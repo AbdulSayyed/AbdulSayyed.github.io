@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sayyed's blog (Posts about static site generator)</title><link>https://AbdulSayyed.github.io/mysite/</link><description></description><atom:link href="https://AbdulSayyed.github.io/mysite/categories/static-site-generator.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:neuro.sayyed@gmail.com"&gt;Abdul Sayyed&lt;/a&gt; </copyright><lastBuildDate>Thu, 16 Jul 2020 11:28:45 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>first-post</title><link>https://AbdulSayyed.github.io/mysite/posts/nikola/first-post/</link><dc:creator>Abdul Sayyed</dc:creator><description>&lt;div&gt;&lt;h3&gt;&lt;a href="https://getnikola.com/getting-started.html"&gt;Nikola&lt;/a&gt; A modern static site generator with jupyter notebook help&lt;/h3&gt;
+&lt;h4&gt;Nikol commands used.&lt;/h4&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;    1.  &amp;gt; nikola version&lt;/span&gt;
+&lt;span class="err"&gt;    2.  &amp;gt; nikola init --quiet sayyedblogs&lt;/span&gt;
+&lt;span class="err"&gt;    3.  &amp;gt; nikola init --demo sayyedblogs&lt;/span&gt;
+&lt;span class="err"&gt;    4.  &amp;gt; nikola --help&lt;/span&gt;
+&lt;span class="err"&gt;    5.  &amp;gt; nikola build&lt;/span&gt;
+&lt;span class="err"&gt;    6.  &amp;gt; nikola serve  or nikola serve --browser or nikola serve -b or nikola auto&lt;/span&gt;
+&lt;span class="err"&gt;    7.  &amp;gt; nikola new_post&lt;/span&gt;
+&lt;span class="err"&gt;    8.  &amp;gt; nikola new_page&lt;/span&gt;
+&lt;span class="err"&gt;    9.  &amp;gt; nikola new_post -f markdown or -f ipynb&lt;/span&gt;
+&lt;span class="err"&gt;    10. &amp;gt; nikola help new_post&lt;/span&gt;
+&lt;span class="err"&gt;    11. &amp;gt; nikola new_post -F # To list all available format&lt;/span&gt;
+&lt;span class="err"&gt;    12. &amp;gt; nikola new_post -f markdown -t about # new page with about.md created with tile set to about&lt;/span&gt;
+&lt;span class="err"&gt;    13. &amp;gt; nikola theme -l # To get the list of install theme&lt;/span&gt;
+&lt;span class="err"&gt;    14. &amp;gt; nikola theme --list-installed  # to see the list of installed theme&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;h4&gt;Related Blogs&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://getnikola.com/handbook.html#jupyter-notebook"&gt;Nikola-documentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://jiaweizhuang.github.io/blog/nikola-guide/"&gt;By Jiawei Zhaung&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.jaakkoluttinen.fi/blog/how-to-blog-with-jupyter-ipython-notebook-and-nikola/"&gt;Jaako Luttinen&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://louistiao.me/posts/how-i-customized-my-nikola-powered-site/"&gt;by Louistiao&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://AbdulSayyed.github.io/mysite/posts/nikola/first-post/"&gt; yet to come&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://bootswatch.com/"&gt;Bootswatch&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://bootswatch.com/"&gt;Bootswatch&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.brainsorting.dev/posts/create-a-blog-with-nikola/"&gt;by Mathieu Dugu&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://groupbcl.ca/blog/posts/2019/static-site-generator-candidate-software-nikola/"&gt;Brian&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[Randlow](https://randlow.github.io/posts/python/create-nikola-coding-blog/&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;How nikola works&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;It is a python static site generator that used help from other existing site generators such as hugo and pelican. It has number of small pulgins that do the jobs. &lt;a href="https://plugins.getnikola.com/"&gt;Here&lt;/a&gt; is the list of plug in that it uses.&lt;/li&gt;
+&lt;li&gt;For example &lt;code&gt;notebook_shortcode&lt;/code&gt; is a plug in that allows embedding the notebook into the markdown files. But be careful, it may not work and distrub your settings.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Installing Nikola&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;Create a Python virtual environment.&lt;/li&gt;
+&lt;li&gt;Either create or choose your working directory, I created &lt;code&gt;mkdir -p nikola&lt;/code&gt; in my project.&lt;/li&gt;
+&lt;li&gt;Cd into nikola, activate your virtual environment &lt;/li&gt;
+&lt;li&gt;Install nikola using pip with extras &lt;code&gt;pip install nikola[extras]&lt;/code&gt;. On windows it takes time.&lt;/li&gt;
+&lt;li&gt;Check the version &lt;code&gt;nikola version&lt;/code&gt;. I have &lt;code&gt;v8.1&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4&gt;Initialize nikola&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;Run &lt;code&gt;$ nikola init --quiet sayyedblogs&lt;/code&gt;. This will create a new directoy name &lt;code&gt;sayyedblogs&lt;/code&gt; and create the following directories and one file. &lt;code&gt;conf.py  files/  galleries/  images/  listings/  pages/  posts/&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;All these directories are empty. The file &lt;code&gt;conf.py&lt;/code&gt; comes with default installation options available.&lt;/li&gt;
+&lt;li&gt;Get the help run &lt;code&gt;nikola --help&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;Available&lt;/span&gt; &lt;span class="n"&gt;commands&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+  &lt;span class="n"&gt;nikola&lt;/span&gt; &lt;span class="n"&gt;auto&lt;/span&gt;                 &lt;span class="n"&gt;builds&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="n"&gt;serves&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;site&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;automatically&lt;/span&gt; &lt;span class="n"&gt;detects&lt;/span&gt; &lt;span class="n"&gt;site&lt;/span&gt; &lt;span class="n"&gt;changes&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;rebuilds&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="n"&gt;optionally&lt;/span&gt; &lt;span class="n"&gt;refreshes&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;browser&lt;/span&gt;
+  &lt;span class="n"&gt;nikola&lt;/span&gt; &lt;span class="n"&gt;build&lt;/span&gt;                &lt;span class="n"&gt;run&lt;/span&gt; &lt;span class="n"&gt;tasks&lt;/span&gt;
+  &lt;span class="n"&gt;nikola&lt;/span&gt; &lt;span class="n"&gt;check&lt;/span&gt;                &lt;span class="n"&gt;check&lt;/span&gt; &lt;span class="n"&gt;links&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="n"&gt;files&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;generated&lt;/span&gt; &lt;span class="n"&gt;site&lt;/span&gt;
+  &lt;span class="n"&gt;nikola&lt;/span&gt; &lt;span class="n"&gt;clean&lt;/span&gt;                &lt;span class="n"&gt;clean&lt;/span&gt; &lt;span class="n"&gt;action&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="n"&gt;remove&lt;/span&gt; &lt;span class="n"&gt;targets&lt;/span&gt;
+  &lt;span class="n"&gt;nikola&lt;/span&gt; &lt;span class="n"&gt;console&lt;/span&gt;              &lt;span class="n"&gt;start&lt;/span&gt; &lt;span class="n"&gt;an&lt;/span&gt; &lt;span class="n"&gt;interactive&lt;/span&gt; &lt;span class="n"&gt;Python&lt;/span&gt; &lt;span class="n"&gt;console&lt;/span&gt; &lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="n"&gt;access&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;your&lt;/span&gt; &lt;span class="n"&gt;site&lt;/span&gt;
+  &lt;span class="n"&gt;nikola&lt;/span&gt; &lt;span class="n"&gt;default_config&lt;/span&gt;       &lt;span class="n"&gt;Print&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;default&lt;/span&gt; &lt;span class="n"&gt;Nikola&lt;/span&gt; &lt;span class="n"&gt;configuration&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+  &lt;span class="n"&gt;nikola&lt;/span&gt; &lt;span class="n"&gt;deploy&lt;/span&gt;               &lt;span class="n"&gt;deploy&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;site&lt;/span&gt;
+  &lt;span class="n"&gt;nikola&lt;/span&gt; &lt;span class="n"&gt;doit_auto&lt;/span&gt;            &lt;span class="n"&gt;automatically&lt;/span&gt; &lt;span class="n"&gt;execute&lt;/span&gt; &lt;span class="n"&gt;tasks&lt;/span&gt; &lt;span class="n"&gt;when&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;dependency&lt;/span&gt; &lt;span class="n"&gt;changes&lt;/span&gt;
+  &lt;span class="n"&gt;nikola&lt;/span&gt; &lt;span class="n"&gt;dumpdb&lt;/span&gt;               &lt;span class="n"&gt;dump&lt;/span&gt; &lt;span class="n"&gt;dependency&lt;/span&gt; &lt;span class="n"&gt;DB&lt;/span&gt;
+  &lt;span class="n"&gt;nikola&lt;/span&gt; &lt;span class="n"&gt;forget&lt;/span&gt;               &lt;span class="n"&gt;clear&lt;/span&gt; &lt;span class="n"&gt;successful&lt;/span&gt; &lt;span class="n"&gt;run&lt;/span&gt; &lt;span class="n"&gt;status&lt;/span&gt; &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;internal&lt;/span&gt; &lt;span class="nn"&gt;DB&lt;/span&gt;
+  &lt;span class="n"&gt;nikola&lt;/span&gt; &lt;span class="n"&gt;github_deploy&lt;/span&gt;        &lt;span class="n"&gt;deploy&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;site&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;GitHub&lt;/span&gt; &lt;span class="n"&gt;Pages&lt;/span&gt;
+  &lt;span class="n"&gt;nikola&lt;/span&gt; &lt;span class="n"&gt;help&lt;/span&gt;                 &lt;span class="n"&gt;show&lt;/span&gt; &lt;span class="n"&gt;help&lt;/span&gt;
+  &lt;span class="n"&gt;nikola&lt;/span&gt; &lt;span class="n"&gt;ignore&lt;/span&gt;               &lt;span class="n"&gt;ignore&lt;/span&gt; &lt;span class="n"&gt;task&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;skip&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;on&lt;/span&gt; &lt;span class="n"&gt;subsequent&lt;/span&gt; &lt;span class="n"&gt;runs&lt;/span&gt;
+  &lt;span class="n"&gt;nikola&lt;/span&gt; &lt;span class="n"&gt;import_wordpress&lt;/span&gt;     &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;a&lt;/span&gt; &lt;span class="nn"&gt;WordPress&lt;/span&gt; &lt;span class="nn"&gt;dump&lt;/span&gt;
+  &lt;span class="n"&gt;nikola&lt;/span&gt; &lt;span class="n"&gt;info&lt;/span&gt;                 &lt;span class="n"&gt;show&lt;/span&gt; &lt;span class="n"&gt;info&lt;/span&gt; &lt;span class="n"&gt;about&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;task&lt;/span&gt;
+  &lt;span class="n"&gt;nikola&lt;/span&gt; &lt;span class="n"&gt;init&lt;/span&gt;                 &lt;span class="n"&gt;create&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;Nikola&lt;/span&gt; &lt;span class="n"&gt;site&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;specified&lt;/span&gt; &lt;span class="n"&gt;folder&lt;/span&gt;
+  &lt;span class="n"&gt;nikola&lt;/span&gt; &lt;span class="nb"&gt;list&lt;/span&gt;                 &lt;span class="nb"&gt;list&lt;/span&gt; &lt;span class="n"&gt;tasks&lt;/span&gt; &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;dodo&lt;/span&gt; &lt;span class="nn"&gt;file&lt;/span&gt;
+  &lt;span class="n"&gt;nikola&lt;/span&gt; &lt;span class="n"&gt;new_page&lt;/span&gt;             &lt;span class="n"&gt;create&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;page&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;site&lt;/span&gt;
+  &lt;span class="n"&gt;nikola&lt;/span&gt; &lt;span class="n"&gt;new_post&lt;/span&gt;             &lt;span class="n"&gt;create&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;blog&lt;/span&gt; &lt;span class="n"&gt;post&lt;/span&gt; &lt;span class="ow"&gt;or&lt;/span&gt; &lt;span class="n"&gt;site&lt;/span&gt; &lt;span class="n"&gt;page&lt;/span&gt;
+  &lt;span class="n"&gt;nikola&lt;/span&gt; &lt;span class="n"&gt;orphans&lt;/span&gt;              &lt;span class="nb"&gt;list&lt;/span&gt; &lt;span class="nb"&gt;all&lt;/span&gt; &lt;span class="n"&gt;orphans&lt;/span&gt;
+  &lt;span class="n"&gt;nikola&lt;/span&gt; &lt;span class="n"&gt;plugin&lt;/span&gt;               &lt;span class="n"&gt;manage&lt;/span&gt; &lt;span class="n"&gt;plugins&lt;/span&gt;
+  &lt;span class="n"&gt;nikola&lt;/span&gt; &lt;span class="n"&gt;reset&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;dep&lt;/span&gt;            &lt;span class="n"&gt;recompute&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="n"&gt;save&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;state&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="nb"&gt;file&lt;/span&gt; &lt;span class="n"&gt;dependencies&lt;/span&gt; &lt;span class="n"&gt;without&lt;/span&gt; &lt;span class="n"&gt;executing&lt;/span&gt; &lt;span class="n"&gt;actions&lt;/span&gt;
+  &lt;span class="n"&gt;nikola&lt;/span&gt; &lt;span class="n"&gt;rst2html&lt;/span&gt;             &lt;span class="nb"&gt;compile&lt;/span&gt; &lt;span class="n"&gt;reStructuredText&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;HTML&lt;/span&gt; &lt;span class="n"&gt;files&lt;/span&gt;
+  &lt;span class="n"&gt;nikola&lt;/span&gt; &lt;span class="n"&gt;serve&lt;/span&gt;                &lt;span class="n"&gt;start&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;test&lt;/span&gt; &lt;span class="n"&gt;webserver&lt;/span&gt;
+  &lt;span class="n"&gt;nikola&lt;/span&gt; &lt;span class="n"&gt;status&lt;/span&gt;               &lt;span class="n"&gt;display&lt;/span&gt; &lt;span class="n"&gt;site&lt;/span&gt; &lt;span class="n"&gt;status&lt;/span&gt;
+  &lt;span class="n"&gt;nikola&lt;/span&gt; &lt;span class="n"&gt;strace&lt;/span&gt;               &lt;span class="n"&gt;use&lt;/span&gt; &lt;span class="n"&gt;strace&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="nb"&gt;list&lt;/span&gt; &lt;span class="n"&gt;file_deps&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="n"&gt;targets&lt;/span&gt;
+  &lt;span class="n"&gt;nikola&lt;/span&gt; &lt;span class="n"&gt;subtheme&lt;/span&gt;             &lt;span class="n"&gt;given&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;swatch&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt; &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;bootswatch.com&lt;/span&gt; &lt;span class="nn"&gt;or&lt;/span&gt; &lt;span class="nn"&gt;hackerthemes.com&lt;/span&gt; &lt;span class="nn"&gt;and&lt;/span&gt; &lt;span class="nn"&gt;a&lt;/span&gt; &lt;span class="nn"&gt;parent&lt;/span&gt; &lt;span class="nn"&gt;theme&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;creates&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;custom&lt;/span&gt; &lt;span class="n"&gt;theme&lt;/span&gt;
+  &lt;span class="n"&gt;nikola&lt;/span&gt; &lt;span class="n"&gt;tabcompletion&lt;/span&gt;        &lt;span class="n"&gt;generate&lt;/span&gt; &lt;span class="n"&gt;script&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;tab&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;completion&lt;/span&gt;
+  &lt;span class="n"&gt;nikola&lt;/span&gt; &lt;span class="n"&gt;theme&lt;/span&gt;                &lt;span class="n"&gt;manage&lt;/span&gt; &lt;span class="n"&gt;themes&lt;/span&gt;
+  &lt;span class="n"&gt;nikola&lt;/span&gt; &lt;span class="n"&gt;version&lt;/span&gt;              &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;Nikola&lt;/span&gt; &lt;span class="n"&gt;version&lt;/span&gt; &lt;span class="n"&gt;number&lt;/span&gt;
+
+  &lt;span class="n"&gt;nikola&lt;/span&gt; &lt;span class="n"&gt;help&lt;/span&gt;                 &lt;span class="n"&gt;show&lt;/span&gt; &lt;span class="n"&gt;help&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="n"&gt;reference&lt;/span&gt;
+  &lt;span class="n"&gt;nikola&lt;/span&gt; &lt;span class="n"&gt;help&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;command&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;       &lt;span class="n"&gt;show&lt;/span&gt; &lt;span class="n"&gt;command&lt;/span&gt; &lt;span class="n"&gt;usage&lt;/span&gt;
+  &lt;span class="n"&gt;nikola&lt;/span&gt; &lt;span class="n"&gt;help&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;task&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;     &lt;span class="n"&gt;show&lt;/span&gt; &lt;span class="n"&gt;task&lt;/span&gt; &lt;span class="n"&gt;usage&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;h4&gt;Build your site&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;Run &lt;code&gt;nikola build&lt;/code&gt; since we don't have any contents it will build an empty site.&lt;/li&gt;
+&lt;li&gt;By default &lt;code&gt;nikola&lt;/code&gt; build a site in &lt;code&gt;output&lt;/code&gt; directory. Following files are created&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        11/07/2020     01:33                assets
+d-----        11/07/2020     01:33                categories
+d-----        11/07/2020     01:33                galleries
+d-----        11/07/2020     01:33                images
+d-----        11/07/2020     01:33                listings
+-a----        11/07/2020     01:33           3451 archive.html
+-a----        11/07/2020     01:33           3669 index.html
+-a----        11/07/2020     01:33             93 robots.txt
+-a----        11/07/2020     01:33            736 rss.xml
+-a----        11/07/2020     01:33            916 sitemap.xml
+-a----        11/07/2020     01:33            745 sitemapindex.xml
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;h4&gt;Start the server&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Though we have not put any of our contents yet we can start the server &lt;code&gt;nikola serve --browser&lt;/code&gt;. It starts the browser and serve it on local host port:80000. You can start the server on a different port &lt;code&gt;nikola server -p 2320&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;When site is built all configuration files are read from &lt;code&gt;conf.py&lt;/code&gt;, we will refer this file as config file hereafter.&lt;/li&gt;
+&lt;li&gt;By default it uses the many options already set to default values.&lt;/li&gt;
+&lt;li&gt;Nikola creates a directory named &lt;code&gt;ouput&lt;/code&gt; where all files and folders are created that is served to the website.&lt;/li&gt;
+&lt;li&gt;The landing page is created at the root of the &lt;code&gt;output&lt;/code&gt; directroy as &lt;code&gt;index.html&lt;/code&gt;. This page is created automatically.&lt;/li&gt;
+&lt;li&gt;It has three sections:&lt;/li&gt;
+&lt;li&gt;Html &lt;code&gt;meta-data&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Page &lt;code&gt;nave-bar&lt;/code&gt; taken from the theme used&lt;/li&gt;
+&lt;li&gt;Page contents ( not defined yet)&lt;/li&gt;
+&lt;li&gt;Bottom script.&lt;/li&gt;
+&lt;li&gt;Since everything is generated automatically, we are not goingto touch it yet we have to.&lt;/li&gt;
+&lt;li&gt;By default Nikola uses &lt;code&gt;bootblog4&lt;/code&gt; theme, we are going to use a different one.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Note: Commit time.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;sayyed@neuro ~/n/p/n/mysite (dev)&amp;gt; gitcommit -m "@dev:Structure is working."                              (nikola) &lt;/span&gt;
+&lt;span class="err"&gt;[dev 8c4958e] dev:Structure is working.&lt;/span&gt;
+&lt;span class="err"&gt; 7 files changed, 335 insertions(+), 32 deletions(-)&lt;/span&gt;
+&lt;span class="err"&gt; create mode 100644 pages/about.rst&lt;/span&gt;
+&lt;span class="err"&gt; create mode 100644 pages/index.rst&lt;/span&gt;
+&lt;span class="err"&gt; create mode 100644 posts/001_intro.ipynb&lt;/span&gt;
+&lt;span class="err"&gt; create mode 100644 posts/002_basics.ipynb&lt;/span&gt;
+&lt;span class="err"&gt;sayyed@neuro ~/n/p/n/mysite (dev)&amp;gt;    &lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description><category>nikola</category><category>static site generator</category><guid>https://AbdulSayyed.github.io/mysite/posts/nikola/first-post/</guid><pubDate>Wed, 15 Jul 2020 17:10:06 GMT</pubDate></item></channel></rss>
