@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>first-post | Sayyed's blog</title>
+<title>Nikola Basics | Sayyed's blog</title>
 <link href="../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
 <link href="../../../assets/css/ipython.min.css" rel="stylesheet" type="text/css">
 <link href="../../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
@@ -12,18 +12,20 @@
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../../rss.xml">
 <link rel="canonical" href="https://AbdulSayyed.github.io/posts/nikola/first-post/">
-<!--[if lt IE 9]><script src="../../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Abdul Sayyed">
-<link rel="prev" href="../../../notebooks/test1/" title="test1" type="text/html">
-<link rel="next" href="../../../notebooks/test2/" title="test2" type="text/html">
+<!--[if lt IE 9]><script src="../../../assets/js/html5.js"></script><![endif]--><link href="../../assets/css/custom.css" rel="stylesheet" type="text/css">
+<!-- Font Awesome --><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+<meta name="author" content="Abdul Sayyed">
+<link rel="prev" href="../../../notebooks/002_basics/" title="002_basics" type="text/html">
+<link rel="next" href="../../../notebooks/003-intro/" title="Change-the-title" type="text/html">
 <meta property="og:site_name" content="Sayyed's blog">
-<meta property="og:title" content="first-post">
+<meta property="og:title" content="Nikola Basics">
 <meta property="og:url" content="https://AbdulSayyed.github.io/posts/nikola/first-post/">
-<meta property="og:description" content="Nikola A modern static site generator with jupyter notebook help
+<meta property="og:description" content="Nikola :  A modern static site generator with builtin jupyter notebook functionality
+
 Nikol commands used.
     1.  &gt; nikola version
     2.  &gt; nikola init --quiet sayyedblogs
-    3.  &gt; nikola init --demo sayyedblogs
-    4.">
+    3.  &gt; nikola init --de">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2020-07-15T18:10:06+01:00">
 <meta property="article:tag" content="nikola">
@@ -87,14 +89,7 @@ navbar-dark bg-dark
 </form>
 
 
-            <ul class="navbar-nav navbar-right">
-<li class="nav-item">
-    <a href="index.md" id="sourcelink" class="nav-link">Source</a>
-    </li>
-
-
-                
-            </ul>
+            <ul class="navbar-nav navbar-right"></ul>
 </div>
 <!-- /.navbar-collapse -->
     </div>
@@ -105,46 +100,46 @@ navbar-dark bg-dark
         
         
         
-<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">first-post</a></h1>
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Nikola Basics</a></h1>
 
         <div class="metadata">
             <p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">
-                    Abdul Sayyed
+                    <a class="u-url" href="../../../authors/abdul-sayyed/">Abdul Sayyed</a>
             </span></p>
             <p class="dateline">
             <a href="." rel="bookmark">
-            <time class="published dt-published" datetime="2020-07-15T18:10:06+01:00" itemprop="datePublished" title="2020-07-15 18:10">2020-07-15 18:10</time></a>
+            <time class="published dt-published" datetime="2020-07-15T18:10:06+01:00" itemprop="datePublished" title="2020-07-15">2020-07-15</time></a>
             </p>
                 <p class="commentline">
         
 
 
             
-        </p>
-<p class="sourceline"><a href="index.md" class="sourcelink">Source</a></p>
 
-        </div>
+        </p>
+</div>
         
 
     </header><div class="e-content entry-content" itemprop="articleBody text">
     <div>
 <h3>
-<a href="https://getnikola.com/getting-started.html">Nikola</a> A modern static site generator with jupyter notebook help</h3>
+<a href="https://getnikola.com/getting-started.html">Nikola</a> :  A modern static site generator with builtin jupyter notebook functionality</h3>
+<hr>
 <h4>Nikol commands used.</h4>
-<pre class="code literal-block"><span></span><code><span class="err">    1.  &gt; nikola version</span>
-<span class="err">    2.  &gt; nikola init --quiet sayyedblogs</span>
-<span class="err">    3.  &gt; nikola init --demo sayyedblogs</span>
-<span class="err">    4.  &gt; nikola --help</span>
-<span class="err">    5.  &gt; nikola build</span>
-<span class="err">    6.  &gt; nikola serve  or nikola serve --browser or nikola serve -b or nikola auto</span>
-<span class="err">    7.  &gt; nikola new_post</span>
-<span class="err">    8.  &gt; nikola new_page</span>
-<span class="err">    9.  &gt; nikola new_post -f markdown or -f ipynb</span>
-<span class="err">    10. &gt; nikola help new_post</span>
-<span class="err">    11. &gt; nikola new_post -F # To list all available format</span>
-<span class="err">    12. &gt; nikola new_post -f markdown -t about # new page with about.md created with tile set to about</span>
-<span class="err">    13. &gt; nikola theme -l # To get the list of install theme</span>
-<span class="err">    14. &gt; nikola theme --list-installed  # to see the list of installed theme</span>
+<pre class="code literal-block"><span></span><code>    <span class="mf">1.</span>  <span class="o">&gt;</span> <span class="n">nikola</span> <span class="n">version</span>
+    <span class="mf">2.</span>  <span class="o">&gt;</span> <span class="n">nikola</span> <span class="n">init</span> <span class="o">--</span><span class="n">quiet</span> <span class="n">sayyedblogs</span>
+    <span class="mf">3.</span>  <span class="o">&gt;</span> <span class="n">nikola</span> <span class="n">init</span> <span class="o">--</span><span class="n">demo</span> <span class="n">sayyedblogs</span>
+    <span class="mf">4.</span>  <span class="o">&gt;</span> <span class="n">nikola</span> <span class="o">--</span><span class="n">help</span>
+    <span class="mf">5.</span>  <span class="o">&gt;</span> <span class="n">nikola</span> <span class="n">build</span>
+    <span class="mf">6.</span>  <span class="o">&gt;</span> <span class="n">nikola</span> <span class="n">serve</span>  <span class="ow">or</span> <span class="n">nikola</span> <span class="n">serve</span> <span class="o">--</span><span class="n">browser</span> <span class="ow">or</span> <span class="n">nikola</span> <span class="n">serve</span> <span class="o">-</span><span class="n">b</span> <span class="ow">or</span> <span class="n">nikola</span> <span class="n">auto</span>
+    <span class="mf">7.</span>  <span class="o">&gt;</span> <span class="n">nikola</span> <span class="n">new_post</span>
+    <span class="mf">8.</span>  <span class="o">&gt;</span> <span class="n">nikola</span> <span class="n">new_page</span>
+    <span class="mf">9.</span>  <span class="o">&gt;</span> <span class="n">nikola</span> <span class="n">new_post</span> <span class="o">-</span><span class="n">f</span> <span class="n">markdown</span> <span class="ow">or</span> <span class="o">-</span><span class="n">f</span> <span class="n">ipynb</span>
+    <span class="mf">10.</span> <span class="o">&gt;</span> <span class="n">nikola</span> <span class="n">help</span> <span class="n">new_post</span>
+    <span class="mf">11.</span> <span class="o">&gt;</span> <span class="n">nikola</span> <span class="n">new_post</span> <span class="o">-</span><span class="n">F</span> <span class="c1"># To list all available format</span>
+    <span class="mf">12.</span> <span class="o">&gt;</span> <span class="n">nikola</span> <span class="n">new_post</span> <span class="o">-</span><span class="n">f</span> <span class="n">markdown</span> <span class="o">-</span><span class="n">t</span> <span class="n">about</span> <span class="c1"># new page with about.md created with tile set to about</span>
+    <span class="mf">13.</span> <span class="o">&gt;</span> <span class="n">nikola</span> <span class="n">theme</span> <span class="o">-</span><span class="n">l</span> <span class="c1"># To get the list of install theme</span>
+    <span class="mf">14.</span> <span class="o">&gt;</span> <span class="n">nikola</span> <span class="n">theme</span> <span class="o">--</span><span class="nb">list</span><span class="o">-</span><span class="n">installed</span>  <span class="c1"># to see the list of installed theme</span>
 </code></pre>
 
 
@@ -262,14 +257,14 @@ d-----        11/07/2020     01:33                listings
 <blockquote>
 <p>Note: Commit time.</p>
 </blockquote>
-<pre class="code literal-block"><span></span><code><span class="err">sayyed@neuro ~/n/p/n/mysite (dev)&gt; gitcommit -m "@dev:Structure is working."                              (nikola) </span>
-<span class="err">[dev 8c4958e] dev:Structure is working.</span>
-<span class="err"> 7 files changed, 335 insertions(+), 32 deletions(-)</span>
-<span class="err"> create mode 100644 pages/about.rst</span>
-<span class="err"> create mode 100644 pages/index.rst</span>
-<span class="err"> create mode 100644 posts/001_intro.ipynb</span>
-<span class="err"> create mode 100644 posts/002_basics.ipynb</span>
-<span class="err">sayyed@neuro ~/n/p/n/mysite (dev)&gt;    </span>
+<pre class="code literal-block"><span></span><code><span class="n">sayyed</span><span class="nd">@neuro</span> <span class="o">~/</span><span class="n">n</span><span class="o">/</span><span class="n">p</span><span class="o">/</span><span class="n">n</span><span class="o">/</span><span class="n">mysite</span> <span class="p">(</span><span class="n">dev</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">gitcommit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">"@dev:Structure is working."</span>                              <span class="p">(</span><span class="n">nikola</span><span class="p">)</span> 
+<span class="p">[</span><span class="n">dev</span> <span class="mi">8</span><span class="n">c4958e</span><span class="p">]</span> <span class="n">dev</span><span class="p">:</span><span class="n">Structure</span> <span class="ow">is</span> <span class="n">working</span><span class="o">.</span>
+ <span class="mi">7</span> <span class="n">files</span> <span class="n">changed</span><span class="p">,</span> <span class="mi">335</span> <span class="n">insertions</span><span class="p">(</span><span class="o">+</span><span class="p">),</span> <span class="mi">32</span> <span class="n">deletions</span><span class="p">(</span><span class="o">-</span><span class="p">)</span>
+ <span class="n">create</span> <span class="n">mode</span> <span class="mi">100644</span> <span class="n">pages</span><span class="o">/</span><span class="n">about</span><span class="o">.</span><span class="n">rst</span>
+ <span class="n">create</span> <span class="n">mode</span> <span class="mi">100644</span> <span class="n">pages</span><span class="o">/</span><span class="n">index</span><span class="o">.</span><span class="n">rst</span>
+ <span class="n">create</span> <span class="n">mode</span> <span class="mi">100644</span> <span class="n">posts</span><span class="o">/</span><span class="mi">001</span><span class="n">_intro</span><span class="o">.</span><span class="n">ipynb</span>
+ <span class="n">create</span> <span class="n">mode</span> <span class="mi">100644</span> <span class="n">posts</span><span class="o">/</span><span class="mi">002</span><span class="n">_basics</span><span class="o">.</span><span class="n">ipynb</span>
+<span class="n">sayyed</span><span class="nd">@neuro</span> <span class="o">~/</span><span class="n">n</span><span class="o">/</span><span class="n">p</span><span class="o">/</span><span class="n">n</span><span class="o">/</span><span class="n">mysite</span> <span class="p">(</span><span class="n">dev</span><span class="p">)</span><span class="o">&gt;</span>    
 </code></pre>
 </div>
     </div>
@@ -279,10 +274,10 @@ d-----        11/07/2020     01:33                listings
         </ul>
 <ul class="pager hidden-print">
 <li class="previous">
-                <a href="../../../notebooks/test1/" rel="prev" title="test1">Previous post</a>
+                <a href="../../../notebooks/002_basics/" rel="prev" title="002_basics">Previous post</a>
             </li>
             <li class="next">
-                <a href="../../../notebooks/test2/" rel="next" title="test2">Next post</a>
+                <a href="../../../notebooks/003-intro/" rel="next" title="Change-the-title">Next post</a>
             </li>
         </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
         

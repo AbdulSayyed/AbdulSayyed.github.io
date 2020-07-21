@@ -7,106 +7,150 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://AbdulSayyed.github.io/</loc>
-  <lastmod>2020-07-16T15:52:00Z</lastmod>
+  <lastmod>2020-07-21T14:36:00Z</lastmod>
  </url>
  <url>
   <loc>https://AbdulSayyed.github.io/archive/</loc>
-  <lastmod>2020-07-16T15:52:00Z</lastmod>
+  <lastmod>2020-07-21T14:36:00Z</lastmod>
  </url>
  <url>
   <loc>https://AbdulSayyed.github.io/archive/2019/</loc>
-  <lastmod>2020-07-16T15:52:00Z</lastmod>
+  <lastmod>2020-07-21T14:36:00Z</lastmod>
  </url>
  <url>
   <loc>https://AbdulSayyed.github.io/archive/2020/</loc>
-  <lastmod>2020-07-16T15:52:00Z</lastmod>
+  <lastmod>2020-07-21T14:36:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://AbdulSayyed.github.io/authors/</loc>
+  <lastmod>2020-07-21T14:36:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://AbdulSayyed.github.io/authors/abdul-sayyed/</loc>
+  <lastmod>2020-07-21T14:36:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://AbdulSayyed.github.io/authors/abudl-sayyed/</loc>
+  <lastmod>2020-07-21T14:36:00Z</lastmod>
  </url>
  <url>
   <loc>https://AbdulSayyed.github.io/categories.html</loc>
-  <lastmod>2020-07-16T15:51:00Z</lastmod>
+  <lastmod>2020-07-21T14:36:00Z</lastmod>
  </url>
  <url>
   <loc>https://AbdulSayyed.github.io/categories/</loc>
-  <lastmod>2020-07-16T15:52:00Z</lastmod>
+  <lastmod>2020-07-21T14:36:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://AbdulSayyed.github.io/categories/blogging/</loc>
+  <lastmod>2020-07-21T14:36:00Z</lastmod>
  </url>
  <url>
   <loc>https://AbdulSayyed.github.io/categories/cat_neuroscience/</loc>
-  <lastmod>2020-07-16T15:52:00Z</lastmod>
+  <lastmod>2020-07-21T14:36:00Z</lastmod>
  </url>
  <url>
   <loc>https://AbdulSayyed.github.io/categories/cat_nikola/</loc>
-  <lastmod>2020-07-16T15:52:00Z</lastmod>
+  <lastmod>2020-07-21T14:36:00Z</lastmod>
  </url>
  <url>
   <loc>https://AbdulSayyed.github.io/categories/cat_nipype/</loc>
-  <lastmod>2020-07-16T15:52:00Z</lastmod>
+  <lastmod>2020-07-21T14:36:00Z</lastmod>
  </url>
  <url>
   <loc>https://AbdulSayyed.github.io/categories/cat_python/</loc>
-  <lastmod>2020-07-16T15:52:00Z</lastmod>
+  <lastmod>2020-07-21T14:36:00Z</lastmod>
  </url>
  <url>
   <loc>https://AbdulSayyed.github.io/categories/jupyter/</loc>
-  <lastmod>2020-07-16T15:52:00Z</lastmod>
+  <lastmod>2020-07-21T14:36:00Z</lastmod>
  </url>
  <url>
   <loc>https://AbdulSayyed.github.io/categories/neuro/</loc>
-  <lastmod>2020-07-16T15:52:00Z</lastmod>
+  <lastmod>2020-07-21T14:36:00Z</lastmod>
  </url>
  <url>
   <loc>https://AbdulSayyed.github.io/categories/nikola/</loc>
-  <lastmod>2020-07-16T15:52:00Z</lastmod>
+  <lastmod>2020-07-21T14:36:00Z</lastmod>
  </url>
  <url>
   <loc>https://AbdulSayyed.github.io/categories/nipype/</loc>
-  <lastmod>2020-07-16T15:52:00Z</lastmod>
+  <lastmod>2020-07-21T14:36:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://AbdulSayyed.github.io/categories/pelican/</loc>
+  <lastmod>2020-07-21T14:36:00Z</lastmod>
  </url>
  <url>
   <loc>https://AbdulSayyed.github.io/categories/python/</loc>
-  <lastmod>2020-07-16T15:52:00Z</lastmod>
+  <lastmod>2020-07-21T14:36:00Z</lastmod>
  </url>
  <url>
   <loc>https://AbdulSayyed.github.io/categories/static-site-generator/</loc>
-  <lastmod>2020-07-16T15:52:00Z</lastmod>
+  <lastmod>2020-07-21T14:36:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://AbdulSayyed.github.io/categories/virtual-environment/</loc>
+  <lastmod>2020-07-21T14:36:00Z</lastmod>
  </url>
  <url>
   <loc>https://AbdulSayyed.github.io/notebooks/001_intro/</loc>
-  <lastmod>2020-07-16T15:52:00Z</lastmod>
+  <lastmod>2020-07-21T14:36:00Z</lastmod>
  </url>
  <url>
   <loc>https://AbdulSayyed.github.io/notebooks/002_basics/</loc>
-  <lastmod>2020-07-16T15:52:00Z</lastmod>
+  <lastmod>2020-07-21T14:36:00Z</lastmod>
  </url>
  <url>
-  <loc>https://AbdulSayyed.github.io/notebooks/test1/</loc>
-  <lastmod>2020-07-16T15:52:00Z</lastmod>
+  <loc>https://AbdulSayyed.github.io/notebooks/002_intro/</loc>
+  <lastmod>2020-07-21T14:36:00Z</lastmod>
  </url>
  <url>
-  <loc>https://AbdulSayyed.github.io/notebooks/test2/</loc>
-  <lastmod>2020-07-16T15:52:00Z</lastmod>
+  <loc>https://AbdulSayyed.github.io/notebooks/003-intro/</loc>
+  <lastmod>2020-07-21T14:36:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://AbdulSayyed.github.io/notebooks/004-intro/</loc>
+  <lastmod>2020-07-21T14:36:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://AbdulSayyed.github.io/notebooks/005-intro/</loc>
+  <lastmod>2020-07-21T14:36:00Z</lastmod>
  </url>
  <url>
   <loc>https://AbdulSayyed.github.io/pages/aboutme/</loc>
-  <lastmod>2020-07-16T15:52:00Z</lastmod>
+  <lastmod>2020-07-21T14:36:00Z</lastmod>
  </url>
  <url>
   <loc>https://AbdulSayyed.github.io/pages/publication/</loc>
-  <lastmod>2020-07-16T15:52:00Z</lastmod>
+  <lastmod>2020-07-21T14:36:00Z</lastmod>
  </url>
  <url>
   <loc>https://AbdulSayyed.github.io/posts/</loc>
-  <lastmod>2020-07-16T15:52:00Z</lastmod>
+  <lastmod>2020-07-21T14:36:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://AbdulSayyed.github.io/posts/index-1.html</loc>
+  <lastmod>2020-07-21T14:36:00Z</lastmod>
  </url>
  <url>
   <loc>https://AbdulSayyed.github.io/posts/neuroscience/reasearch-methods/</loc>
-  <lastmod>2020-07-16T15:52:00Z</lastmod>
+  <lastmod>2020-07-21T14:36:00Z</lastmod>
  </url>
  <url>
   <loc>https://AbdulSayyed.github.io/posts/nikola/first-post/</loc>
-  <lastmod>2020-07-16T15:52:00Z</lastmod>
+  <lastmod>2020-07-21T14:36:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://AbdulSayyed.github.io/posts/pelican/Fourth-Post/</loc>
+  <lastmod>2020-07-21T14:36:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://AbdulSayyed.github.io/posts/python/Third-Post/</loc>
+  <lastmod>2020-07-21T14:36:00Z</lastmod>
  </url>
  <url>
   <loc>https://AbdulSayyed.github.io/posts/python/python-basics/</loc>
-  <lastmod>2020-07-16T15:52:00Z</lastmod>
+  <lastmod>2020-07-21T14:36:00Z</lastmod>
  </url>
 </urlset>
