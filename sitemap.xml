@@ -35,7 +35,7 @@
  </url>
  <url>
   <loc>https://AbdulSayyed.github.io/categories.html</loc>
-  <lastmod>2020-07-21T14:36:00Z</lastmod>
+  <lastmod>2020-07-22T11:10:00Z</lastmod>
  </url>
  <url>
   <loc>https://AbdulSayyed.github.io/categories/</loc>
@@ -118,6 +118,10 @@
   <lastmod>2020-07-21T14:36:00Z</lastmod>
  </url>
  <url>
+  <loc>https://AbdulSayyed.github.io/notebooks/008-intro/</loc>
+  <lastmod>2020-07-22T10:55:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://AbdulSayyed.github.io/pages/aboutme/</loc>
   <lastmod>2020-07-21T14:36:00Z</lastmod>
  </url>
@@ -131,7 +135,11 @@
  </url>
  <url>
   <loc>https://AbdulSayyed.github.io/posts/index-1.html</loc>
-  <lastmod>2020-07-21T14:36:00Z</lastmod>
+  <lastmod>2020-07-22T11:10:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://AbdulSayyed.github.io/posts/neuroscience/nipype-workflow/</loc>
+  <lastmod>2020-07-22T10:55:00Z</lastmod>
  </url>
  <url>
   <loc>https://AbdulSayyed.github.io/posts/neuroscience/reasearch-methods/</loc>

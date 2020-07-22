@@ -93,7 +93,101 @@ navbar-dark bg-dark
 
     
 <div class="postindex">
-    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="../notebooks/005-intro/" class="u-url">Nipype introduction</a></h1>
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="neuroscience/nipype-workflow/" class="u-url">nipype-workflow</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                <a href="../authors/abdul-sayyed/">Abdul Sayyed</a>
+            </span></p>
+            <p class="dateline">
+            <a href="neuroscience/nipype-workflow/" rel="bookmark">
+            <time class="published dt-published" datetime="2020-07-21T18:24:13+01:00" itemprop="datePublished" title="2020-07-21">2020-07-21</time></a>
+            </p>
+                <p class="commentline">
+        
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<h3>My setup of nipype</h3>
+<ul>
+<li>I have successfully created a conda environment for <code>nipype</code>. it is located here ().</li>
+<li>The directory I have chosen to work is <code>/nikol/</code> the listing is given as below.</li>
+</ul>
+<pre class="code literal-block"><span></span><code><span class="err">⋊</span><span class="o">&gt;</span> <span class="o">~/</span><span class="n">n</span><span class="o">/</span><span class="n">p</span><span class="o">/</span><span class="n">nikola</span> <span class="n">ll</span>                                                                                                         <span class="p">(</span><span class="n">base</span><span class="p">)</span> <span class="mi">17</span><span class="p">:</span><span class="mi">32</span><span class="p">:</span><span class="mi">36</span>
+<span class="n">total</span> <span class="mi">52</span><span class="n">K</span>
+<span class="n">drwxrwxr</span><span class="o">-</span><span class="n">x</span> <span class="mi">12</span> <span class="n">sayyed</span> <span class="n">sayyed</span> <span class="mf">4.0</span><span class="n">K</span> <span class="n">Jul</span> <span class="mi">10</span> <span class="mi">21</span><span class="p">:</span><span class="mi">35</span> <span class="n">demosite</span><span class="o">/</span>
+<span class="n">drwxrwxr</span><span class="o">-</span><span class="n">x</span>  <span class="mi">6</span> <span class="n">sayyed</span> <span class="n">sayyed</span> <span class="mf">4.0</span><span class="n">K</span> <span class="n">Jul</span> <span class="mi">18</span> <span class="mi">00</span><span class="p">:</span><span class="mi">27</span> <span class="n">Ex_01</span><span class="o">/</span>
+<span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">r</span><span class="o">--</span>  <span class="mi">1</span> <span class="n">sayyed</span> <span class="n">sayyed</span>  <span class="mi">28</span><span class="n">K</span> <span class="n">Jul</span> <span class="mi">16</span> <span class="mi">18</span><span class="p">:</span><span class="mi">15</span> <span class="n">installed</span><span class="o">-</span><span class="n">moudle</span><span class="o">.</span><span class="n">txt</span>
+<span class="n">drwxrwxr</span><span class="o">-</span><span class="n">x</span> <span class="mi">13</span> <span class="n">sayyed</span> <span class="n">sayyed</span> <span class="mf">4.0</span><span class="n">K</span> <span class="n">Jul</span> <span class="mi">21</span> <span class="mi">18</span><span class="p">:</span><span class="mi">23</span> <span class="n">mysite</span><span class="o">/</span>
+<span class="n">lrwxrwxrwx</span>  <span class="mi">1</span> <span class="n">sayyed</span> <span class="n">sayyed</span>   <span class="mi">31</span> <span class="n">Jul</span> <span class="mi">21</span> <span class="mi">16</span><span class="p">:</span><span class="mi">11</span> <span class="n">nik</span><span class="o">-</span><span class="n">nip</span><span class="o">-</span><span class="n">vscode</span> <span class="o">-&gt;</span> <span class="o">./.</span><span class="n">vscode</span><span class="o">/</span><span class="n">Nikola</span><span class="o">.</span><span class="n">code</span><span class="o">-</span><span class="n">workspace</span>
+<span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">r</span><span class="o">--</span>  <span class="mi">1</span> <span class="n">sayyed</span> <span class="n">sayyed</span> <span class="mf">8.1</span><span class="n">K</span> <span class="n">Jul</span> <span class="mi">16</span> <span class="mi">18</span><span class="p">:</span><span class="mi">13</span> <span class="n">requirement</span><span class="o">.</span><span class="n">txt</span>
+<span class="err">⋊</span><span class="o">&gt;</span> <span class="o">~/</span><span class="n">n</span><span class="o">/</span><span class="n">p</span><span class="o">/</span><span class="n">nikola</span>    
+</code></pre>
+
+
+<ul>
+<li>The <code>demosite</code> I do not need and it will be deleted.</li>
+<li>Mysite directory is the main directory of nikola blog.</li>
+<li>The <code>vsocde workspace</code> is saved in <code>.vscode</code> folder and pointed by <code>nik-nip-vscode</code> link ( it is uselss at this moment)</li>
+</ul>
+<h4>How <code>notebook</code> differs when created in <code>nikola</code> or in <code>jupyterlab</code>?</h4>
+<ol>
+<li>Notebook can be created in many ways. But when nikola does its scanning it throws an error if it does not find the meta data it requires for a notebook  to be a part of the nikola.</li>
+<li>It does not matter where it can be created from, the meta data can be easily added. Inorder for nikola to open and work with notebook, it has to have some meta data inside it. It is not a rocket science as I had gread difficulty dealing with notebook when trying to open them with pelican or embed them in markdown file. Though I have not been successful to embed notebooks in markdown files using short code as described by nikola docuemtation.</li>
+<li>Follwing is a meta data entries when the file is created by jupter lab selecting particular ipython kernel. Ipython kernil is just a python interpreter name that you have created in your conda or pip environment and given it a uniqure name. For exampe when I created <code>nipype</code> environment I installed different version of differnt software that can work together. This version is knows as your particular python kernel or interpreter.</li>
+</ol>
+<pre class="code literal-block"><span></span><code><span class="s2">"metadata"</span><span class="p">:</span> <span class="p">{</span>
+  <span class="s2">"kernelspec"</span><span class="p">:</span> <span class="p">{</span>
+   <span class="s2">"display_name"</span><span class="p">:</span> <span class="s2">"Python (nipype)"</span><span class="p">,</span> <span class="c1"># This is added when you choose you particular python kernel</span>
+   <span class="s2">"language"</span><span class="p">:</span> <span class="s2">"python"</span><span class="p">,</span>
+   <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"nipype"</span>
+  <span class="p">},</span>
+  <span class="s2">"language_info"</span><span class="p">:</span> <span class="p">{</span>
+   <span class="s2">"codemirror_mode"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"ipython"</span><span class="p">,</span>
+    <span class="s2">"version"</span><span class="p">:</span> <span class="mi">3</span>
+   <span class="p">},</span>
+   <span class="s2">"file_extension"</span><span class="p">:</span> <span class="s2">".py"</span><span class="p">,</span>
+   <span class="s2">"mimetype"</span><span class="p">:</span> <span class="s2">"text/x-python"</span><span class="p">,</span>
+   <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"python"</span><span class="p">,</span>
+   <span class="s2">"nbconvert_exporter"</span><span class="p">:</span> <span class="s2">"python"</span><span class="p">,</span>
+   <span class="s2">"pygments_lexer"</span><span class="p">:</span> <span class="s2">"ipython3"</span><span class="p">,</span>
+   <span class="s2">"version"</span><span class="p">:</span> <span class="s2">"3.8.2"</span>
+  <span class="p">}</span>
+</code></pre>
+
+
+<ol>
+<li>The above detail is enough for jupyter to open the file but not for nikola needs to know more to deal with correct theme and template to open notebook data. Follwing information is needed and can simply be added into the above meta data.</li>
+</ol>
+<pre class="code literal-block"><span></span><code><span class="s2">"nikola"</span><span class="p">:</span> <span class="p">{</span>
+   <span class="s2">"author"</span><span class="p">:</span> <span class="s2">"Abdul Sayyed"</span><span class="p">,</span>
+   <span class="s2">"category"</span><span class="p">:</span> <span class="s2">"nipype"</span><span class="p">,</span>
+   <span class="s2">"date"</span><span class="p">:</span> <span class="s2">"2020-07-10 15:43:54 UTC+01:00"</span><span class="p">,</span>
+   <span class="s2">"description"</span><span class="p">:</span> <span class="s2">""</span><span class="p">,</span>
+   <span class="s2">"link"</span><span class="p">:</span> <span class="s2">""</span><span class="p">,</span>
+   <span class="s2">"slug"</span><span class="p">:</span> <span class="s2">"001_intro"</span><span class="p">,</span>
+   <span class="s2">"tags"</span><span class="p">:</span> <span class="s2">"python, jupyter, nipype"</span><span class="p">,</span>
+   <span class="s2">"title"</span><span class="p">:</span> <span class="s2">"001_intro"</span><span class="p">,</span>
+   <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"text"</span>
+  <span class="p">}</span>
+</code></pre>
+
+
+<h4>How to create a notebook with vscode.</h4>
+<ol>
+<li>Using command pattlet we can use <code>&gt; create notebook</code> command. There are other worth exploring as of importing as well.</li>
+<li>Running notebook in vscode and setting it properly can be handy. The scroll bar shows, wchic environmen is selected. If the wrong one is selected, by clicking on the status bar on the infromation it will open different environment where the right one can be opened. Once the right one is opened. The notebook already have installed module such as <code>numpy, matplot or nipype</code> exposed api avilable to use.</li>
+<li>On the right hand top corner, vscode also shows the local server and the right kernel selected.</li>
+<li>It is very handy that in my one <code>notebook</code> folder created in <code>nikola</code> top level directories, I can have different notebooks set and ready to be used with different environments.</li>
+<li>They can all be opened from one place and knows which environment they are to be used as in their meta contents this information is saved.</li>
+<li>If not the right kernel can be opened from the right corner.</li>
+</ol>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="../notebooks/005-intro/" class="u-url">Nipype introduction</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 <a href="../authors/abdul-sayyed/">Abdul Sayyed</a>
@@ -184,7 +278,7 @@ navbar-dark bg-dark
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [2]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">nipype</span> <span class="k">as</span> <span class="nn">ny</span>
@@ -195,84 +289,29 @@ navbar-dark bg-dark
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">AttributeError</span>                            Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-2-afcaa9d89df3&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-green-fg">import</span> nipype <span class="ansi-green-fg">as</span> ny
-<span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg"> </span>ny<span class="ansi-blue-fg">.</span>help<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-red-fg">AttributeError</span>: module 'nipype' has no attribute 'help'</pre>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Thouth the module has been imported successfully but it does not have any attribute or any function <code>help()</code> it thorws an error. 
+The above command succeeded, it means it is working. we have nipype on our path. To see where it is loaded from use <code>shift + tab</code>
+</li>
+</ul>
 </div>
 </div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">-</span> <span class="n">The</span> <span class="n">above</span> <span class="n">command</span> <span class="n">succeeded</span><span class="p">,</span> <span class="n">it</span> <span class="n">means</span> <span class="n">it</span> <span class="ow">is</span> <span class="n">working</span><span class="o">.</span> <span class="n">we</span> <span class="n">have</span> <span class="n">nipype</span> <span class="n">on</span> <span class="n">our</span> <span class="n">path</span><span class="o">.</span> <span class="n">To</span> <span class="n">see</span> <span class="n">where</span> <span class="n">it</span> <span class="ow">is</span> <span class="n">loaded</span> <span class="kn">from</span> <span class="nn">use</span> <span class="err">`</span><span class="n">shift</span> <span class="o">+</span> <span class="n">tab</span><span class="err">`</span>
+<div class=" highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 
     </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [3]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ny</span><span class="o">.</span><span class="n">get_info</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[3]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>{'pkg_path': '/home/sayyed/anaconda3/envs/nipype/lib/python3.8/site-packages/nipype',
- 'commit_source': 'archive substitution',
- 'commit_hash': '%h',
- 'nipype_version': '1.5.0',
- 'sys_version': '3.8.2 | packaged by conda-forge | (default, Apr 24 2020, 08:20:52) \n[GCC 7.3.0]',
- 'sys_executable': '/home/sayyed/anaconda3/envs/nipype/bin/python3.8',
- 'sys_platform': 'linux',
- 'numpy_version': '1.18.5',
- 'scipy_version': '1.5.0',
- 'networkx_version': '2.4',
- 'nibabel_version': '3.1.1',
- 'traits_version': '6.1.0'}</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -1337,6 +1376,93 @@ d-----        11/07/2020     01:33                listings
 </div>
 </div>
     </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="../notebooks/008-intro/" class="u-url">008-nipype</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                <a href="../authors/abdul-sayyed/">Abdul Sayyed</a>
+            </span></p>
+            <p class="dateline">
+            <a href="../notebooks/008-intro/" rel="bookmark">
+            <time class="published dt-published" datetime="2020-07-10T15:43:54+01:00" itemprop="datePublished" title="2020-07-10">2020-07-10</time></a>
+            </p>
+                <p class="commentline">
+        
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Checking-nipype-installation">Checking <code>nipype</code> installation<a class="anchor-link" href="../notebooks/008-intro/#Checking-nipype-installation">¶</a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">nipype</span> <span class="k">as</span> <span class="nn">ny</span>
+<span class="n">ny</span><span class="o">.</span><span class="n">get_info</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[3]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{'pkg_path': '/home/sayyed/anaconda3/envs/nipype/lib/python3.8/site-packages/nipype',
+ 'commit_source': 'archive substitution',
+ 'commit_hash': '%h',
+ 'nipype_version': '1.5.0',
+ 'sys_version': '3.8.2 | packaged by conda-forge | (default, Apr 24 2020, 08:20:52) \n[GCC 7.3.0]',
+ 'sys_executable': '/home/sayyed/anaconda3/envs/nipype/bin/python',
+ 'sys_platform': 'linux',
+ 'numpy_version': '1.18.5',
+ 'scipy_version': '1.5.0',
+ 'networkx_version': '2.4',
+ 'nibabel_version': '3.1.1',
+ 'traits_version': '6.1.0'}</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+    </div>
     </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="python/Third-Post/" class="u-url">Python Virtual Enviorenment</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
@@ -1363,441 +1489,6 @@ d-----        11/07/2020     01:33                listings
 </ol>
 </li>
 </ul>
-</div>
-    </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="pelican/Fourth-Post/" class="u-url">Learning-pelican</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                <a href="../authors/abdul-sayyed/">Abdul Sayyed</a>
-            </span></p>
-            <p class="dateline">
-            <a href="pelican/Fourth-Post/" rel="bookmark">
-            <time class="published dt-published" datetime="2020-07-05T12:40:00+01:00" itemprop="datePublished" title="2020-07-05">2020-07-05</time></a>
-            </p>
-                <p class="commentline">
-        
-
-
-        </p>
-</div>
-    </header><div class="e-content entry-content">
-    <div>
-<h3>What are we using to build a site.</h3>
-<ol>
-<li>
-<a href="https://blog.getpelican.com/">Pelican</a> library installed with </li>
-<li>Markdown parsing library</li>
-<li>Jinja2, a template engine</li>
-<li>pip or conda virtual environment that a user create where the above are installed and kept serprately.</li>
-<li>Other buildig tools<ol>
-<li>
-<a href="https://blog.miguelgrinberg.com/">Flask tutorial</a>. A web framework.</li>
-<li>
-<a href="https://www.fullstackpython.com/green-unicorn-gunicorn.html">Green unicorn or gunicorn</a> is web server Gateway implementation (WSGI) tha tis used to run Python web aaplication.</li>
-<li>
-<a href="https://www.fullstackpython.com/jinja2.html">Jinja2</a>. An implementation of a template engine.This link contains many useful sites.</li>
-</ol>
-</li>
-</ol>
-<h3>What guides are available to use.</h3>
-<ol>
-<li><a href="https://www.fullstackpython.com/blog/python-3-flask-green-unicorn-ubuntu-1604-xenial-xerus.html">Full Stack Python</a></li>
-<li>
-</li>
-</ol>
-<h4>Building a Basic site.</h4>
-<ol>
-<li>Select your working director, or cd into it.</li>
-<li>Create a virtual env, if not created. Activate your environment</li>
-<li>First <code>conda install pip</code>. It will install the following</li>
-</ol>
-<pre class="code literal-block"><span></span><code><span class="n">he</span> <span class="n">following</span> <span class="k">NEW</span> <span class="n">packages</span> <span class="n">will</span> <span class="n">be</span> <span class="n">INSTALLED</span><span class="p">:</span>
-
-  <span class="n">_libgcc_mutex</span>      <span class="n">conda</span><span class="o">-</span><span class="n">forge</span><span class="o">/</span><span class="n">linux</span><span class="o">-</span><span class="mi">64</span><span class="p">::</span><span class="n">_libgcc_mutex</span><span class="o">-</span><span class="mi">0</span><span class="p">.</span><span class="mi">1</span><span class="o">-</span><span class="n">conda_forge</span>
-  <span class="n">_openmp_mutex</span>      <span class="n">conda</span><span class="o">-</span><span class="n">forge</span><span class="o">/</span><span class="n">linux</span><span class="o">-</span><span class="mi">64</span><span class="p">::</span><span class="n">_openmp_mutex</span><span class="o">-</span><span class="mi">4</span><span class="p">.</span><span class="mi">5</span><span class="o">-</span><span class="mi">0</span><span class="n">_gnu</span>
-  <span class="n">ca</span><span class="o">-</span><span class="n">certificates</span>    <span class="n">conda</span><span class="o">-</span><span class="n">forge</span><span class="o">/</span><span class="n">linux</span><span class="o">-</span><span class="mi">64</span><span class="p">::</span><span class="n">ca</span><span class="o">-</span><span class="n">certificates</span><span class="o">-</span><span class="mi">2020</span><span class="p">.</span><span class="mi">6</span><span class="p">.</span><span class="mi">20</span><span class="o">-</span><span class="n">hecda079_0</span>
-  <span class="n">certifi</span>            <span class="n">conda</span><span class="o">-</span><span class="n">forge</span><span class="o">/</span><span class="n">linux</span><span class="o">-</span><span class="mi">64</span><span class="p">::</span><span class="n">certifi</span><span class="o">-</span><span class="mi">2020</span><span class="p">.</span><span class="mi">6</span><span class="p">.</span><span class="mi">20</span><span class="o">-</span><span class="n">py38h32f6830_0</span>
-  <span class="n">ld_impl_linux</span><span class="o">-</span><span class="mi">64</span>   <span class="n">conda</span><span class="o">-</span><span class="n">forge</span><span class="o">/</span><span class="n">linux</span><span class="o">-</span><span class="mi">64</span><span class="p">::</span><span class="n">ld_impl_linux</span><span class="o">-</span><span class="mi">64</span><span class="o">-</span><span class="mi">2</span><span class="p">.</span><span class="mi">34</span><span class="o">-</span><span class="n">h53a641e_5</span>
-  <span class="n">libffi</span>             <span class="n">conda</span><span class="o">-</span><span class="n">forge</span><span class="o">/</span><span class="n">linux</span><span class="o">-</span><span class="mi">64</span><span class="p">::</span><span class="n">libffi</span><span class="o">-</span><span class="mi">3</span><span class="p">.</span><span class="mi">2</span><span class="p">.</span><span class="mi">1</span><span class="o">-</span><span class="n">he1b5a44_1007</span>
-  <span class="n">libgcc</span><span class="o">-</span><span class="n">ng</span>          <span class="n">conda</span><span class="o">-</span><span class="n">forge</span><span class="o">/</span><span class="n">linux</span><span class="o">-</span><span class="mi">64</span><span class="p">::</span><span class="n">libgcc</span><span class="o">-</span><span class="n">ng</span><span class="o">-</span><span class="mi">9</span><span class="p">.</span><span class="mi">2</span><span class="p">.</span><span class="mi">0</span><span class="o">-</span><span class="n">h24d8f2e_2</span>
-  <span class="n">libgomp</span>            <span class="n">conda</span><span class="o">-</span><span class="n">forge</span><span class="o">/</span><span class="n">linux</span><span class="o">-</span><span class="mi">64</span><span class="p">::</span><span class="n">libgomp</span><span class="o">-</span><span class="mi">9</span><span class="p">.</span><span class="mi">2</span><span class="p">.</span><span class="mi">0</span><span class="o">-</span><span class="n">h24d8f2e_2</span>
-  <span class="n">libstdcxx</span><span class="o">-</span><span class="n">ng</span>       <span class="n">conda</span><span class="o">-</span><span class="n">forge</span><span class="o">/</span><span class="n">linux</span><span class="o">-</span><span class="mi">64</span><span class="p">::</span><span class="n">libstdcxx</span><span class="o">-</span><span class="n">ng</span><span class="o">-</span><span class="mi">9</span><span class="p">.</span><span class="mi">2</span><span class="p">.</span><span class="mi">0</span><span class="o">-</span><span class="n">hdf63c60_2</span>
-  <span class="n">ncurses</span>            <span class="n">conda</span><span class="o">-</span><span class="n">forge</span><span class="o">/</span><span class="n">linux</span><span class="o">-</span><span class="mi">64</span><span class="p">::</span><span class="n">ncurses</span><span class="o">-</span><span class="mi">6</span><span class="p">.</span><span class="mi">1</span><span class="o">-</span><span class="n">hf484d3e_1002</span>
-  <span class="n">openssl</span>            <span class="n">conda</span><span class="o">-</span><span class="n">forge</span><span class="o">/</span><span class="n">linux</span><span class="o">-</span><span class="mi">64</span><span class="p">::</span><span class="n">openssl</span><span class="o">-</span><span class="mi">1</span><span class="p">.</span><span class="mi">1</span><span class="p">.</span><span class="mi">1</span><span class="k">g</span><span class="o">-</span><span class="n">h516909a_0</span>
-  <span class="n">pip</span>                <span class="n">conda</span><span class="o">-</span><span class="n">forge</span><span class="o">/</span><span class="n">noarch</span><span class="p">::</span><span class="n">pip</span><span class="o">-</span><span class="mi">20</span><span class="p">.</span><span class="mi">1</span><span class="p">.</span><span class="mi">1</span><span class="o">-</span><span class="n">py_1</span>
-  <span class="n">python</span>             <span class="n">conda</span><span class="o">-</span><span class="n">forge</span><span class="o">/</span><span class="n">linux</span><span class="o">-</span><span class="mi">64</span><span class="p">::</span><span class="n">python</span><span class="o">-</span><span class="mi">3</span><span class="p">.</span><span class="mi">8</span><span class="p">.</span><span class="mi">3</span><span class="o">-</span><span class="n">cpython_he5300dc_0</span>
-  <span class="n">python_abi</span>         <span class="n">conda</span><span class="o">-</span><span class="n">forge</span><span class="o">/</span><span class="n">linux</span><span class="o">-</span><span class="mi">64</span><span class="p">::</span><span class="n">python_abi</span><span class="o">-</span><span class="mi">3</span><span class="p">.</span><span class="mi">8</span><span class="o">-</span><span class="mi">1</span><span class="n">_cp38</span>
-  <span class="n">readline</span>           <span class="n">conda</span><span class="o">-</span><span class="n">forge</span><span class="o">/</span><span class="n">linux</span><span class="o">-</span><span class="mi">64</span><span class="p">::</span><span class="n">readline</span><span class="o">-</span><span class="mi">8</span><span class="p">.</span><span class="mi">0</span><span class="o">-</span><span class="n">hf8c457e_0</span>
-  <span class="n">setuptools</span>         <span class="n">conda</span><span class="o">-</span><span class="n">forge</span><span class="o">/</span><span class="n">linux</span><span class="o">-</span><span class="mi">64</span><span class="p">::</span><span class="n">setuptools</span><span class="o">-</span><span class="mi">49</span><span class="p">.</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="o">-</span><span class="n">py38h32f6830_0</span>
-  <span class="n">sqlite</span>             <span class="n">conda</span><span class="o">-</span><span class="n">forge</span><span class="o">/</span><span class="n">linux</span><span class="o">-</span><span class="mi">64</span><span class="p">::</span><span class="n">sqlite</span><span class="o">-</span><span class="mi">3</span><span class="p">.</span><span class="mi">32</span><span class="p">.</span><span class="mi">3</span><span class="o">-</span><span class="n">hcee41ef_0</span>
-  <span class="n">tk</span>                 <span class="n">conda</span><span class="o">-</span><span class="n">forge</span><span class="o">/</span><span class="n">linux</span><span class="o">-</span><span class="mi">64</span><span class="p">::</span><span class="n">tk</span><span class="o">-</span><span class="mi">8</span><span class="p">.</span><span class="mi">6</span><span class="p">.</span><span class="mi">10</span><span class="o">-</span><span class="n">hed695b0_0</span>
-  <span class="n">wheel</span>              <span class="n">conda</span><span class="o">-</span><span class="n">forge</span><span class="o">/</span><span class="n">noarch</span><span class="p">::</span><span class="n">wheel</span><span class="o">-</span><span class="mi">0</span><span class="p">.</span><span class="mi">34</span><span class="p">.</span><span class="mi">2</span><span class="o">-</span><span class="n">py_1</span>
-  <span class="n">xz</span>                 <span class="n">conda</span><span class="o">-</span><span class="n">forge</span><span class="o">/</span><span class="n">linux</span><span class="o">-</span><span class="mi">64</span><span class="p">::</span><span class="n">xz</span><span class="o">-</span><span class="mi">5</span><span class="p">.</span><span class="mi">2</span><span class="p">.</span><span class="mi">5</span><span class="o">-</span><span class="n">h516909a_0</span>
-  <span class="n">zlib</span>               <span class="n">conda</span><span class="o">-</span><span class="n">forge</span><span class="o">/</span><span class="n">linux</span><span class="o">-</span><span class="mi">64</span><span class="p">::</span><span class="n">zlib</span><span class="o">-</span><span class="mi">1</span><span class="p">.</span><span class="mi">2</span><span class="p">.</span><span class="mi">11</span><span class="o">-</span><span class="n">h516909a_1006</span>
-</code></pre>
-
-
-<blockquote>
-<p>Note : pip and python both are installed. keep a record of <code>pip -V</code> and <code>python --version</code></p>
-</blockquote>
-<ol>
-<li>Install pelican, the latest guide is <a href="https://docs.getpelican.com/en/stable/install.html">here</a>. It uses this command <code>pip install pelican[Markdown]</code>. Though it gives this error</li>
-</ol>
-<pre class="code literal-block"><span></span><code><span class="n">ERROR</span><span class="o">:</span> <span class="n">nbconvert</span> <span class="mf">5.6</span><span class="o">.</span><span class="mi">1</span> <span class="n">requires</span> <span class="n">entrypoints</span><span class="o">&gt;=</span><span class="mf">0.2</span><span class="o">.</span><span class="mi">2</span><span class="o">,</span> <span class="n">which</span> <span class="k">is</span> <span class="n">not</span> <span class="n">installed</span><span class="o">.</span>
-<span class="n">ERROR</span><span class="o">:</span> <span class="n">bleach</span> <span class="mf">3.1</span><span class="o">.</span><span class="mi">5</span> <span class="n">requires</span> <span class="n">packaging</span><span class="o">,</span> <span class="n">which</span> <span class="k">is</span> <span class="n">not</span> <span class="n">installed</span><span class="o">.</span>
-</code></pre>
-
-
-<ol>
-<li>It can be installed seprataley.  Install pelican and markdown parsing  libraries with pip ,e.g., <code>pip install pelican==3.7.1 markdown==2.6.8</code><ul>
-<li>Installing pelican would install <code>feedgenerator, jinja2, pygments, docutils, pytx, blinker and unidecode</code>
-</li>
-<li>Optionally you can install using pip other librarirs lke <code>piloow, beautifulsoup4, cssmin, cssprefixer, cssutil, pretty, six, smartypans and typogrify webassets</code>
-</li>
-</ul>
-</li>
-</ol>
-<blockquote>
-<p>Time to time it can be upgraded <code>pip install --upgrade pelican</code></p>
-</blockquote>
-<ol>
-<li>Start pellican <code>pelican-quickstart</code>
-</li>
-</ol>
-<pre class="code literal-block"><span></span><code><span class="w">   </span><span class="k">Where</span><span class="w"> </span><span class="n">do</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="k">create</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">web</span><span class="w"> </span><span class="n">site</span><span class="vm">?</span><span class="w"> </span><span class="o">[</span><span class="n">.</span><span class="o">]</span><span class="w"> </span>
-<span class="o">&gt;</span><span class="w"> </span><span class="n">What</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">title</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">web</span><span class="w"> </span><span class="n">site</span><span class="vm">?</span><span class="w"> </span><span class="n">nipype</span><span class="w"></span>
-<span class="o">&gt;</span><span class="w"> </span><span class="n">Who</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">author</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">web</span><span class="w"> </span><span class="n">site</span><span class="vm">?</span><span class="w"> </span><span class="n">Abdul</span><span class="w"> </span><span class="n">Sayyed</span><span class="w"></span>
-<span class="o">&gt;</span><span class="w"> </span><span class="n">What</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="k">language</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">web</span><span class="w"> </span><span class="n">site</span><span class="vm">?</span><span class="w"> </span><span class="o">[</span><span class="n">en</span><span class="o">]</span><span class="w"> </span>
-<span class="o">&gt;</span><span class="w"> </span><span class="n">Do</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">specify</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">URL</span><span class="w"> </span><span class="k">prefix</span><span class="vm">?</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">g</span><span class="p">.,</span><span class="w"> </span><span class="nl">https</span><span class="p">:</span><span class="o">//</span><span class="n">example</span><span class="p">.</span><span class="n">com</span><span class="w">   </span><span class="p">(</span><span class="n">Y</span><span class="o">/</span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="n">Y</span><span class="w"></span>
-<span class="o">&gt;</span><span class="w"> </span><span class="n">What</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">URL</span><span class="w"> </span><span class="k">prefix</span><span class="vm">?</span><span class="w"> </span><span class="p">(</span><span class="n">see</span><span class="w"> </span><span class="n">above</span><span class="w"> </span><span class="n">example</span><span class="p">;</span><span class="w"> </span><span class="k">no</span><span class="w"> </span><span class="k">trailing</span><span class="w"> </span><span class="n">slash</span><span class="p">)</span><span class="w"> </span><span class="nl">http</span><span class="p">:</span><span class="o">//</span><span class="n">AbdulSayyed</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="o">/</span><span class="n">jupyter</span><span class="o">-</span><span class="n">pelican</span><span class="w"></span>
-<span class="o">&gt;</span><span class="w"> </span><span class="n">Do</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">enable</span><span class="w"> </span><span class="n">article</span><span class="w"> </span><span class="n">pagination</span><span class="vm">?</span><span class="w"> </span><span class="p">(</span><span class="n">Y</span><span class="o">/</span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="n">y</span><span class="w"></span>
-<span class="o">&gt;</span><span class="w"> </span><span class="n">How</span><span class="w"> </span><span class="n">many</span><span class="w"> </span><span class="n">articles</span><span class="w"> </span><span class="n">per</span><span class="w"> </span><span class="n">page</span><span class="w"> </span><span class="n">do</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">want</span><span class="vm">?</span><span class="w"> </span><span class="o">[</span><span class="n">10</span><span class="o">]</span><span class="w"> </span><span class="mi">5</span><span class="w"></span>
-<span class="o">&gt;</span><span class="w"> </span><span class="n">What</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="nc">time</span><span class="w"> </span><span class="k">zone</span><span class="vm">?</span><span class="w"> </span><span class="o">[</span><span class="n">Europe/Paris</span><span class="o">]</span><span class="w"> </span><span class="n">Europe</span><span class="o">/</span><span class="n">London</span><span class="w"></span>
-<span class="o">&gt;</span><span class="w"> </span><span class="n">Do</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">generate</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">tasks</span><span class="p">.</span><span class="n">py</span><span class="o">/</span><span class="n">Makefile</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">automate</span><span class="w"> </span><span class="n">generation</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">publishing</span><span class="vm">?</span><span class="w"> </span><span class="p">(</span><span class="n">Y</span><span class="o">/</span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="n">y</span><span class="w"></span>
-<span class="o">&gt;</span><span class="w"> </span><span class="n">Do</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">upload</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">website</span><span class="w"> </span><span class="k">using</span><span class="w"> </span><span class="n">FTP</span><span class="vm">?</span><span class="w"> </span><span class="p">(</span><span class="n">y</span><span class="o">/</span><span class="n">N</span><span class="p">)</span><span class="w"> </span><span class="n">n</span><span class="w"></span>
-<span class="o">&gt;</span><span class="w"> </span><span class="n">Do</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">upload</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">website</span><span class="w"> </span><span class="k">using</span><span class="w"> </span><span class="n">SSH</span><span class="vm">?</span><span class="w"> </span><span class="p">(</span><span class="n">y</span><span class="o">/</span><span class="n">N</span><span class="p">)</span><span class="w"> </span><span class="n">n</span><span class="w"></span>
-<span class="o">&gt;</span><span class="w"> </span><span class="n">Do</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">upload</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">website</span><span class="w"> </span><span class="k">using</span><span class="w"> </span><span class="n">Dropbox</span><span class="vm">?</span><span class="w"> </span><span class="p">(</span><span class="n">y</span><span class="o">/</span><span class="n">N</span><span class="p">)</span><span class="w"> </span><span class="n">n</span><span class="w"></span>
-<span class="o">&gt;</span><span class="w"> </span><span class="n">Do</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">upload</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">website</span><span class="w"> </span><span class="k">using</span><span class="w"> </span><span class="n">S3</span><span class="vm">?</span><span class="w"> </span><span class="p">(</span><span class="n">y</span><span class="o">/</span><span class="n">N</span><span class="p">)</span><span class="w"> </span><span class="n">n</span><span class="w"></span>
-<span class="o">&gt;</span><span class="w"> </span><span class="n">Do</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">upload</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">website</span><span class="w"> </span><span class="k">using</span><span class="w"> </span><span class="n">Rackspace</span><span class="w"> </span><span class="n">Cloud</span><span class="w"> </span><span class="n">Files</span><span class="vm">?</span><span class="w"> </span><span class="p">(</span><span class="n">y</span><span class="o">/</span><span class="n">N</span><span class="p">)</span><span class="w"> </span><span class="n">n</span><span class="w"></span>
-<span class="o">&gt;</span><span class="w"> </span><span class="n">Do</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">want</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">upload</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">website</span><span class="w"> </span><span class="k">using</span><span class="w"> </span><span class="n">GitHub</span><span class="w"> </span><span class="n">Pages</span><span class="vm">?</span><span class="w"> </span><span class="p">(</span><span class="n">y</span><span class="o">/</span><span class="n">N</span><span class="p">)</span><span class="w"> </span><span class="n">y</span><span class="w"></span>
-<span class="o">&gt;</span><span class="w"> </span><span class="k">Is</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">personal</span><span class="w"> </span><span class="n">page</span><span class="w"> </span><span class="p">(</span><span class="n">username</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="p">)</span><span class="vm">?</span><span class="w"> </span><span class="p">(</span><span class="n">y</span><span class="o">/</span><span class="n">N</span><span class="p">)</span><span class="w"> </span><span class="n">y</span><span class="w"></span>
-<span class="n">Done</span><span class="p">.</span><span class="w"> </span><span class="n">Your</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">project</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">available</span><span class="w"> </span><span class="k">at</span><span class="w"> </span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">sayyed</span><span class="o">/</span><span class="n">neuro</span><span class="o">-</span><span class="n">science</span><span class="o">/</span><span class="n">projects</span><span class="o">/</span><span class="n">nipype</span><span class="w"></span>
-</code></pre>
-
-
-<ol>
-<li>Following files are created.</li>
-</ol>
-<pre class="code literal-block"><span></span><code><span class="n">Makefile</span>          <span class="n">pelicanconf</span><span class="o">.</span><span class="n">py</span>
-<span class="n">content</span><span class="o">/</span>           <span class="n">publishconf</span><span class="o">.</span><span class="n">py</span> <span class="n">output</span><span class="o">/</span>
-</code></pre>
-
-
-<ul>
-<li>make command is used to genereat/start many task such as , making html, cleaning, regenerating serving etc. It is generated according to the input which we have used while creating a basic infrasturcture.</li>
-<li>
-<p>content/ directory is used to write markdown contents wile other two files are for configuation.</p>
-</li>
-<li>
-<p>Run <code>make html</code> and the contents of our markdown file will be converted into html in a newly created directory called <code>output</code>. You can also run <code>pelican content</code> to generate HTML.</p>
-</li>
-<li>Run <code>make serve</code> and server will start on a local host post on port 8000. You can cd into output directory and run <code>python -m pelican.server</code>
-</li>
-<li>You can also use <code>pelican -s pelicanconf.py -o output content</code> to make html instead of make html</li>
-<li>You can cd to ouput then use <code>python -m http.server</code>
-</li>
-<li>Write your post in <strong>content/</strong> directory using post or blog or any other directory like <strong>code/</strong> etc and keep your post or articles seprate.</li>
-<li>If using sublime use this [package] <code>https://packagecontrol.io/packages/Pelican</code>. Once installed use <code>Ctr+shift+p</code> and write <code>pelican</code> help wil come. You can cofigure the metadata.</li>
-</ul>
-<h4>The contents of pelican conf file</h4>
-<pre class="code literal-block"><span></span><code><span class="ch">#!/usr/bin/env python</span>
-<span class="c1"># -*- coding: utf-8 -*- #</span>
-<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">unicode_literals</span>
-
-<span class="n">AUTHOR</span> <span class="o">=</span> <span class="s1">'Abdul Sayyed'</span>
-<span class="n">SITENAME</span> <span class="o">=</span> <span class="s1">'Neuroimaging in Python'</span>
-<span class="n">SITEURL</span> <span class="o">=</span> <span class="s1">''</span>
-
-<span class="n">PATH</span> <span class="o">=</span> <span class="s1">'content'</span>
-
-<span class="n">TIMEZONE</span> <span class="o">=</span> <span class="s1">'Europe/London'</span>
-
-<span class="n">DEFAULT_LANG</span> <span class="o">=</span> <span class="s1">'en'</span>
-
-<span class="c1"># Feed generation is usually not desired when developing</span>
-<span class="n">FEED_ALL_ATOM</span> <span class="o">=</span> <span class="bp">None</span>
-<span class="n">CATEGORY_FEED_ATOM</span> <span class="o">=</span> <span class="bp">None</span>
-<span class="n">TRANSLATION_FEED_ATOM</span> <span class="o">=</span> <span class="bp">None</span>
-<span class="n">AUTHOR_FEED_ATOM</span> <span class="o">=</span> <span class="bp">None</span>
-<span class="n">AUTHOR_FEED_RSS</span> <span class="o">=</span> <span class="bp">None</span>
-
-<span class="c1"># Blogroll</span>
-<span class="n">LINKS</span> <span class="o">=</span> <span class="p">((</span><span class="s1">'Pelican'</span><span class="p">,</span> <span class="s1">'http://getpelican.com/'</span><span class="p">),</span>
-         <span class="p">(</span><span class="s1">'Python.org'</span><span class="p">,</span> <span class="s1">'http://python.org/'</span><span class="p">),</span>
-         <span class="p">(</span><span class="s1">'Jinja2'</span><span class="p">,</span> <span class="s1">'http://jinja.pocoo.org/'</span><span class="p">),</span>
-         <span class="p">(</span><span class="s1">'You can modify those links in your config file'</span><span class="p">,</span> <span class="s1">'#'</span><span class="p">),)</span>
-
-<span class="c1"># Social widget</span>
-<span class="n">SOCIAL</span> <span class="o">=</span> <span class="p">((</span><span class="s1">'You can add links in your config file'</span><span class="p">,</span> <span class="s1">'#'</span><span class="p">),</span>
-          <span class="p">(</span><span class="s1">'Another social link'</span><span class="p">,</span> <span class="s1">'#'</span><span class="p">),)</span>
-
-<span class="n">DEFAULT_PAGINATION</span> <span class="o">=</span> <span class="mi">5</span>
-
-<span class="c1"># Uncomment following line if you want document-relative URLs when developing</span>
-<span class="c1">#RELATIVE_URLS = True</span>
-</code></pre>
-
-
-<h4>Running your site</h4>
-<ul>
-<li>
-<code>make html</code> and <code>make serve</code> are two main commands.</li>
-<li>First time is run the out put is below</li>
-</ul>
-<h4>Adding first post</h4>
-<ol>
-<li>Created <code>first.md</code> in content folder <code>echo "# First markdown post" &gt;&gt;./content/first.md</code>
-</li>
-<li>Add follwoing meta dat at the top.</li>
-</ol>
-<pre class="code literal-block"><span></span><code><span class="n">Title</span><span class="o">:</span> <span class="n">My</span> <span class="n">First</span> <span class="n">Post</span>
-<span class="n">Date</span><span class="o">:</span> <span class="mi">2020</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">05</span> <span class="mi">12</span><span class="o">:</span><span class="mi">40</span>
-<span class="n">Status</span><span class="o">:</span> <span class="n">published</span>
-<span class="n">Category</span><span class="o">:</span> <span class="n">nipype</span>
-<span class="n">Tags</span><span class="o">:</span> <span class="n">python</span><span class="o">,</span> <span class="n">neuroscience</span>
-<span class="n">Slug</span><span class="o">:</span> <span class="n">First</span><span class="o">-</span><span class="n">Post</span>
-<span class="n">Authors</span><span class="o">:</span> <span class="n">Abdul</span> <span class="n">Sayyed</span>
-<span class="n">Summary</span><span class="o">:</span> <span class="n">Alcohol</span> <span class="n">apophenia</span> <span class="n">nodal</span> <span class="n">point</span> <span class="n">dead</span> <span class="n">plastic</span> <span class="n">long</span><span class="o">-</span><span class="n">chain</span> <span class="n">hydrocarbons</span> <span class="n">lights</span> <span class="n">neon</span><span class="o">.</span> <span class="n">Dome</span> <span class="n">sub</span><span class="o">-</span><span class="n">orbital</span> <span class="n">DIY</span> <span class="n">render</span><span class="o">-</span><span class="n">farm</span> <span class="n">youtube</span> <span class="n">systema</span> <span class="n">katana</span> <span class="n">tiger</span><span class="o">-</span><span class="n">team</span> <span class="n">shrine</span> <span class="n">tank</span><span class="o">-</span><span class="n">traps</span> <span class="n">paranoid</span> <span class="n">pre</span><span class="o">--</span><span class="n">ware</span> <span class="n">soul</span><span class="o">-</span><span class="n">delay</span> <span class="n">boy</span> <span class="n">voodoo</span> <span class="n">god</span> <span class="n">gang</span><span class="o">.</span> <span class="n">Beef</span> <span class="n">noodles</span> <span class="n">market</span> <span class="n">papier</span><span class="o">-</span><span class="n">mache</span> <span class="n">faded</span> <span class="n">skyscraper</span><span class="o">-</span><span class="n">ware</span> <span class="n">numinous</span> <span class="n">disposable</span> <span class="n">sub</span><span class="o">-</span><span class="n">orbital</span> <span class="n">sunglasses</span> <span class="n">Kowloon</span> <span class="n">math</span><span class="o">.</span> <span class="n">Render</span><span class="o">-</span><span class="n">farm</span> <span class="n">dome</span> <span class="n">digital</span> <span class="n">media</span> <span class="n">tube</span> <span class="n">girl</span> <span class="n">DIY</span> <span class="n">drugs</span> <span class="mi">3</span><span class="n">D</span><span class="o">-</span><span class="n">printed</span> <span class="n">network</span> <span class="n">refrigerator</span> <span class="n">wristwatch</span> <span class="n">construct</span> <span class="n">papier</span><span class="o">-</span><span class="n">mache</span> <span class="n">sign</span><span class="o">.</span>
-</code></pre>
-
-
-<ul>
-<li>
-<p>The output is bleow.</p>
-</li>
-<li>
-<p>Added and committed then push to remote.</p>
-</li>
-</ul>
-<h4>Adding functionality for <code>jupyter notebook</code>
-</h4>
-<ul>
-<li>First create a repo and committ then start working with dev branch</li>
-</ul>
-<pre class="code literal-block"><span></span><code><span class="err">git init .</span>
-<span class="err">git add --all</span>
-<span class="err">git commit -m "@master: initial commit"</span>
-<span class="err">git checkout -b dev</span>
-</code></pre>
-
-
-<ul>
-<li>Install a plug in from <a href="https://github.com/danielfrg/pelican-jupyter">danielfrg/pelican-jupyter</a>
-</li>
-<li>First create a plug in folder <code>mkdir -p plugins</code> </li>
-<li>Down load or clone somewhere temporarily and only copy <code>pelican_jupyter</code> folder into your plugin folder.</li>
-</ul>
-<h4>Inform your config file about the plugins</h4>
-<ul>
-<li>open <code>pelicanconf.py</code> and add the following after the last line.</li>
-</ul>
-<pre class="code literal-block"><span></span><code><span class="n">MARKUP</span> <span class="o">=</span> <span class="p">(</span><span class="s2">"md"</span><span class="p">,</span> <span class="s2">"ipynb"</span><span class="p">)</span>
-
-<span class="kn">from</span> <span class="nn">pelican_jupyter</span> <span class="kn">import</span> <span class="n">markup</span> <span class="k">as</span> <span class="n">nb_markup</span>
-<span class="n">PLUGINS</span> <span class="o">=</span> <span class="p">[</span><span class="n">nb_markup</span><span class="p">]</span>
-<span class="n">IPYNB_MARKUP_USE_FIRST_CELL</span> <span class="o">=</span> <span class="bp">True</span>
-
-<span class="n">IGNORE_FILES</span> <span class="o">=</span> <span class="p">[</span><span class="s2">".ipynb_checkpoints"</span><span class="p">]</span>
-</code></pre>
-
-
-<ul>
-<li>Now the structure is ready to pubish a notbook.</li>
-<li>Install <code>jupyter lab</code>
-</li>
-<li>
-<code>conda install jupyterlab</code>, it wil install all other requirement for the job.</li>
-<li>Start <code>jupyter lab</code>
-</li>
-<li>Write your first notebook with an extension of <code>.ipynb</code>, in order for this book to be published directly it has to have markdown in first cell. Add the follwoing in first cell and in other cell carry on doing some pyton work.</li>
-</ul>
-<pre class="code literal-block"><span></span><code><span class="err">- title: My notebook</span>
-<span class="err">- author: John Doe</span>
-<span class="err">- date: 2018-05-11</span>
-<span class="err">- category: pyhton</span>
-<span class="err">- tags: pip</span>
-</code></pre>
-
-
-<ul>
-<li>Save and close the juptyer lab </li>
-<li>Run <code>make html</code> and you will get some kind of error.</li>
-</ul>
-<pre class="code literal-block"><span></span><code><span class="n">CRITICAL</span><span class="o">:</span> <span class="n">ModuleNotFoundError</span><span class="o">:</span> <span class="n">No</span> <span class="n">module</span> <span class="n">named</span> <span class="s1">'pelican_jupyter'</span>
-</code></pre>
-
-
-<ul>
-<li>Since our plugins is a part of this module that we did not install as it is in developing stages.</li>
-<li>Now install <code>pip install pelican_jupyter</code>
-</li>
-<li>Run and start the server</li>
-<li>You should see your <code>.ipynb</code> running directly as a blog post.</li>
-<li>
-<p>The output is as follows</p>
-</li>
-<li>
-<p>In order to get live reload install <code>invoke</code> using <code>pip install invoke</code> along with <code>livereload</code></p>
-</li>
-<li>
-<h3>Then start your server with <code>invoke livereload</code>.</h3>
-</li>
-</ul>
-<h4>Adding <a href="https://github.com/getpelican/pelican-themes">themes</a>
-</h4>
-<ol>
-<li>Using <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3">pelican-bootstrap3</a>. Clone it in main directory </li>
-<li>Add the following in your <code>pelicanconf.py</code>.</li>
-</ol>
-<pre class="code literal-block"><span></span><code><span class="err">THEME = 'pelican-themes/pelican-bootstrap3'</span>
-<span class="err">JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']}</span>
-</code></pre>
-
-
-<h4>Adding new plugins  to the pelicanconf.py</h4>
-<ol>
-<li>
-<p>To implement i18n, you need to include the plugins. The best choice is <a href="https://github.com/getpelican/pelican-plugins/tree/master/i18n_subsites">i18n_subsites</a> plugin.</p>
-</li>
-<li>
-<p>Since we already have the directory <code>plugins</code> where our plugins are kept. We do not need to have all the plugins which are present. But to first get them locally. You need to add the whole repo locallely</p>
-</li>
-<li>
-<p>clone it recusively <code>git clone --recursive https://github.com/getpelican/pelican-plugins</code></p>
-</li>
-<li>Add follwoing line to your <code>pelicanconf.py</code> file</li>
-</ol>
-<pre class="code literal-block"><span></span><code><span class="err"># plugins</span>
-<span class="err">PLUGIN_PATHS = ['./plugins']</span>
-<span class="err">PLUGINS = ['i18n_subsites']</span>
-</code></pre>
-
-
-<ol>
-<li>
-<p>Copy paste <code>i18n_subsites</code> folder into you <code>plugins/</code> folder. Once done rebuilt the site and run the server.</p>
-</li>
-<li>
-<p>Notice the change, now new theme is working.</p>
-</li>
-</ol>
-<p><img alt="" src="../pelican-server-04"></p>
-<hr>
-<h4>Customising the views</h4>
-<ul>
-<li>New custom <code>.css</code> and <code>.js</code> files are added in a new folder under <code>content\extra</code>.</li>
-<li>We need to tell <code>pelicanconf.py</code> where are they stroed.</li>
-<li>Add the following contents in the config file</li>
-</ul>
-<pre class="code literal-block"><span></span><code><span class="n">pelicanconf</span><span class="o">.</span><span class="n">py</span>
-
-<span class="n">CUSTOM_CSS</span> <span class="o">=</span> <span class="s1">'static/css/custom.css'</span>
-<span class="n">CUSTOM_JS</span> <span class="o">=</span> <span class="s1">'static/js/custom.js'</span>
-
-<span class="n">STATIC_PATHS</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">'extra'</span> <span class="p">]</span>
-
-<span class="n">EXTRA_PATH_METADATA</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">'extra/custom.css'</span><span class="p">:</span> <span class="p">{</span><span class="s1">'path'</span><span class="p">:</span> <span class="s1">'static/css/custom.css'</span><span class="p">},</span>
-    <span class="s1">'extra/custom.js'</span><span class="p">:</span> <span class="p">{</span><span class="s1">'path'</span><span class="p">:</span> <span class="s1">'static/js/custom.js'</span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre>
-
-
-<h4>Adding pages to the site</h4>
-<ul>
-<li>Pages are not post but about you or the sites.</li>
-<li>Create a new folder under <code>content/pages</code> and add a new file called <code>about.md</code>.</li>
-<li>Tell config file about the pages, add the following to your config file</li>
-</ul>
-<pre class="code literal-block"><span></span><code><span class="o">#</span> <span class="n">Paths</span>
-<span class="n">PATH</span> <span class="o">=</span> <span class="s1">'content'</span>
-<span class="n">PAGE_PATHS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'pages'</span><span class="p">]</span>
-<span class="n">ARTICLE_PATHS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'posts'</span><span class="p">]</span>
-
-<span class="o">#</span> <span class="n">Top</span> <span class="n">menus</span>
-<span class="n">DISPLAY_CATEGORIES_ON_MENU</span> <span class="o">=</span> <span class="k">False</span>
-<span class="n">DISPLAY_PAGES_ON_MENU</span> <span class="o">=</span> <span class="k">True</span>
-</code></pre>
-
-
-<blockquote>
-<p>if every thing is working then use this below.</p>
-</blockquote>
-<h4>Creating a sample notebook</h4>
-<ol>
-<li>Start jupyter notebook or jupyter lab from nipype env, but it will give error a they are not installed in this envioronment.</li>
-</ol>
-<blockquote>
-<p>Note: To avoid this problem, you need to install ipykernel i your environment <code>pip insall --user ipykernel</code></p>
-</blockquote>
-</div>
-    </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="../notebooks/002_intro/" class="u-url">002_intro</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                <a href="../authors/abdul-sayyed/">Abdul Sayyed</a>
-            </span></p>
-            <p class="dateline">
-            <a href="../notebooks/002_intro/" rel="bookmark">
-            <time class="published dt-published" datetime="2020-07-01T15:43:54+01:00" itemprop="datePublished" title="2020-07-01">2020-07-01</time></a>
-            </p>
-                <p class="commentline">
-        
-
-
-        </p>
-</div>
-    </header><div class="e-content entry-content">
-    <div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [2]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Markdown Here!</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [4]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
 </div>
     </div>
     </article>
