@@ -5,7 +5,7 @@
          
          &lt;center&gt;
         &lt;hr&gt;
-        </description><atom:link href="https://AbdulSayyed.github.io/categories/cat_nipype.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:neuro.sayyed@gmail.com"&gt;Abdul Sayyed&lt;/a&gt; </copyright><lastBuildDate>Wed, 22 Jul 2020 11:10:33 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>nipype-workflow</title><link>https://AbdulSayyed.github.io/posts/neuroscience/nipype-workflow/</link><dc:creator>Abdul Sayyed</dc:creator><description>&lt;div&gt;&lt;h3&gt;My setup of nipype&lt;/h3&gt;
+        </description><atom:link href="https://AbdulSayyed.github.io/categories/cat_nipype.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:neuro.sayyed@gmail.com"&gt;Abdul Sayyed&lt;/a&gt; </copyright><lastBuildDate>Sun, 02 Aug 2020 16:24:01 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>nipype-workflow</title><link>https://AbdulSayyed.github.io/posts/neuroscience/nipype-workflow/</link><dc:creator>Abdul Sayyed</dc:creator><description>&lt;div&gt;&lt;h3&gt;My setup of nipype&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;I have successfully created a conda environment for &lt;code&gt;nipype&lt;/code&gt;. it is located here ().&lt;/li&gt;
 &lt;li&gt;The directory I have chosen to work is &lt;code&gt;/nikol/&lt;/code&gt; the listing is given as below.&lt;/li&gt;

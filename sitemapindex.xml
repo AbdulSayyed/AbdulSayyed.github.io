@@ -7,70 +7,94 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
   <loc>https://AbdulSayyed.github.io/authors/abdul-sayyed.xml</loc>
-  <lastmod>2020-07-22T11:10:00Z</lastmod>
+  <lastmod>2020-08-02T16:24:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://AbdulSayyed.github.io/authors/abudl-sayyed.xml</loc>
-  <lastmod>2020-07-21T14:36:00Z</lastmod>
+  <lastmod>2020-08-02T15:53:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://AbdulSayyed.github.io/categories/blogging.xml</loc>
-  <lastmod>2020-07-21T14:36:00Z</lastmod>
+  <lastmod>2020-08-02T15:52:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://AbdulSayyed.github.io/categories/cat_matplot.xml</loc>
+  <lastmod>2020-08-02T15:53:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://AbdulSayyed.github.io/categories/cat_neuroscience.xml</loc>
-  <lastmod>2020-07-21T14:36:00Z</lastmod>
+  <lastmod>2020-08-02T15:53:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://AbdulSayyed.github.io/categories/cat_nibab.xml</loc>
+  <lastmod>2020-08-02T10:20:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://AbdulSayyed.github.io/categories/cat_nibabel.xml</loc>
+  <lastmod>2020-08-02T15:53:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://AbdulSayyed.github.io/categories/cat_nikola.xml</loc>
-  <lastmod>2020-07-21T14:36:00Z</lastmod>
+  <lastmod>2020-08-02T15:53:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://AbdulSayyed.github.io/categories/cat_nilearn.xml</loc>
+  <lastmod>2020-08-02T15:53:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://AbdulSayyed.github.io/categories/cat_nipype.xml</loc>
-  <lastmod>2020-07-22T11:10:00Z</lastmod>
+  <lastmod>2020-08-02T16:24:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://AbdulSayyed.github.io/categories/cat_python.xml</loc>
-  <lastmod>2020-07-21T14:36:00Z</lastmod>
+  <lastmod>2020-08-02T15:52:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://AbdulSayyed.github.io/categories/jupyter.xml</loc>
-  <lastmod>2020-07-22T11:10:00Z</lastmod>
+  <lastmod>2020-08-02T16:24:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://AbdulSayyed.github.io/categories/matplot.xml</loc>
+  <lastmod>2020-08-02T15:52:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://AbdulSayyed.github.io/categories/neuro.xml</loc>
-  <lastmod>2020-07-21T14:36:00Z</lastmod>
+  <lastmod>2020-08-02T15:53:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://AbdulSayyed.github.io/categories/nikola.xml</loc>
-  <lastmod>2020-07-21T14:36:00Z</lastmod>
+  <lastmod>2020-08-02T15:52:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://AbdulSayyed.github.io/categories/nilearn.xml</loc>
+  <lastmod>2020-08-02T15:53:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://AbdulSayyed.github.io/categories/nipype.xml</loc>
-  <lastmod>2020-07-22T11:10:00Z</lastmod>
+  <lastmod>2020-08-02T16:24:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://AbdulSayyed.github.io/categories/pelican.xml</loc>
-  <lastmod>2020-07-21T14:36:00Z</lastmod>
+  <lastmod>2020-08-02T15:52:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://AbdulSayyed.github.io/categories/python.xml</loc>
-  <lastmod>2020-07-22T11:10:00Z</lastmod>
+  <lastmod>2020-08-02T16:24:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://AbdulSayyed.github.io/categories/static-site-generator.xml</loc>
-  <lastmod>2020-07-21T14:36:00Z</lastmod>
+  <lastmod>2020-08-02T15:53:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://AbdulSayyed.github.io/categories/virtual-environment.xml</loc>
-  <lastmod>2020-07-21T14:36:00Z</lastmod>
+  <lastmod>2020-08-02T15:53:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://AbdulSayyed.github.io/rss.xml</loc>
-  <lastmod>2020-07-22T11:10:00Z</lastmod>
+  <lastmod>2020-08-02T16:24:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://AbdulSayyed.github.io/sitemap.xml</loc>
-  <lastmod>2020-07-22T11:10:00Z</lastmod>
+  <lastmod>2020-08-02T16:24:00Z</lastmod>
  </sitemap>
 </sitemapindex>

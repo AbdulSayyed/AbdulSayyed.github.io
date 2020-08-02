@@ -5,7 +5,7 @@
                 
                 &lt;center&gt;
                 &lt;hr&gt;
-       </description><atom:link href="https://AbdulSayyed.github.io/categories/cat_python.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:neuro.sayyed@gmail.com"&gt;Abdul Sayyed&lt;/a&gt; </copyright><lastBuildDate>Tue, 21 Jul 2020 14:36:52 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Python Virtual Enviorenment</title><link>https://AbdulSayyed.github.io/posts/python/Third-Post/</link><dc:creator>Abudl Sayyed</dc:creator><description>&lt;div&gt;&lt;h3&gt;Virtual environments&lt;/h3&gt;
+       </description><atom:link href="https://AbdulSayyed.github.io/categories/cat_python.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:neuro.sayyed@gmail.com"&gt;Abdul Sayyed&lt;/a&gt; </copyright><lastBuildDate>Sun, 02 Aug 2020 15:52:59 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Python Virtual Enviorenment</title><link>https://AbdulSayyed.github.io/posts/python/Third-Post/</link><dc:creator>Abudl Sayyed</dc:creator><description>&lt;div&gt;&lt;h3&gt;Virtual environments&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;In python there are many ways to create virtual environment, they are mentiond below.&lt;ol&gt;
 &lt;li&gt;Using python3 built in command.&lt;/li&gt;
