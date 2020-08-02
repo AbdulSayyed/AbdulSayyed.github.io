@@ -35,23 +35,35 @@
  </url>
  <url>
   <loc>https://AbdulSayyed.github.io/categories.html</loc>
-  <lastmod>2020-08-02T16:24:00Z</lastmod>
+  <lastmod>2020-08-02T21:25:00Z</lastmod>
  </url>
  <url>
   <loc>https://AbdulSayyed.github.io/categories/</loc>
-  <lastmod>2020-08-02T16:24:00Z</lastmod>
+  <lastmod>2020-08-02T21:25:00Z</lastmod>
  </url>
  <url>
   <loc>https://AbdulSayyed.github.io/categories/blogging/</loc>
   <lastmod>2020-08-02T15:52:00Z</lastmod>
  </url>
  <url>
+  <loc>https://AbdulSayyed.github.io/categories/cat_matplot/</loc>
+  <lastmod>2020-08-02T21:25:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://AbdulSayyed.github.io/categories/cat_neuroscience/</loc>
   <lastmod>2020-08-02T15:52:00Z</lastmod>
  </url>
  <url>
+  <loc>https://AbdulSayyed.github.io/categories/cat_nibabel/</loc>
+  <lastmod>2020-08-02T21:25:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://AbdulSayyed.github.io/categories/cat_nikola/</loc>
   <lastmod>2020-08-02T15:52:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://AbdulSayyed.github.io/categories/cat_nilearn/</loc>
+  <lastmod>2020-08-02T21:25:00Z</lastmod>
  </url>
  <url>
   <loc>https://AbdulSayyed.github.io/categories/cat_nipype/</loc>
@@ -66,12 +78,20 @@
   <lastmod>2020-08-02T15:52:00Z</lastmod>
  </url>
  <url>
+  <loc>https://AbdulSayyed.github.io/categories/matplot/</loc>
+  <lastmod>2020-08-02T21:25:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://AbdulSayyed.github.io/categories/neuro/</loc>
   <lastmod>2020-08-02T15:52:00Z</lastmod>
  </url>
  <url>
   <loc>https://AbdulSayyed.github.io/categories/nikola/</loc>
   <lastmod>2020-08-02T15:52:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://AbdulSayyed.github.io/categories/nilearn/</loc>
+  <lastmod>2020-08-02T21:25:00Z</lastmod>
  </url>
  <url>
   <loc>https://AbdulSayyed.github.io/categories/nipype/</loc>
@@ -94,8 +114,16 @@
   <lastmod>2020-08-02T15:52:00Z</lastmod>
  </url>
  <url>
+  <loc>https://AbdulSayyed.github.io/notebooks/001-intro/</loc>
+  <lastmod>2020-08-02T21:25:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://AbdulSayyed.github.io/notebooks/001_intro/</loc>
   <lastmod>2020-08-02T15:53:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://AbdulSayyed.github.io/notebooks/002-nipype/</loc>
+  <lastmod>2020-08-02T21:25:00Z</lastmod>
  </url>
  <url>
   <loc>https://AbdulSayyed.github.io/notebooks/002_basics/</loc>
@@ -122,6 +150,22 @@
   <lastmod>2020-07-22T10:55:00Z</lastmod>
  </url>
  <url>
+  <loc>https://AbdulSayyed.github.io/notebooks/matplot-001/</loc>
+  <lastmod>2020-08-02T21:25:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://AbdulSayyed.github.io/notebooks/nibabel-001/</loc>
+  <lastmod>2020-08-02T21:25:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://AbdulSayyed.github.io/notebooks/nilearn-001/</loc>
+  <lastmod>2020-08-02T21:25:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://AbdulSayyed.github.io/notebooks/scikit-001/</loc>
+  <lastmod>2020-08-02T21:25:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://AbdulSayyed.github.io/pages/aboutme/</loc>
   <lastmod>2020-08-02T15:53:00Z</lastmod>
  </url>
@@ -135,7 +179,11 @@
  </url>
  <url>
   <loc>https://AbdulSayyed.github.io/posts/index-1.html</loc>
-  <lastmod>2020-08-02T16:24:00Z</lastmod>
+  <lastmod>2020-08-02T21:25:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://AbdulSayyed.github.io/posts/neuroscience/nibabel_001/</loc>
+  <lastmod>2020-08-02T21:25:00Z</lastmod>
  </url>
  <url>
   <loc>https://AbdulSayyed.github.io/posts/neuroscience/nipype-workflow/</loc>

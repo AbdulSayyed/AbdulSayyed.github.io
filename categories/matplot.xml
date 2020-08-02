@@ -1,0 +1,1844 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sayyed's blog (Posts about matplot)</title><link>https://AbdulSayyed.github.io/</link><description></description><atom:link href="https://AbdulSayyed.github.io/categories/matplot.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:neuro.sayyed@gmail.com"&gt;Abdul Sayyed&lt;/a&gt; </copyright><lastBuildDate>Sun, 02 Aug 2020 21:25:37 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Introduction to matplot</title><link>https://AbdulSayyed.github.io/notebooks/matplot-001/</link><dc:creator>Abdul Sayyed</dc:creator><description>&lt;div&gt;&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h3 id="Matplotlib"&gt;&lt;a href="https://matplotlib.org/3.1.1/index.html"&gt;Matplotlib&lt;/a&gt;&lt;a class="anchor-link" href="https://AbdulSayyed.github.io/notebooks/matplot-001/#Matplotlib"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;h3 id="UserGuide"&gt;&lt;a href="https://matplotlib.org/3.1.1/users/index.html"&gt;UserGuide&lt;/a&gt;&lt;a class="anchor-link" href="https://AbdulSayyed.github.io/notebooks/matplot-001/#UserGuide"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;It is plotting library for 2D plotting used in academic publising on hardcopy and in interactive environment.&lt;/li&gt;
+&lt;li&gt;It can be used in &lt;code&gt;Python script, in Python and IPython shells, Jupyter notebook, web application servers&lt;/code&gt;. These four...&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="What-it-can-generate-?"&gt;What it can generate ?&lt;a class="anchor-link" href="https://AbdulSayyed.github.io/notebooks/matplot-001/#What-it-can-generate-?"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;It can draw &lt;code&gt;plot, histograms, power spectra, bar charts, errorcharts, scatterplots,etc&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://matplotlib.org/3.1.1/tutorials/introductory/sample_plots.html"&gt;Sample Plots&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://matplotlib.org/3.1.1/gallery/index.html"&gt;Thumbnail gallery&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="How-it-is-installed-?"&gt;How it is installed ?&lt;a class="anchor-link" href="https://AbdulSayyed.github.io/notebooks/matplot-001/#How-it-is-installed-?"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;It can be installed as its own package&lt;/li&gt;
+&lt;li&gt;With third party distribution&lt;/li&gt;
+&lt;li&gt;From source, it can be built&lt;/li&gt;
+&lt;li&gt;Clone the latest repo&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="Its-Dependencies-?-on-[30-July-2020]-Following-is-taken-from--documentation"&gt;Its Dependencies ? on [30 July 2020] Following is taken from  documentation&lt;a class="anchor-link" href="https://AbdulSayyed.github.io/notebooks/matplot-001/#Its-Dependencies-?-on-%5B30-July-2020%5D-Following-is-taken-from--documentation"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;txt
+
+Python (&amp;gt;= 3.6)
+FreeType (&amp;gt;= 2.3)
+libpng (&amp;gt;= 1.2)
+NumPy (&amp;gt;= 1.11)
+setuptools
+cycler (&amp;gt;= 0.10.0)
+dateutil (&amp;gt;= 2.1)
+kiwisolver (&amp;gt;= 1.0.0)
+pyparsing
+
+- To get the better user interface toolkit, optional can be insalled.
+
+tk (&amp;gt;= 8.3, != 8.6.0 or 8.6.1): for the Tk-based backends;
+PyQt4 (&amp;gt;= 4.6) or PySide (&amp;gt;= 1.0.3): for the Qt4-based backends;
+PyQt5: for the Qt5-based backends;
+PyGObject: for the GTK3-based backends;
+wxpython (&amp;gt;= 4): for the WX-based backends;
+cairocffi (&amp;gt;= 0.8) or pycairo: for the cairo-based backends;
+Tornado: for the WebAgg backend;
+For better support of animation output format and image file formats, LaTeX, etc., you can install the following:
+
+ffmpeg/avconv: for saving movies;
+ImageMagick: for saving animated gifs;
+Pillow (&amp;gt;= 3.4): for a larger selection of image file formats: JPEG, BMP, and TIFF image files;
+LaTeX and GhostScript (&amp;gt;=9.0) : for rendering text with LaTeX.&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="Concepts-behind-the-matplotlib"&gt;Concepts behind the matplotlib&lt;a class="anchor-link" href="https://AbdulSayyed.github.io/notebooks/matplot-001/#Concepts-behind-the-matplotlib"&gt;¶&lt;/a&gt;&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;The work is done on many levels from &lt;code&gt;general to specific&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Once can visiulize data easily as well as control necessary high and low level detail.&lt;/li&gt;
+&lt;li&gt;It is all done through object library so the more specific can be accused its less specific object.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;matplotlib&lt;/code&gt; is said to be the &lt;code&gt;state-machine environment&lt;/code&gt; provide by &lt;code&gt;matplotlib.pyplot&lt;/code&gt; module.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;&lt;p&gt;Pyplot is like a matlab environment, so should not be difficult. The first level in object hirararcy is the &lt;code&gt;pyplot&lt;/code&gt; library. The user uses this object to draw figures and controls its attributes.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [ ]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;pyplot&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt;
+
+&lt;span class="n"&gt;fig&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pyplot&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;figure&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;fig&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;suptitle&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'No axes on this figure'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Draw two by two figures ( that is four boxex)&lt;/span&gt;
+&lt;span class="n"&gt;fig&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ax_lst&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pyplot&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;subplots&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="c1"&gt;# Draw only one&lt;/span&gt;
+&lt;span class="n"&gt;fig&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ax_lst&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pyplot&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;subplots&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;ul&gt;
+&lt;li&gt;The above figure is just a description how easy it is to plat a figure, it is very simple and other software such as &lt;code&gt;r, matplot&lt;/code&gt; provides the smae high level abstraction.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;&lt;p&gt;Note: Matplotlib figures and plots works with &lt;code&gt;numpy&lt;/code&gt; arrays as input. Other libraries &lt;code&gt;arrly-like&lt;/code&gt; object  such as &lt;code&gt;pandas&lt;/code&gt; np.matrix may or may not work. It is better that they can be converted to &lt;code&gt;np.array&lt;/code&gt; object.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id="Using-numpy-to-draw-a-sin-funciton"&gt;Using &lt;code&gt;numpy&lt;/code&gt; to draw a sin funciton&lt;a class="anchor-link" href="https://AbdulSayyed.github.io/notebooks/matplot-001/#Using-numpy-to-draw-a-sin-funciton"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [56]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# run above cells so that librararie are imported, if not, import them again&lt;/span&gt;
+
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;pyplot&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt; 
+
+&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;arange&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mf"&gt;0.2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sin&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c1"&gt;# creating a figure and set of subplots. pyplot.subplots() creates two object at one time, it implicitly &lt;/span&gt;
+&lt;span class="c1"&gt;# creates a fig object and show a subplot created in ax&lt;/span&gt;
+&lt;span class="n"&gt;fig&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ax&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pyplot&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;subplots&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Though ax points to a subplots objects, it is still empty so fill it&lt;/span&gt;
+&lt;span class="n"&gt;ax&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;pyplot&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+
+    &lt;div class="prompt"&gt;&lt;/div&gt;
+
+
+
+&lt;div class="output_svg output_subarea "&gt;
+&lt;?xml version="1.0" encoding="utf-8" standalone="no"?&gt;
+
+&lt;!-- Created with matplotlib (https://matplotlib.org/) --&gt;
+&lt;svg height="248.518125pt" version="1.1" viewbox="0 0 386.845312 248.518125" width="386.845312pt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
+ &lt;metadata&gt;
+  &lt;rdf xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"&gt;
+   &lt;work&gt;
+    &lt;type rdf:resource="http://purl.org/dc/dcmitype/StillImage"&gt;&lt;/type&gt;
+    &lt;date&gt;2020-07-30T17:19:08.451113&lt;/date&gt;
+    &lt;format&gt;image/svg+xml&lt;/format&gt;
+    &lt;creator&gt;
+     &lt;agent&gt;
+      &lt;title&gt;Matplotlib v3.3.0, https://matplotlib.org/&lt;/title&gt;
+     &lt;/agent&gt;
+    &lt;/creator&gt;
+   &lt;/work&gt;
+  &lt;/rdf&gt;
+ &lt;/metadata&gt;
+ &lt;defs&gt;
+  &lt;style type="text/css"&gt;*{stroke-linecap:butt;stroke-linejoin:round;}&lt;/style&gt;
+ &lt;/defs&gt;
+ &lt;g id="figure_1"&gt;
+  &lt;g id="patch_1"&gt;
+   &lt;path d="M 0 248.518125 
+L 386.845312 248.518125 
+L 386.845312 0 
+L 0 0 
+z
+" style="fill:none;"&gt;&lt;/path&gt;
+  &lt;/g&gt;
+  &lt;g id="axes_1"&gt;
+   &lt;g id="patch_2"&gt;
+    &lt;path d="M 44.845313 224.64 
+L 379.645313 224.64 
+L 379.645313 7.2 
+L 44.845313 7.2 
+z
+" style="fill:#ffffff;"&gt;&lt;/path&gt;
+   &lt;/g&gt;
+   &lt;g id="matplotlib.axis_1"&gt;
+    &lt;g id="xtick_1"&gt;
+     &lt;g id="line2d_1"&gt;
+      &lt;defs&gt;
+       &lt;path d="M 0 0 
+L 0 3.5 
+" id="mca91e9e6e7" style="stroke:#000000;stroke-width:0.8;"&gt;&lt;/path&gt;
+      &lt;/defs&gt;
+      &lt;g&gt;
+       &lt;use style="stroke:#000000;stroke-width:0.8;" x="60.063494" xlink:href="#mca91e9e6e7" y="224.64"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+     &lt;g id="text_1"&gt;
+      &lt;!-- 0 --&gt;
+      &lt;g transform="translate(56.882244 239.238438)scale(0.1 -0.1)"&gt;
+       &lt;defs&gt;
+        &lt;path d="M 31.78125 66.40625 
+Q 24.171875 66.40625 20.328125 58.90625 
+Q 16.5 51.421875 16.5 36.375 
+Q 16.5 21.390625 20.328125 13.890625 
+Q 24.171875 6.390625 31.78125 6.390625 
+Q 39.453125 6.390625 43.28125 13.890625 
+Q 47.125 21.390625 47.125 36.375 
+Q 47.125 51.421875 43.28125 58.90625 
+Q 39.453125 66.40625 31.78125 66.40625 
+z
+M 31.78125 74.21875 
+Q 44.046875 74.21875 50.515625 64.515625 
+Q 56.984375 54.828125 56.984375 36.375 
+Q 56.984375 17.96875 50.515625 8.265625 
+Q 44.046875 -1.421875 31.78125 -1.421875 
+Q 19.53125 -1.421875 13.0625 8.265625 
+Q 6.59375 17.96875 6.59375 36.375 
+Q 6.59375 54.828125 13.0625 64.515625 
+Q 19.53125 74.21875 31.78125 74.21875 
+z
+" id="DejaVuSans-48"&gt;&lt;/path&gt;
+       &lt;/defs&gt;
+       &lt;use xlink:href="#DejaVuSans-48"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+    &lt;/g&gt;
+    &lt;g id="xtick_2"&gt;
+     &lt;g id="line2d_2"&gt;
+      &lt;g&gt;
+       &lt;use style="stroke:#000000;stroke-width:0.8;" x="122.178522" xlink:href="#mca91e9e6e7" y="224.64"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+     &lt;g id="text_2"&gt;
+      &lt;!-- 2 --&gt;
+      &lt;g transform="translate(118.997272 239.238438)scale(0.1 -0.1)"&gt;
+       &lt;defs&gt;
+        &lt;path d="M 19.1875 8.296875 
+L 53.609375 8.296875 
+L 53.609375 0 
+L 7.328125 0 
+L 7.328125 8.296875 
+Q 12.9375 14.109375 22.625 23.890625 
+Q 32.328125 33.6875 34.8125 36.53125 
+Q 39.546875 41.84375 41.421875 45.53125 
+Q 43.3125 49.21875 43.3125 52.78125 
+Q 43.3125 58.59375 39.234375 62.25 
+Q 35.15625 65.921875 28.609375 65.921875 
+Q 23.96875 65.921875 18.8125 64.3125 
+Q 13.671875 62.703125 7.8125 59.421875 
+L 7.8125 69.390625 
+Q 13.765625 71.78125 18.9375 73 
+Q 24.125 74.21875 28.421875 74.21875 
+Q 39.75 74.21875 46.484375 68.546875 
+Q 53.21875 62.890625 53.21875 53.421875 
+Q 53.21875 48.921875 51.53125 44.890625 
+Q 49.859375 40.875 45.40625 35.40625 
+Q 44.1875 33.984375 37.640625 27.21875 
+Q 31.109375 20.453125 19.1875 8.296875 
+z
+" id="DejaVuSans-50"&gt;&lt;/path&gt;
+       &lt;/defs&gt;
+       &lt;use xlink:href="#DejaVuSans-50"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+    &lt;/g&gt;
+    &lt;g id="xtick_3"&gt;
+     &lt;g id="line2d_3"&gt;
+      &lt;g&gt;
+       &lt;use style="stroke:#000000;stroke-width:0.8;" x="184.29355" xlink:href="#mca91e9e6e7" y="224.64"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+     &lt;g id="text_3"&gt;
+      &lt;!-- 4 --&gt;
+      &lt;g transform="translate(181.1123 239.238438)scale(0.1 -0.1)"&gt;
+       &lt;defs&gt;
+        &lt;path d="M 37.796875 64.3125 
+L 12.890625 25.390625 
+L 37.796875 25.390625 
+z
+M 35.203125 72.90625 
+L 47.609375 72.90625 
+L 47.609375 25.390625 
+L 58.015625 25.390625 
+L 58.015625 17.1875 
+L 47.609375 17.1875 
+L 47.609375 0 
+L 37.796875 0 
+L 37.796875 17.1875 
+L 4.890625 17.1875 
+L 4.890625 26.703125 
+z
+" id="DejaVuSans-52"&gt;&lt;/path&gt;
+       &lt;/defs&gt;
+       &lt;use xlink:href="#DejaVuSans-52"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+    &lt;/g&gt;
+    &lt;g id="xtick_4"&gt;
+     &lt;g id="line2d_4"&gt;
+      &lt;g&gt;
+       &lt;use style="stroke:#000000;stroke-width:0.8;" x="246.408578" xlink:href="#mca91e9e6e7" y="224.64"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+     &lt;g id="text_4"&gt;
+      &lt;!-- 6 --&gt;
+      &lt;g transform="translate(243.227328 239.238438)scale(0.1 -0.1)"&gt;
+       &lt;defs&gt;
+        &lt;path d="M 33.015625 40.375 
+Q 26.375 40.375 22.484375 35.828125 
+Q 18.609375 31.296875 18.609375 23.390625 
+Q 18.609375 15.53125 22.484375 10.953125 
+Q 26.375 6.390625 33.015625 6.390625 
+Q 39.65625 6.390625 43.53125 10.953125 
+Q 47.40625 15.53125 47.40625 23.390625 
+Q 47.40625 31.296875 43.53125 35.828125 
+Q 39.65625 40.375 33.015625 40.375 
+z
+M 52.59375 71.296875 
+L 52.59375 62.3125 
+Q 48.875 64.0625 45.09375 64.984375 
+Q 41.3125 65.921875 37.59375 65.921875 
+Q 27.828125 65.921875 22.671875 59.328125 
+Q 17.53125 52.734375 16.796875 39.40625 
+Q 19.671875 43.65625 24.015625 45.921875 
+Q 28.375 48.1875 33.59375 48.1875 
+Q 44.578125 48.1875 50.953125 41.515625 
+Q 57.328125 34.859375 57.328125 23.390625 
+Q 57.328125 12.15625 50.6875 5.359375 
+Q 44.046875 -1.421875 33.015625 -1.421875 
+Q 20.359375 -1.421875 13.671875 8.265625 
+Q 6.984375 17.96875 6.984375 36.375 
+Q 6.984375 53.65625 15.1875 63.9375 
+Q 23.390625 74.21875 37.203125 74.21875 
+Q 40.921875 74.21875 44.703125 73.484375 
+Q 48.484375 72.75 52.59375 71.296875 
+z
+" id="DejaVuSans-54"&gt;&lt;/path&gt;
+       &lt;/defs&gt;
+       &lt;use xlink:href="#DejaVuSans-54"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+    &lt;/g&gt;
+    &lt;g id="xtick_5"&gt;
+     &lt;g id="line2d_5"&gt;
+      &lt;g&gt;
+       &lt;use style="stroke:#000000;stroke-width:0.8;" x="308.523606" xlink:href="#mca91e9e6e7" y="224.64"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+     &lt;g id="text_5"&gt;
+      &lt;!-- 8 --&gt;
+      &lt;g transform="translate(305.342356 239.238438)scale(0.1 -0.1)"&gt;
+       &lt;defs&gt;
+        &lt;path d="M 31.78125 34.625 
+Q 24.75 34.625 20.71875 30.859375 
+Q 16.703125 27.09375 16.703125 20.515625 
+Q 16.703125 13.921875 20.71875 10.15625 
+Q 24.75 6.390625 31.78125 6.390625 
+Q 38.8125 6.390625 42.859375 10.171875 
+Q 46.921875 13.96875 46.921875 20.515625 
+Q 46.921875 27.09375 42.890625 30.859375 
+Q 38.875 34.625 31.78125 34.625 
+z
+M 21.921875 38.8125 
+Q 15.578125 40.375 12.03125 44.71875 
+Q 8.5 49.078125 8.5 55.328125 
+Q 8.5 64.0625 14.71875 69.140625 
+Q 20.953125 74.21875 31.78125 74.21875 
+Q 42.671875 74.21875 48.875 69.140625 
+Q 55.078125 64.0625 55.078125 55.328125 
+Q 55.078125 49.078125 51.53125 44.71875 
+Q 48 40.375 41.703125 38.8125 
+Q 48.828125 37.15625 52.796875 32.3125 
+Q 56.78125 27.484375 56.78125 20.515625 
+Q 56.78125 9.90625 50.3125 4.234375 
+Q 43.84375 -1.421875 31.78125 -1.421875 
+Q 19.734375 -1.421875 13.25 4.234375 
+Q 6.78125 9.90625 6.78125 20.515625 
+Q 6.78125 27.484375 10.78125 32.3125 
+Q 14.796875 37.15625 21.921875 38.8125 
+z
+M 18.3125 54.390625 
+Q 18.3125 48.734375 21.84375 45.5625 
+Q 25.390625 42.390625 31.78125 42.390625 
+Q 38.140625 42.390625 41.71875 45.5625 
+Q 45.3125 48.734375 45.3125 54.390625 
+Q 45.3125 60.0625 41.71875 63.234375 
+Q 38.140625 66.40625 31.78125 66.40625 
+Q 25.390625 66.40625 21.84375 63.234375 
+Q 18.3125 60.0625 18.3125 54.390625 
+z
+" id="DejaVuSans-56"&gt;&lt;/path&gt;
+       &lt;/defs&gt;
+       &lt;use xlink:href="#DejaVuSans-56"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+    &lt;/g&gt;
+    &lt;g id="xtick_6"&gt;
+     &lt;g id="line2d_6"&gt;
+      &lt;g&gt;
+       &lt;use style="stroke:#000000;stroke-width:0.8;" x="370.638633" xlink:href="#mca91e9e6e7" y="224.64"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+     &lt;g id="text_6"&gt;
+      &lt;!-- 10 --&gt;
+      &lt;g transform="translate(364.276133 239.238438)scale(0.1 -0.1)"&gt;
+       &lt;defs&gt;
+        &lt;path d="M 12.40625 8.296875 
+L 28.515625 8.296875 
+L 28.515625 63.921875 
+L 10.984375 60.40625 
+L 10.984375 69.390625 
+L 28.421875 72.90625 
+L 38.28125 72.90625 
+L 38.28125 8.296875 
+L 54.390625 8.296875 
+L 54.390625 0 
+L 12.40625 0 
+z
+" id="DejaVuSans-49"&gt;&lt;/path&gt;
+       &lt;/defs&gt;
+       &lt;use xlink:href="#DejaVuSans-49"&gt;&lt;/use&gt;
+       &lt;use x="63.623047" xlink:href="#DejaVuSans-48"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+    &lt;/g&gt;
+   &lt;/g&gt;
+   &lt;g id="matplotlib.axis_2"&gt;
+    &lt;g id="ytick_1"&gt;
+     &lt;g id="line2d_7"&gt;
+      &lt;defs&gt;
+       &lt;path d="M 0 0 
+L -3.5 0 
+" id="m59e284cc60" style="stroke:#000000;stroke-width:0.8;"&gt;&lt;/path&gt;
+      &lt;/defs&gt;
+      &lt;g&gt;
+       &lt;use style="stroke:#000000;stroke-width:0.8;" x="44.845313" xlink:href="#m59e284cc60" y="215.136249"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+     &lt;g id="text_7"&gt;
+      &lt;!-- −1.00 --&gt;
+      &lt;g transform="translate(7.2 218.935468)scale(0.1 -0.1)"&gt;
+       &lt;defs&gt;
+        &lt;path d="M 10.59375 35.5 
+L 73.1875 35.5 
+L 73.1875 27.203125 
+L 10.59375 27.203125 
+z
+" id="DejaVuSans-8722"&gt;&lt;/path&gt;
+        &lt;path d="M 10.6875 12.40625 
+L 21 12.40625 
+L 21 0 
+L 10.6875 0 
+z
+" id="DejaVuSans-46"&gt;&lt;/path&gt;
+       &lt;/defs&gt;
+       &lt;use xlink:href="#DejaVuSans-8722"&gt;&lt;/use&gt;
+       &lt;use x="83.789062" xlink:href="#DejaVuSans-49"&gt;&lt;/use&gt;
+       &lt;use x="147.412109" xlink:href="#DejaVuSans-46"&gt;&lt;/use&gt;
+       &lt;use x="179.199219" xlink:href="#DejaVuSans-48"&gt;&lt;/use&gt;
+       &lt;use x="242.822266" xlink:href="#DejaVuSans-48"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+    &lt;/g&gt;
+    &lt;g id="ytick_2"&gt;
+     &lt;g id="line2d_8"&gt;
+      &lt;g&gt;
+       &lt;use style="stroke:#000000;stroke-width:0.8;" x="44.845313" xlink:href="#m59e284cc60" y="190.374393"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+     &lt;g id="text_8"&gt;
+      &lt;!-- −0.75 --&gt;
+      &lt;g transform="translate(7.2 194.173612)scale(0.1 -0.1)"&gt;
+       &lt;defs&gt;
+        &lt;path d="M 8.203125 72.90625 
+L 55.078125 72.90625 
+L 55.078125 68.703125 
+L 28.609375 0 
+L 18.3125 0 
+L 43.21875 64.59375 
+L 8.203125 64.59375 
+z
+" id="DejaVuSans-55"&gt;&lt;/path&gt;
+        &lt;path d="M 10.796875 72.90625 
+L 49.515625 72.90625 
+L 49.515625 64.59375 
+L 19.828125 64.59375 
+L 19.828125 46.734375 
+Q 21.96875 47.46875 24.109375 47.828125 
+Q 26.265625 48.1875 28.421875 48.1875 
+Q 40.625 48.1875 47.75 41.5 
+Q 54.890625 34.8125 54.890625 23.390625 
+Q 54.890625 11.625 47.5625 5.09375 
+Q 40.234375 -1.421875 26.90625 -1.421875 
+Q 22.3125 -1.421875 17.546875 -0.640625 
+Q 12.796875 0.140625 7.71875 1.703125 
+L 7.71875 11.625 
+Q 12.109375 9.234375 16.796875 8.0625 
+Q 21.484375 6.890625 26.703125 6.890625 
+Q 35.15625 6.890625 40.078125 11.328125 
+Q 45.015625 15.765625 45.015625 23.390625 
+Q 45.015625 31 40.078125 35.4375 
+Q 35.15625 39.890625 26.703125 39.890625 
+Q 22.75 39.890625 18.8125 39.015625 
+Q 14.890625 38.140625 10.796875 36.28125 
+z
+" id="DejaVuSans-53"&gt;&lt;/path&gt;
+       &lt;/defs&gt;
+       &lt;use xlink:href="#DejaVuSans-8722"&gt;&lt;/use&gt;
+       &lt;use x="83.789062" xlink:href="#DejaVuSans-48"&gt;&lt;/use&gt;
+       &lt;use x="147.412109" xlink:href="#DejaVuSans-46"&gt;&lt;/use&gt;
+       &lt;use x="179.199219" xlink:href="#DejaVuSans-55"&gt;&lt;/use&gt;
+       &lt;use x="242.822266" xlink:href="#DejaVuSans-53"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+    &lt;/g&gt;
+    &lt;g id="ytick_3"&gt;
+     &lt;g id="line2d_9"&gt;
+      &lt;g&gt;
+       &lt;use style="stroke:#000000;stroke-width:0.8;" x="44.845313" xlink:href="#m59e284cc60" y="165.612538"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+     &lt;g id="text_9"&gt;
+      &lt;!-- −0.50 --&gt;
+      &lt;g transform="translate(7.2 169.411756)scale(0.1 -0.1)"&gt;
+       &lt;use xlink:href="#DejaVuSans-8722"&gt;&lt;/use&gt;
+       &lt;use x="83.789062" xlink:href="#DejaVuSans-48"&gt;&lt;/use&gt;
+       &lt;use x="147.412109" xlink:href="#DejaVuSans-46"&gt;&lt;/use&gt;
+       &lt;use x="179.199219" xlink:href="#DejaVuSans-53"&gt;&lt;/use&gt;
+       &lt;use x="242.822266" xlink:href="#DejaVuSans-48"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+    &lt;/g&gt;
+    &lt;g id="ytick_4"&gt;
+     &lt;g id="line2d_10"&gt;
+      &lt;g&gt;
+       &lt;use style="stroke:#000000;stroke-width:0.8;" x="44.845313" xlink:href="#m59e284cc60" y="140.850682"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+     &lt;g id="text_10"&gt;
+      &lt;!-- −0.25 --&gt;
+      &lt;g transform="translate(7.2 144.649901)scale(0.1 -0.1)"&gt;
+       &lt;use xlink:href="#DejaVuSans-8722"&gt;&lt;/use&gt;
+       &lt;use x="83.789062" xlink:href="#DejaVuSans-48"&gt;&lt;/use&gt;
+       &lt;use x="147.412109" xlink:href="#DejaVuSans-46"&gt;&lt;/use&gt;
+       &lt;use x="179.199219" xlink:href="#DejaVuSans-50"&gt;&lt;/use&gt;
+       &lt;use x="242.822266" xlink:href="#DejaVuSans-53"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+    &lt;/g&gt;
+    &lt;g id="ytick_5"&gt;
+     &lt;g id="line2d_11"&gt;
+      &lt;g&gt;
+       &lt;use style="stroke:#000000;stroke-width:0.8;" x="44.845313" xlink:href="#m59e284cc60" y="116.088826"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+     &lt;g id="text_11"&gt;
+      &lt;!-- 0.00 --&gt;
+      &lt;g transform="translate(15.579688 119.888045)scale(0.1 -0.1)"&gt;
+       &lt;use xlink:href="#DejaVuSans-48"&gt;&lt;/use&gt;
+       &lt;use x="63.623047" xlink:href="#DejaVuSans-46"&gt;&lt;/use&gt;
+       &lt;use x="95.410156" xlink:href="#DejaVuSans-48"&gt;&lt;/use&gt;
+       &lt;use x="159.033203" xlink:href="#DejaVuSans-48"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+    &lt;/g&gt;
+    &lt;g id="ytick_6"&gt;
+     &lt;g id="line2d_12"&gt;
+      &lt;g&gt;
+       &lt;use style="stroke:#000000;stroke-width:0.8;" x="44.845313" xlink:href="#m59e284cc60" y="91.32697"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+     &lt;g id="text_12"&gt;
+      &lt;!-- 0.25 --&gt;
+      &lt;g transform="translate(15.579688 95.126189)scale(0.1 -0.1)"&gt;
+       &lt;use xlink:href="#DejaVuSans-48"&gt;&lt;/use&gt;
+       &lt;use x="63.623047" xlink:href="#DejaVuSans-46"&gt;&lt;/use&gt;
+       &lt;use x="95.410156" xlink:href="#DejaVuSans-50"&gt;&lt;/use&gt;
+       &lt;use x="159.033203" xlink:href="#DejaVuSans-53"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+    &lt;/g&gt;
+    &lt;g id="ytick_7"&gt;
+     &lt;g id="line2d_13"&gt;
+      &lt;g&gt;
+       &lt;use style="stroke:#000000;stroke-width:0.8;" x="44.845313" xlink:href="#m59e284cc60" y="66.565114"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+     &lt;g id="text_13"&gt;
+      &lt;!-- 0.50 --&gt;
+      &lt;g transform="translate(15.579688 70.364333)scale(0.1 -0.1)"&gt;
+       &lt;use xlink:href="#DejaVuSans-48"&gt;&lt;/use&gt;
+       &lt;use x="63.623047" xlink:href="#DejaVuSans-46"&gt;&lt;/use&gt;
+       &lt;use x="95.410156" xlink:href="#DejaVuSans-53"&gt;&lt;/use&gt;
+       &lt;use x="159.033203" xlink:href="#DejaVuSans-48"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+    &lt;/g&gt;
+    &lt;g id="ytick_8"&gt;
+     &lt;g id="line2d_14"&gt;
+      &lt;g&gt;
+       &lt;use style="stroke:#000000;stroke-width:0.8;" x="44.845313" xlink:href="#m59e284cc60" y="41.803259"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+     &lt;g id="text_14"&gt;
+      &lt;!-- 0.75 --&gt;
+      &lt;g transform="translate(15.579688 45.602477)scale(0.1 -0.1)"&gt;
+       &lt;use xlink:href="#DejaVuSans-48"&gt;&lt;/use&gt;
+       &lt;use x="63.623047" xlink:href="#DejaVuSans-46"&gt;&lt;/use&gt;
+       &lt;use x="95.410156" xlink:href="#DejaVuSans-55"&gt;&lt;/use&gt;
+       &lt;use x="159.033203" xlink:href="#DejaVuSans-53"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+    &lt;/g&gt;
+    &lt;g id="ytick_9"&gt;
+     &lt;g id="line2d_15"&gt;
+      &lt;g&gt;
+       &lt;use style="stroke:#000000;stroke-width:0.8;" x="44.845313" xlink:href="#m59e284cc60" y="17.041403"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+     &lt;g id="text_15"&gt;
+      &lt;!-- 1.00 --&gt;
+      &lt;g transform="translate(15.579688 20.840622)scale(0.1 -0.1)"&gt;
+       &lt;use xlink:href="#DejaVuSans-49"&gt;&lt;/use&gt;
+       &lt;use x="63.623047" xlink:href="#DejaVuSans-46"&gt;&lt;/use&gt;
+       &lt;use x="95.410156" xlink:href="#DejaVuSans-48"&gt;&lt;/use&gt;
+       &lt;use x="159.033203" xlink:href="#DejaVuSans-48"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+    &lt;/g&gt;
+   &lt;/g&gt;
+   &lt;g id="line2d_16"&gt;
+    &lt;path clip-path="url(#p04bee059b3)" d="M 60.063494 116.088826 
+L 66.274997 96.411141 
+L 72.4865 77.517943 
+L 78.698003 60.162444 
+L 84.909505 45.036554 
+L 91.121008 32.743293 
+L 97.332511 23.772756 
+L 103.544014 18.48257 
+L 109.755517 17.083636 
+L 115.967019 19.631728 
+L 122.178522 26.025259 
+L 128.390025 36.009341 
+L 134.601528 49.185939 
+L 140.81303 65.029744 
+L 147.024533 82.909113 
+L 153.236036 102.111253 
+L 159.447539 121.870635 
+L 165.659042 141.399514 
+L 171.870544 159.919336 
+L 178.082047 176.691774 
+L 184.29355 191.048163 
+L 190.505053 202.41616 
+L 196.716556 210.342559 
+L 202.928058 214.511359 
+L 209.139561 214.756364 
+L 215.351064 211.067804 
+L 221.562567 203.592733 
+L 227.774069 192.629157 
+L 233.985572 178.61416 
+L 240.197075 162.106475 
+L 246.408578 143.764211 
+L 252.620081 124.318617 
+L 258.831583 104.544928 
+L 265.043086 85.231457 
+L 271.254589 67.148172 
+L 277.466092 51.015996 
+L 283.677595 37.478069 
+L 289.889097 27.074105 
+L 296.1006 20.218877 
+L 302.312103 17.185681 
+L 308.523606 18.095441 
+L 314.735108 22.911888 
+L 320.946611 31.443006 
+L 327.158114 43.348686 
+L 333.369617 58.154285 
+L 339.58112 75.269552 
+L 345.792622 94.012154 
+L 352.004125 113.634884 
+L 358.215628 133.355445 
+L 364.427131 152.387639 
+" style="fill:none;stroke:#1f77b4;stroke-linecap:square;stroke-width:1.5;"&gt;&lt;/path&gt;
+   &lt;/g&gt;
+   &lt;g id="patch_3"&gt;
+    &lt;path d="M 44.845313 224.64 
+L 44.845313 7.2 
+" style="fill:none;stroke:#000000;stroke-linecap:square;stroke-linejoin:miter;stroke-width:0.8;"&gt;&lt;/path&gt;
+   &lt;/g&gt;
+   &lt;g id="patch_4"&gt;
+    &lt;path d="M 379.645313 224.64 
+L 379.645313 7.2 
+" style="fill:none;stroke:#000000;stroke-linecap:square;stroke-linejoin:miter;stroke-width:0.8;"&gt;&lt;/path&gt;
+   &lt;/g&gt;
+   &lt;g id="patch_5"&gt;
+    &lt;path d="M 44.845313 224.64 
+L 379.645313 224.64 
+" style="fill:none;stroke:#000000;stroke-linecap:square;stroke-linejoin:miter;stroke-width:0.8;"&gt;&lt;/path&gt;
+   &lt;/g&gt;
+   &lt;g id="patch_6"&gt;
+    &lt;path d="M 44.845313 7.2 
+L 379.645313 7.2 
+" style="fill:none;stroke:#000000;stroke-linecap:square;stroke-linejoin:miter;stroke-width:0.8;"&gt;&lt;/path&gt;
+   &lt;/g&gt;
+  &lt;/g&gt;
+ &lt;/g&gt;
+ &lt;defs&gt;
+  &lt;clippath id="p04bee059b3"&gt;
+   &lt;rect height="217.44" width="334.8" x="44.845313" y="7.2"&gt;&lt;/rect&gt;
+  &lt;/clippath&gt;
+ &lt;/defs&gt;
+&lt;/svg&gt;
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [59]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;### What happened above ?&lt;/span&gt;
+
+&lt;span class="c1"&gt;# `np.arange`, numpy has number of function that creates an array as shown below.&lt;/span&gt;
+&lt;span class="c1"&gt;# The function above creates an arry startgin from 0 and ending to 10 with a difference of 0.2&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;numpy&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;arange&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mf"&gt;0.2&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+
+    &lt;div class="prompt output_prompt"&gt;Out[59]:&lt;/div&gt;
+
+
+
+
+&lt;div class="output_text output_subarea output_execute_result"&gt;
+&lt;pre&gt;array([0. , 0.2, 0.4, 0.6, 0.8, 1. , 1.2, 1.4, 1.6, 1.8, 2. , 2.2, 2.4,
+       2.6, 2.8, 3. , 3.2, 3.4, 3.6, 3.8, 4. , 4.2, 4.4, 4.6, 4.8, 5. ,
+       5.2, 5.4, 5.6, 5.8, 6. , 6.2, 6.4, 6.6, 6.8, 7. , 7.2, 7.4, 7.6,
+       7.8, 8. , 8.2, 8.4, 8.6, 8.8, 9. , 9.2, 9.4, 9.6, 9.8])&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [60]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# We need to draw something, and we decided to draw the output of `sin` funciton so we saved the outpu in y variable&lt;/span&gt;
+&lt;span class="c1"&gt;# The return value of `sin(x)` function that is a tuple and need to be printed using print(y)&lt;/span&gt;
+&lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sin&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;#print(y)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [68]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Now we have x that goes from 0 to 10 with a difference of 0.2 that is we are going to plot &lt;/span&gt;
+&lt;span class="c1"&gt;# values of y against x. to plot a figure we need to use matplot.pyplot object. This method provides a subplot object that&lt;/span&gt;
+&lt;span class="c1"&gt;# is very convinent to plotting any values using object within fig object &lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;plt&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="n"&gt;fig&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ax&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;subplots&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+
+    &lt;div class="prompt"&gt;&lt;/div&gt;
+
+
+
+&lt;div class="output_svg output_subarea "&gt;
+&lt;?xml version="1.0" encoding="utf-8" standalone="no"?&gt;
+
+&lt;!-- Created with matplotlib (https://matplotlib.org/) --&gt;
+&lt;svg height="252.317344pt" version="1.1" viewbox="0 0 380.054687 252.317344" width="380.054687pt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
+ &lt;metadata&gt;
+  &lt;rdf xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"&gt;
+   &lt;work&gt;
+    &lt;type rdf:resource="http://purl.org/dc/dcmitype/StillImage"&gt;&lt;/type&gt;
+    &lt;date&gt;2020-07-30T17:46:57.614660&lt;/date&gt;
+    &lt;format&gt;image/svg+xml&lt;/format&gt;
+    &lt;creator&gt;
+     &lt;agent&gt;
+      &lt;title&gt;Matplotlib v3.3.0, https://matplotlib.org/&lt;/title&gt;
+     &lt;/agent&gt;
+    &lt;/creator&gt;
+   &lt;/work&gt;
+  &lt;/rdf&gt;
+ &lt;/metadata&gt;
+ &lt;defs&gt;
+  &lt;style type="text/css"&gt;*{stroke-linecap:butt;stroke-linejoin:round;}&lt;/style&gt;
+ &lt;/defs&gt;
+ &lt;g id="figure_1"&gt;
+  &lt;g id="patch_1"&gt;
+   &lt;path d="M 0 252.317344 
+L 380.054687 252.317344 
+L 380.054687 0 
+L 0 0 
+z
+" style="fill:none;"&gt;&lt;/path&gt;
+  &lt;/g&gt;
+  &lt;g id="axes_1"&gt;
+   &lt;g id="patch_2"&gt;
+    &lt;path d="M 30.103125 228.439219 
+L 364.903125 228.439219 
+L 364.903125 10.999219 
+L 30.103125 10.999219 
+z
+" style="fill:#ffffff;"&gt;&lt;/path&gt;
+   &lt;/g&gt;
+   &lt;g id="matplotlib.axis_1"&gt;
+    &lt;g id="xtick_1"&gt;
+     &lt;g id="line2d_1"&gt;
+      &lt;defs&gt;
+       &lt;path d="M 0 0 
+L 0 3.5 
+" id="mf923e57415" style="stroke:#000000;stroke-width:0.8;"&gt;&lt;/path&gt;
+      &lt;/defs&gt;
+      &lt;g&gt;
+       &lt;use style="stroke:#000000;stroke-width:0.8;" x="30.103125" xlink:href="#mf923e57415" y="228.439219"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+     &lt;g id="text_1"&gt;
+      &lt;!-- 0.0 --&gt;
+      &lt;g transform="translate(22.151563 243.037656)scale(0.1 -0.1)"&gt;
+       &lt;defs&gt;
+        &lt;path d="M 31.78125 66.40625 
+Q 24.171875 66.40625 20.328125 58.90625 
+Q 16.5 51.421875 16.5 36.375 
+Q 16.5 21.390625 20.328125 13.890625 
+Q 24.171875 6.390625 31.78125 6.390625 
+Q 39.453125 6.390625 43.28125 13.890625 
+Q 47.125 21.390625 47.125 36.375 
+Q 47.125 51.421875 43.28125 58.90625 
+Q 39.453125 66.40625 31.78125 66.40625 
+z
+M 31.78125 74.21875 
+Q 44.046875 74.21875 50.515625 64.515625 
+Q 56.984375 54.828125 56.984375 36.375 
+Q 56.984375 17.96875 50.515625 8.265625 
+Q 44.046875 -1.421875 31.78125 -1.421875 
+Q 19.53125 -1.421875 13.0625 8.265625 
+Q 6.59375 17.96875 6.59375 36.375 
+Q 6.59375 54.828125 13.0625 64.515625 
+Q 19.53125 74.21875 31.78125 74.21875 
+z
+" id="DejaVuSans-48"&gt;&lt;/path&gt;
+        &lt;path d="M 10.6875 12.40625 
+L 21 12.40625 
+L 21 0 
+L 10.6875 0 
+z
+" id="DejaVuSans-46"&gt;&lt;/path&gt;
+       &lt;/defs&gt;
+       &lt;use xlink:href="#DejaVuSans-48"&gt;&lt;/use&gt;
+       &lt;use x="63.623047" xlink:href="#DejaVuSans-46"&gt;&lt;/use&gt;
+       &lt;use x="95.410156" xlink:href="#DejaVuSans-48"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+    &lt;/g&gt;
+    &lt;g id="xtick_2"&gt;
+     &lt;g id="line2d_2"&gt;
+      &lt;g&gt;
+       &lt;use style="stroke:#000000;stroke-width:0.8;" x="97.063125" xlink:href="#mf923e57415" y="228.439219"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+     &lt;g id="text_2"&gt;
+      &lt;!-- 0.2 --&gt;
+      &lt;g transform="translate(89.111563 243.037656)scale(0.1 -0.1)"&gt;
+       &lt;defs&gt;
+        &lt;path d="M 19.1875 8.296875 
+L 53.609375 8.296875 
+L 53.609375 0 
+L 7.328125 0 
+L 7.328125 8.296875 
+Q 12.9375 14.109375 22.625 23.890625 
+Q 32.328125 33.6875 34.8125 36.53125 
+Q 39.546875 41.84375 41.421875 45.53125 
+Q 43.3125 49.21875 43.3125 52.78125 
+Q 43.3125 58.59375 39.234375 62.25 
+Q 35.15625 65.921875 28.609375 65.921875 
+Q 23.96875 65.921875 18.8125 64.3125 
+Q 13.671875 62.703125 7.8125 59.421875 
+L 7.8125 69.390625 
+Q 13.765625 71.78125 18.9375 73 
+Q 24.125 74.21875 28.421875 74.21875 
+Q 39.75 74.21875 46.484375 68.546875 
+Q 53.21875 62.890625 53.21875 53.421875 
+Q 53.21875 48.921875 51.53125 44.890625 
+Q 49.859375 40.875 45.40625 35.40625 
+Q 44.1875 33.984375 37.640625 27.21875 
+Q 31.109375 20.453125 19.1875 8.296875 
+z
+" id="DejaVuSans-50"&gt;&lt;/path&gt;
+       &lt;/defs&gt;
+       &lt;use xlink:href="#DejaVuSans-48"&gt;&lt;/use&gt;
+       &lt;use x="63.623047" xlink:href="#DejaVuSans-46"&gt;&lt;/use&gt;
+       &lt;use x="95.410156" xlink:href="#DejaVuSans-50"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+    &lt;/g&gt;
+    &lt;g id="xtick_3"&gt;
+     &lt;g id="line2d_3"&gt;
+      &lt;g&gt;
+       &lt;use style="stroke:#000000;stroke-width:0.8;" x="164.023125" xlink:href="#mf923e57415" y="228.439219"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+     &lt;g id="text_3"&gt;
+      &lt;!-- 0.4 --&gt;
+      &lt;g transform="translate(156.071563 243.037656)scale(0.1 -0.1)"&gt;
+       &lt;defs&gt;
+        &lt;path d="M 37.796875 64.3125 
+L 12.890625 25.390625 
+L 37.796875 25.390625 
+z
+M 35.203125 72.90625 
+L 47.609375 72.90625 
+L 47.609375 25.390625 
+L 58.015625 25.390625 
+L 58.015625 17.1875 
+L 47.609375 17.1875 
+L 47.609375 0 
+L 37.796875 0 
+L 37.796875 17.1875 
+L 4.890625 17.1875 
+L 4.890625 26.703125 
+z
+" id="DejaVuSans-52"&gt;&lt;/path&gt;
+       &lt;/defs&gt;
+       &lt;use xlink:href="#DejaVuSans-48"&gt;&lt;/use&gt;
+       &lt;use x="63.623047" xlink:href="#DejaVuSans-46"&gt;&lt;/use&gt;
+       &lt;use x="95.410156" xlink:href="#DejaVuSans-52"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+    &lt;/g&gt;
+    &lt;g id="xtick_4"&gt;
+     &lt;g id="line2d_4"&gt;
+      &lt;g&gt;
+       &lt;use style="stroke:#000000;stroke-width:0.8;" x="230.983125" xlink:href="#mf923e57415" y="228.439219"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+     &lt;g id="text_4"&gt;
+      &lt;!-- 0.6 --&gt;
+      &lt;g transform="translate(223.031563 243.037656)scale(0.1 -0.1)"&gt;
+       &lt;defs&gt;
+        &lt;path d="M 33.015625 40.375 
+Q 26.375 40.375 22.484375 35.828125 
+Q 18.609375 31.296875 18.609375 23.390625 
+Q 18.609375 15.53125 22.484375 10.953125 
+Q 26.375 6.390625 33.015625 6.390625 
+Q 39.65625 6.390625 43.53125 10.953125 
+Q 47.40625 15.53125 47.40625 23.390625 
+Q 47.40625 31.296875 43.53125 35.828125 
+Q 39.65625 40.375 33.015625 40.375 
+z
+M 52.59375 71.296875 
+L 52.59375 62.3125 
+Q 48.875 64.0625 45.09375 64.984375 
+Q 41.3125 65.921875 37.59375 65.921875 
+Q 27.828125 65.921875 22.671875 59.328125 
+Q 17.53125 52.734375 16.796875 39.40625 
+Q 19.671875 43.65625 24.015625 45.921875 
+Q 28.375 48.1875 33.59375 48.1875 
+Q 44.578125 48.1875 50.953125 41.515625 
+Q 57.328125 34.859375 57.328125 23.390625 
+Q 57.328125 12.15625 50.6875 5.359375 
+Q 44.046875 -1.421875 33.015625 -1.421875 
+Q 20.359375 -1.421875 13.671875 8.265625 
+Q 6.984375 17.96875 6.984375 36.375 
+Q 6.984375 53.65625 15.1875 63.9375 
+Q 23.390625 74.21875 37.203125 74.21875 
+Q 40.921875 74.21875 44.703125 73.484375 
+Q 48.484375 72.75 52.59375 71.296875 
+z
+" id="DejaVuSans-54"&gt;&lt;/path&gt;
+       &lt;/defs&gt;
+       &lt;use xlink:href="#DejaVuSans-48"&gt;&lt;/use&gt;
+       &lt;use x="63.623047" xlink:href="#DejaVuSans-46"&gt;&lt;/use&gt;
+       &lt;use x="95.410156" xlink:href="#DejaVuSans-54"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+    &lt;/g&gt;
+    &lt;g id="xtick_5"&gt;
+     &lt;g id="line2d_5"&gt;
+      &lt;g&gt;
+       &lt;use style="stroke:#000000;stroke-width:0.8;" x="297.943125" xlink:href="#mf923e57415" y="228.439219"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+     &lt;g id="text_5"&gt;
+      &lt;!-- 0.8 --&gt;
+      &lt;g transform="translate(289.991563 243.037656)scale(0.1 -0.1)"&gt;
+       &lt;defs&gt;
+        &lt;path d="M 31.78125 34.625 
+Q 24.75 34.625 20.71875 30.859375 
+Q 16.703125 27.09375 16.703125 20.515625 
+Q 16.703125 13.921875 20.71875 10.15625 
+Q 24.75 6.390625 31.78125 6.390625 
+Q 38.8125 6.390625 42.859375 10.171875 
+Q 46.921875 13.96875 46.921875 20.515625 
+Q 46.921875 27.09375 42.890625 30.859375 
+Q 38.875 34.625 31.78125 34.625 
+z
+M 21.921875 38.8125 
+Q 15.578125 40.375 12.03125 44.71875 
+Q 8.5 49.078125 8.5 55.328125 
+Q 8.5 64.0625 14.71875 69.140625 
+Q 20.953125 74.21875 31.78125 74.21875 
+Q 42.671875 74.21875 48.875 69.140625 
+Q 55.078125 64.0625 55.078125 55.328125 
+Q 55.078125 49.078125 51.53125 44.71875 
+Q 48 40.375 41.703125 38.8125 
+Q 48.828125 37.15625 52.796875 32.3125 
+Q 56.78125 27.484375 56.78125 20.515625 
+Q 56.78125 9.90625 50.3125 4.234375 
+Q 43.84375 -1.421875 31.78125 -1.421875 
+Q 19.734375 -1.421875 13.25 4.234375 
+Q 6.78125 9.90625 6.78125 20.515625 
+Q 6.78125 27.484375 10.78125 32.3125 
+Q 14.796875 37.15625 21.921875 38.8125 
+z
+M 18.3125 54.390625 
+Q 18.3125 48.734375 21.84375 45.5625 
+Q 25.390625 42.390625 31.78125 42.390625 
+Q 38.140625 42.390625 41.71875 45.5625 
+Q 45.3125 48.734375 45.3125 54.390625 
+Q 45.3125 60.0625 41.71875 63.234375 
+Q 38.140625 66.40625 31.78125 66.40625 
+Q 25.390625 66.40625 21.84375 63.234375 
+Q 18.3125 60.0625 18.3125 54.390625 
+z
+" id="DejaVuSans-56"&gt;&lt;/path&gt;
+       &lt;/defs&gt;
+       &lt;use xlink:href="#DejaVuSans-48"&gt;&lt;/use&gt;
+       &lt;use x="63.623047" xlink:href="#DejaVuSans-46"&gt;&lt;/use&gt;
+       &lt;use x="95.410156" xlink:href="#DejaVuSans-56"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+    &lt;/g&gt;
+    &lt;g id="xtick_6"&gt;
+     &lt;g id="line2d_6"&gt;
+      &lt;g&gt;
+       &lt;use style="stroke:#000000;stroke-width:0.8;" x="364.903125" xlink:href="#mf923e57415" y="228.439219"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+     &lt;g id="text_6"&gt;
+      &lt;!-- 1.0 --&gt;
+      &lt;g transform="translate(356.951563 243.037656)scale(0.1 -0.1)"&gt;
+       &lt;defs&gt;
+        &lt;path d="M 12.40625 8.296875 
+L 28.515625 8.296875 
+L 28.515625 63.921875 
+L 10.984375 60.40625 
+L 10.984375 69.390625 
+L 28.421875 72.90625 
+L 38.28125 72.90625 
+L 38.28125 8.296875 
+L 54.390625 8.296875 
+L 54.390625 0 
+L 12.40625 0 
+z
+" id="DejaVuSans-49"&gt;&lt;/path&gt;
+       &lt;/defs&gt;
+       &lt;use xlink:href="#DejaVuSans-49"&gt;&lt;/use&gt;
+       &lt;use x="63.623047" xlink:href="#DejaVuSans-46"&gt;&lt;/use&gt;
+       &lt;use x="95.410156" xlink:href="#DejaVuSans-48"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+    &lt;/g&gt;
+   &lt;/g&gt;
+   &lt;g id="matplotlib.axis_2"&gt;
+    &lt;g id="ytick_1"&gt;
+     &lt;g id="line2d_7"&gt;
+      &lt;defs&gt;
+       &lt;path d="M 0 0 
+L -3.5 0 
+" id="maed1dd0b73" style="stroke:#000000;stroke-width:0.8;"&gt;&lt;/path&gt;
+      &lt;/defs&gt;
+      &lt;g&gt;
+       &lt;use style="stroke:#000000;stroke-width:0.8;" x="30.103125" xlink:href="#maed1dd0b73" y="228.439219"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+     &lt;g id="text_7"&gt;
+      &lt;!-- 0.0 --&gt;
+      &lt;g transform="translate(7.2 232.238437)scale(0.1 -0.1)"&gt;
+       &lt;use xlink:href="#DejaVuSans-48"&gt;&lt;/use&gt;
+       &lt;use x="63.623047" xlink:href="#DejaVuSans-46"&gt;&lt;/use&gt;
+       &lt;use x="95.410156" xlink:href="#DejaVuSans-48"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+    &lt;/g&gt;
+    &lt;g id="ytick_2"&gt;
+     &lt;g id="line2d_8"&gt;
+      &lt;g&gt;
+       &lt;use style="stroke:#000000;stroke-width:0.8;" x="30.103125" xlink:href="#maed1dd0b73" y="184.951219"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+     &lt;g id="text_8"&gt;
+      &lt;!-- 0.2 --&gt;
+      &lt;g transform="translate(7.2 188.750437)scale(0.1 -0.1)"&gt;
+       &lt;use xlink:href="#DejaVuSans-48"&gt;&lt;/use&gt;
+       &lt;use x="63.623047" xlink:href="#DejaVuSans-46"&gt;&lt;/use&gt;
+       &lt;use x="95.410156" xlink:href="#DejaVuSans-50"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+    &lt;/g&gt;
+    &lt;g id="ytick_3"&gt;
+     &lt;g id="line2d_9"&gt;
+      &lt;g&gt;
+       &lt;use style="stroke:#000000;stroke-width:0.8;" x="30.103125" xlink:href="#maed1dd0b73" y="141.463219"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+     &lt;g id="text_9"&gt;
+      &lt;!-- 0.4 --&gt;
+      &lt;g transform="translate(7.2 145.262437)scale(0.1 -0.1)"&gt;
+       &lt;use xlink:href="#DejaVuSans-48"&gt;&lt;/use&gt;
+       &lt;use x="63.623047" xlink:href="#DejaVuSans-46"&gt;&lt;/use&gt;
+       &lt;use x="95.410156" xlink:href="#DejaVuSans-52"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+    &lt;/g&gt;
+    &lt;g id="ytick_4"&gt;
+     &lt;g id="line2d_10"&gt;
+      &lt;g&gt;
+       &lt;use style="stroke:#000000;stroke-width:0.8;" x="30.103125" xlink:href="#maed1dd0b73" y="97.975219"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+     &lt;g id="text_10"&gt;
+      &lt;!-- 0.6 --&gt;
+      &lt;g transform="translate(7.2 101.774437)scale(0.1 -0.1)"&gt;
+       &lt;use xlink:href="#DejaVuSans-48"&gt;&lt;/use&gt;
+       &lt;use x="63.623047" xlink:href="#DejaVuSans-46"&gt;&lt;/use&gt;
+       &lt;use x="95.410156" xlink:href="#DejaVuSans-54"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+    &lt;/g&gt;
+    &lt;g id="ytick_5"&gt;
+     &lt;g id="line2d_11"&gt;
+      &lt;g&gt;
+       &lt;use style="stroke:#000000;stroke-width:0.8;" x="30.103125" xlink:href="#maed1dd0b73" y="54.487219"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+     &lt;g id="text_11"&gt;
+      &lt;!-- 0.8 --&gt;
+      &lt;g transform="translate(7.2 58.286437)scale(0.1 -0.1)"&gt;
+       &lt;use xlink:href="#DejaVuSans-48"&gt;&lt;/use&gt;
+       &lt;use x="63.623047" xlink:href="#DejaVuSans-46"&gt;&lt;/use&gt;
+       &lt;use x="95.410156" xlink:href="#DejaVuSans-56"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+    &lt;/g&gt;
+    &lt;g id="ytick_6"&gt;
+     &lt;g id="line2d_12"&gt;
+      &lt;g&gt;
+       &lt;use style="stroke:#000000;stroke-width:0.8;" x="30.103125" xlink:href="#maed1dd0b73" y="10.999219"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+     &lt;g id="text_12"&gt;
+      &lt;!-- 1.0 --&gt;
+      &lt;g transform="translate(7.2 14.798437)scale(0.1 -0.1)"&gt;
+       &lt;use xlink:href="#DejaVuSans-49"&gt;&lt;/use&gt;
+       &lt;use x="63.623047" xlink:href="#DejaVuSans-46"&gt;&lt;/use&gt;
+       &lt;use x="95.410156" xlink:href="#DejaVuSans-48"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+    &lt;/g&gt;
+   &lt;/g&gt;
+   &lt;g id="patch_3"&gt;
+    &lt;path d="M 30.103125 228.439219 
+L 30.103125 10.999219 
+" style="fill:none;stroke:#000000;stroke-linecap:square;stroke-linejoin:miter;stroke-width:0.8;"&gt;&lt;/path&gt;
+   &lt;/g&gt;
+   &lt;g id="patch_4"&gt;
+    &lt;path d="M 364.903125 228.439219 
+L 364.903125 10.999219 
+" style="fill:none;stroke:#000000;stroke-linecap:square;stroke-linejoin:miter;stroke-width:0.8;"&gt;&lt;/path&gt;
+   &lt;/g&gt;
+   &lt;g id="patch_5"&gt;
+    &lt;path d="M 30.103125 228.439219 
+L 364.903125 228.439219 
+" style="fill:none;stroke:#000000;stroke-linecap:square;stroke-linejoin:miter;stroke-width:0.8;"&gt;&lt;/path&gt;
+   &lt;/g&gt;
+   &lt;g id="patch_6"&gt;
+    &lt;path d="M 30.103125 10.999219 
+L 364.903125 10.999219 
+" style="fill:none;stroke:#000000;stroke-linecap:square;stroke-linejoin:miter;stroke-width:0.8;"&gt;&lt;/path&gt;
+   &lt;/g&gt;
+  &lt;/g&gt;
+ &lt;/g&gt;
+&lt;/svg&gt;
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [75]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# The above draws only an empty figure, even though `plt.show()` is not even used explicitly. &lt;/span&gt;
+&lt;span class="c1"&gt;# pyplot to plot an object we have used the following&lt;/span&gt;
+&lt;span class="n"&gt;ax&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;pyplot&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [77]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;### The above does not work it has to be done in one go&lt;/span&gt;
+&lt;span class="n"&gt;fig2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;fx&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;subplots&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;fx&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+
+    &lt;div class="prompt"&gt;&lt;/div&gt;
+
+
+
+&lt;div class="output_svg output_subarea "&gt;
+&lt;?xml version="1.0" encoding="utf-8" standalone="no"?&gt;
+
+&lt;!-- Created with matplotlib (https://matplotlib.org/) --&gt;
+&lt;svg height="248.518125pt" version="1.1" viewbox="0 0 386.845312 248.518125" width="386.845312pt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
+ &lt;metadata&gt;
+  &lt;rdf xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"&gt;
+   &lt;work&gt;
+    &lt;type rdf:resource="http://purl.org/dc/dcmitype/StillImage"&gt;&lt;/type&gt;
+    &lt;date&gt;2020-07-30T18:03:06.413486&lt;/date&gt;
+    &lt;format&gt;image/svg+xml&lt;/format&gt;
+    &lt;creator&gt;
+     &lt;agent&gt;
+      &lt;title&gt;Matplotlib v3.3.0, https://matplotlib.org/&lt;/title&gt;
+     &lt;/agent&gt;
+    &lt;/creator&gt;
+   &lt;/work&gt;
+  &lt;/rdf&gt;
+ &lt;/metadata&gt;
+ &lt;defs&gt;
+  &lt;style type="text/css"&gt;*{stroke-linecap:butt;stroke-linejoin:round;}&lt;/style&gt;
+ &lt;/defs&gt;
+ &lt;g id="figure_1"&gt;
+  &lt;g id="patch_1"&gt;
+   &lt;path d="M 0 248.518125 
+L 386.845312 248.518125 
+L 386.845312 0 
+L 0 0 
+z
+" style="fill:none;"&gt;&lt;/path&gt;
+  &lt;/g&gt;
+  &lt;g id="axes_1"&gt;
+   &lt;g id="patch_2"&gt;
+    &lt;path d="M 44.845313 224.64 
+L 379.645313 224.64 
+L 379.645313 7.2 
+L 44.845313 7.2 
+z
+" style="fill:#ffffff;"&gt;&lt;/path&gt;
+   &lt;/g&gt;
+   &lt;g id="matplotlib.axis_1"&gt;
+    &lt;g id="xtick_1"&gt;
+     &lt;g id="line2d_1"&gt;
+      &lt;defs&gt;
+       &lt;path d="M 0 0 
+L 0 3.5 
+" id="mc6c70aadd3" style="stroke:#000000;stroke-width:0.8;"&gt;&lt;/path&gt;
+      &lt;/defs&gt;
+      &lt;g&gt;
+       &lt;use style="stroke:#000000;stroke-width:0.8;" x="60.063494" xlink:href="#mc6c70aadd3" y="224.64"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+     &lt;g id="text_1"&gt;
+      &lt;!-- 0 --&gt;
+      &lt;g transform="translate(56.882244 239.238438)scale(0.1 -0.1)"&gt;
+       &lt;defs&gt;
+        &lt;path d="M 31.78125 66.40625 
+Q 24.171875 66.40625 20.328125 58.90625 
+Q 16.5 51.421875 16.5 36.375 
+Q 16.5 21.390625 20.328125 13.890625 
+Q 24.171875 6.390625 31.78125 6.390625 
+Q 39.453125 6.390625 43.28125 13.890625 
+Q 47.125 21.390625 47.125 36.375 
+Q 47.125 51.421875 43.28125 58.90625 
+Q 39.453125 66.40625 31.78125 66.40625 
+z
+M 31.78125 74.21875 
+Q 44.046875 74.21875 50.515625 64.515625 
+Q 56.984375 54.828125 56.984375 36.375 
+Q 56.984375 17.96875 50.515625 8.265625 
+Q 44.046875 -1.421875 31.78125 -1.421875 
+Q 19.53125 -1.421875 13.0625 8.265625 
+Q 6.59375 17.96875 6.59375 36.375 
+Q 6.59375 54.828125 13.0625 64.515625 
+Q 19.53125 74.21875 31.78125 74.21875 
+z
+" id="DejaVuSans-48"&gt;&lt;/path&gt;
+       &lt;/defs&gt;
+       &lt;use xlink:href="#DejaVuSans-48"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+    &lt;/g&gt;
+    &lt;g id="xtick_2"&gt;
+     &lt;g id="line2d_2"&gt;
+      &lt;g&gt;
+       &lt;use style="stroke:#000000;stroke-width:0.8;" x="122.178522" xlink:href="#mc6c70aadd3" y="224.64"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+     &lt;g id="text_2"&gt;
+      &lt;!-- 2 --&gt;
+      &lt;g transform="translate(118.997272 239.238438)scale(0.1 -0.1)"&gt;
+       &lt;defs&gt;
+        &lt;path d="M 19.1875 8.296875 
+L 53.609375 8.296875 
+L 53.609375 0 
+L 7.328125 0 
+L 7.328125 8.296875 
+Q 12.9375 14.109375 22.625 23.890625 
+Q 32.328125 33.6875 34.8125 36.53125 
+Q 39.546875 41.84375 41.421875 45.53125 
+Q 43.3125 49.21875 43.3125 52.78125 
+Q 43.3125 58.59375 39.234375 62.25 
+Q 35.15625 65.921875 28.609375 65.921875 
+Q 23.96875 65.921875 18.8125 64.3125 
+Q 13.671875 62.703125 7.8125 59.421875 
+L 7.8125 69.390625 
+Q 13.765625 71.78125 18.9375 73 
+Q 24.125 74.21875 28.421875 74.21875 
+Q 39.75 74.21875 46.484375 68.546875 
+Q 53.21875 62.890625 53.21875 53.421875 
+Q 53.21875 48.921875 51.53125 44.890625 
+Q 49.859375 40.875 45.40625 35.40625 
+Q 44.1875 33.984375 37.640625 27.21875 
+Q 31.109375 20.453125 19.1875 8.296875 
+z
+" id="DejaVuSans-50"&gt;&lt;/path&gt;
+       &lt;/defs&gt;
+       &lt;use xlink:href="#DejaVuSans-50"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+    &lt;/g&gt;
+    &lt;g id="xtick_3"&gt;
+     &lt;g id="line2d_3"&gt;
+      &lt;g&gt;
+       &lt;use style="stroke:#000000;stroke-width:0.8;" x="184.29355" xlink:href="#mc6c70aadd3" y="224.64"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+     &lt;g id="text_3"&gt;
+      &lt;!-- 4 --&gt;
+      &lt;g transform="translate(181.1123 239.238438)scale(0.1 -0.1)"&gt;
+       &lt;defs&gt;
+        &lt;path d="M 37.796875 64.3125 
+L 12.890625 25.390625 
+L 37.796875 25.390625 
+z
+M 35.203125 72.90625 
+L 47.609375 72.90625 
+L 47.609375 25.390625 
+L 58.015625 25.390625 
+L 58.015625 17.1875 
+L 47.609375 17.1875 
+L 47.609375 0 
+L 37.796875 0 
+L 37.796875 17.1875 
+L 4.890625 17.1875 
+L 4.890625 26.703125 
+z
+" id="DejaVuSans-52"&gt;&lt;/path&gt;
+       &lt;/defs&gt;
+       &lt;use xlink:href="#DejaVuSans-52"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+    &lt;/g&gt;
+    &lt;g id="xtick_4"&gt;
+     &lt;g id="line2d_4"&gt;
+      &lt;g&gt;
+       &lt;use style="stroke:#000000;stroke-width:0.8;" x="246.408578" xlink:href="#mc6c70aadd3" y="224.64"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+     &lt;g id="text_4"&gt;
+      &lt;!-- 6 --&gt;
+      &lt;g transform="translate(243.227328 239.238438)scale(0.1 -0.1)"&gt;
+       &lt;defs&gt;
+        &lt;path d="M 33.015625 40.375 
+Q 26.375 40.375 22.484375 35.828125 
+Q 18.609375 31.296875 18.609375 23.390625 
+Q 18.609375 15.53125 22.484375 10.953125 
+Q 26.375 6.390625 33.015625 6.390625 
+Q 39.65625 6.390625 43.53125 10.953125 
+Q 47.40625 15.53125 47.40625 23.390625 
+Q 47.40625 31.296875 43.53125 35.828125 
+Q 39.65625 40.375 33.015625 40.375 
+z
+M 52.59375 71.296875 
+L 52.59375 62.3125 
+Q 48.875 64.0625 45.09375 64.984375 
+Q 41.3125 65.921875 37.59375 65.921875 
+Q 27.828125 65.921875 22.671875 59.328125 
+Q 17.53125 52.734375 16.796875 39.40625 
+Q 19.671875 43.65625 24.015625 45.921875 
+Q 28.375 48.1875 33.59375 48.1875 
+Q 44.578125 48.1875 50.953125 41.515625 
+Q 57.328125 34.859375 57.328125 23.390625 
+Q 57.328125 12.15625 50.6875 5.359375 
+Q 44.046875 -1.421875 33.015625 -1.421875 
+Q 20.359375 -1.421875 13.671875 8.265625 
+Q 6.984375 17.96875 6.984375 36.375 
+Q 6.984375 53.65625 15.1875 63.9375 
+Q 23.390625 74.21875 37.203125 74.21875 
+Q 40.921875 74.21875 44.703125 73.484375 
+Q 48.484375 72.75 52.59375 71.296875 
+z
+" id="DejaVuSans-54"&gt;&lt;/path&gt;
+       &lt;/defs&gt;
+       &lt;use xlink:href="#DejaVuSans-54"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+    &lt;/g&gt;
+    &lt;g id="xtick_5"&gt;
+     &lt;g id="line2d_5"&gt;
+      &lt;g&gt;
+       &lt;use style="stroke:#000000;stroke-width:0.8;" x="308.523606" xlink:href="#mc6c70aadd3" y="224.64"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+     &lt;g id="text_5"&gt;
+      &lt;!-- 8 --&gt;
+      &lt;g transform="translate(305.342356 239.238438)scale(0.1 -0.1)"&gt;
+       &lt;defs&gt;
+        &lt;path d="M 31.78125 34.625 
+Q 24.75 34.625 20.71875 30.859375 
+Q 16.703125 27.09375 16.703125 20.515625 
+Q 16.703125 13.921875 20.71875 10.15625 
+Q 24.75 6.390625 31.78125 6.390625 
+Q 38.8125 6.390625 42.859375 10.171875 
+Q 46.921875 13.96875 46.921875 20.515625 
+Q 46.921875 27.09375 42.890625 30.859375 
+Q 38.875 34.625 31.78125 34.625 
+z
+M 21.921875 38.8125 
+Q 15.578125 40.375 12.03125 44.71875 
+Q 8.5 49.078125 8.5 55.328125 
+Q 8.5 64.0625 14.71875 69.140625 
+Q 20.953125 74.21875 31.78125 74.21875 
+Q 42.671875 74.21875 48.875 69.140625 
+Q 55.078125 64.0625 55.078125 55.328125 
+Q 55.078125 49.078125 51.53125 44.71875 
+Q 48 40.375 41.703125 38.8125 
+Q 48.828125 37.15625 52.796875 32.3125 
+Q 56.78125 27.484375 56.78125 20.515625 
+Q 56.78125 9.90625 50.3125 4.234375 
+Q 43.84375 -1.421875 31.78125 -1.421875 
+Q 19.734375 -1.421875 13.25 4.234375 
+Q 6.78125 9.90625 6.78125 20.515625 
+Q 6.78125 27.484375 10.78125 32.3125 
+Q 14.796875 37.15625 21.921875 38.8125 
+z
+M 18.3125 54.390625 
+Q 18.3125 48.734375 21.84375 45.5625 
+Q 25.390625 42.390625 31.78125 42.390625 
+Q 38.140625 42.390625 41.71875 45.5625 
+Q 45.3125 48.734375 45.3125 54.390625 
+Q 45.3125 60.0625 41.71875 63.234375 
+Q 38.140625 66.40625 31.78125 66.40625 
+Q 25.390625 66.40625 21.84375 63.234375 
+Q 18.3125 60.0625 18.3125 54.390625 
+z
+" id="DejaVuSans-56"&gt;&lt;/path&gt;
+       &lt;/defs&gt;
+       &lt;use xlink:href="#DejaVuSans-56"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+    &lt;/g&gt;
+    &lt;g id="xtick_6"&gt;
+     &lt;g id="line2d_6"&gt;
+      &lt;g&gt;
+       &lt;use style="stroke:#000000;stroke-width:0.8;" x="370.638633" xlink:href="#mc6c70aadd3" y="224.64"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+     &lt;g id="text_6"&gt;
+      &lt;!-- 10 --&gt;
+      &lt;g transform="translate(364.276133 239.238438)scale(0.1 -0.1)"&gt;
+       &lt;defs&gt;
+        &lt;path d="M 12.40625 8.296875 
+L 28.515625 8.296875 
+L 28.515625 63.921875 
+L 10.984375 60.40625 
+L 10.984375 69.390625 
+L 28.421875 72.90625 
+L 38.28125 72.90625 
+L 38.28125 8.296875 
+L 54.390625 8.296875 
+L 54.390625 0 
+L 12.40625 0 
+z
+" id="DejaVuSans-49"&gt;&lt;/path&gt;
+       &lt;/defs&gt;
+       &lt;use xlink:href="#DejaVuSans-49"&gt;&lt;/use&gt;
+       &lt;use x="63.623047" xlink:href="#DejaVuSans-48"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+    &lt;/g&gt;
+   &lt;/g&gt;
+   &lt;g id="matplotlib.axis_2"&gt;
+    &lt;g id="ytick_1"&gt;
+     &lt;g id="line2d_7"&gt;
+      &lt;defs&gt;
+       &lt;path d="M 0 0 
+L -3.5 0 
+" id="m09e48d8de0" style="stroke:#000000;stroke-width:0.8;"&gt;&lt;/path&gt;
+      &lt;/defs&gt;
+      &lt;g&gt;
+       &lt;use style="stroke:#000000;stroke-width:0.8;" x="44.845313" xlink:href="#m09e48d8de0" y="215.136249"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+     &lt;g id="text_7"&gt;
+      &lt;!-- −1.00 --&gt;
+      &lt;g transform="translate(7.2 218.935468)scale(0.1 -0.1)"&gt;
+       &lt;defs&gt;
+        &lt;path d="M 10.59375 35.5 
+L 73.1875 35.5 
+L 73.1875 27.203125 
+L 10.59375 27.203125 
+z
+" id="DejaVuSans-8722"&gt;&lt;/path&gt;
+        &lt;path d="M 10.6875 12.40625 
+L 21 12.40625 
+L 21 0 
+L 10.6875 0 
+z
+" id="DejaVuSans-46"&gt;&lt;/path&gt;
+       &lt;/defs&gt;
+       &lt;use xlink:href="#DejaVuSans-8722"&gt;&lt;/use&gt;
+       &lt;use x="83.789062" xlink:href="#DejaVuSans-49"&gt;&lt;/use&gt;
+       &lt;use x="147.412109" xlink:href="#DejaVuSans-46"&gt;&lt;/use&gt;
+       &lt;use x="179.199219" xlink:href="#DejaVuSans-48"&gt;&lt;/use&gt;
+       &lt;use x="242.822266" xlink:href="#DejaVuSans-48"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+    &lt;/g&gt;
+    &lt;g id="ytick_2"&gt;
+     &lt;g id="line2d_8"&gt;
+      &lt;g&gt;
+       &lt;use style="stroke:#000000;stroke-width:0.8;" x="44.845313" xlink:href="#m09e48d8de0" y="190.374393"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+     &lt;g id="text_8"&gt;
+      &lt;!-- −0.75 --&gt;
+      &lt;g transform="translate(7.2 194.173612)scale(0.1 -0.1)"&gt;
+       &lt;defs&gt;
+        &lt;path d="M 8.203125 72.90625 
+L 55.078125 72.90625 
+L 55.078125 68.703125 
+L 28.609375 0 
+L 18.3125 0 
+L 43.21875 64.59375 
+L 8.203125 64.59375 
+z
+" id="DejaVuSans-55"&gt;&lt;/path&gt;
+        &lt;path d="M 10.796875 72.90625 
+L 49.515625 72.90625 
+L 49.515625 64.59375 
+L 19.828125 64.59375 
+L 19.828125 46.734375 
+Q 21.96875 47.46875 24.109375 47.828125 
+Q 26.265625 48.1875 28.421875 48.1875 
+Q 40.625 48.1875 47.75 41.5 
+Q 54.890625 34.8125 54.890625 23.390625 
+Q 54.890625 11.625 47.5625 5.09375 
+Q 40.234375 -1.421875 26.90625 -1.421875 
+Q 22.3125 -1.421875 17.546875 -0.640625 
+Q 12.796875 0.140625 7.71875 1.703125 
+L 7.71875 11.625 
+Q 12.109375 9.234375 16.796875 8.0625 
+Q 21.484375 6.890625 26.703125 6.890625 
+Q 35.15625 6.890625 40.078125 11.328125 
+Q 45.015625 15.765625 45.015625 23.390625 
+Q 45.015625 31 40.078125 35.4375 
+Q 35.15625 39.890625 26.703125 39.890625 
+Q 22.75 39.890625 18.8125 39.015625 
+Q 14.890625 38.140625 10.796875 36.28125 
+z
+" id="DejaVuSans-53"&gt;&lt;/path&gt;
+       &lt;/defs&gt;
+       &lt;use xlink:href="#DejaVuSans-8722"&gt;&lt;/use&gt;
+       &lt;use x="83.789062" xlink:href="#DejaVuSans-48"&gt;&lt;/use&gt;
+       &lt;use x="147.412109" xlink:href="#DejaVuSans-46"&gt;&lt;/use&gt;
+       &lt;use x="179.199219" xlink:href="#DejaVuSans-55"&gt;&lt;/use&gt;
+       &lt;use x="242.822266" xlink:href="#DejaVuSans-53"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+    &lt;/g&gt;
+    &lt;g id="ytick_3"&gt;
+     &lt;g id="line2d_9"&gt;
+      &lt;g&gt;
+       &lt;use style="stroke:#000000;stroke-width:0.8;" x="44.845313" xlink:href="#m09e48d8de0" y="165.612538"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+     &lt;g id="text_9"&gt;
+      &lt;!-- −0.50 --&gt;
+      &lt;g transform="translate(7.2 169.411756)scale(0.1 -0.1)"&gt;
+       &lt;use xlink:href="#DejaVuSans-8722"&gt;&lt;/use&gt;
+       &lt;use x="83.789062" xlink:href="#DejaVuSans-48"&gt;&lt;/use&gt;
+       &lt;use x="147.412109" xlink:href="#DejaVuSans-46"&gt;&lt;/use&gt;
+       &lt;use x="179.199219" xlink:href="#DejaVuSans-53"&gt;&lt;/use&gt;
+       &lt;use x="242.822266" xlink:href="#DejaVuSans-48"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+    &lt;/g&gt;
+    &lt;g id="ytick_4"&gt;
+     &lt;g id="line2d_10"&gt;
+      &lt;g&gt;
+       &lt;use style="stroke:#000000;stroke-width:0.8;" x="44.845313" xlink:href="#m09e48d8de0" y="140.850682"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+     &lt;g id="text_10"&gt;
+      &lt;!-- −0.25 --&gt;
+      &lt;g transform="translate(7.2 144.649901)scale(0.1 -0.1)"&gt;
+       &lt;use xlink:href="#DejaVuSans-8722"&gt;&lt;/use&gt;
+       &lt;use x="83.789062" xlink:href="#DejaVuSans-48"&gt;&lt;/use&gt;
+       &lt;use x="147.412109" xlink:href="#DejaVuSans-46"&gt;&lt;/use&gt;
+       &lt;use x="179.199219" xlink:href="#DejaVuSans-50"&gt;&lt;/use&gt;
+       &lt;use x="242.822266" xlink:href="#DejaVuSans-53"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+    &lt;/g&gt;
+    &lt;g id="ytick_5"&gt;
+     &lt;g id="line2d_11"&gt;
+      &lt;g&gt;
+       &lt;use style="stroke:#000000;stroke-width:0.8;" x="44.845313" xlink:href="#m09e48d8de0" y="116.088826"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+     &lt;g id="text_11"&gt;
+      &lt;!-- 0.00 --&gt;
+      &lt;g transform="translate(15.579688 119.888045)scale(0.1 -0.1)"&gt;
+       &lt;use xlink:href="#DejaVuSans-48"&gt;&lt;/use&gt;
+       &lt;use x="63.623047" xlink:href="#DejaVuSans-46"&gt;&lt;/use&gt;
+       &lt;use x="95.410156" xlink:href="#DejaVuSans-48"&gt;&lt;/use&gt;
+       &lt;use x="159.033203" xlink:href="#DejaVuSans-48"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+    &lt;/g&gt;
+    &lt;g id="ytick_6"&gt;
+     &lt;g id="line2d_12"&gt;
+      &lt;g&gt;
+       &lt;use style="stroke:#000000;stroke-width:0.8;" x="44.845313" xlink:href="#m09e48d8de0" y="91.32697"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+     &lt;g id="text_12"&gt;
+      &lt;!-- 0.25 --&gt;
+      &lt;g transform="translate(15.579688 95.126189)scale(0.1 -0.1)"&gt;
+       &lt;use xlink:href="#DejaVuSans-48"&gt;&lt;/use&gt;
+       &lt;use x="63.623047" xlink:href="#DejaVuSans-46"&gt;&lt;/use&gt;
+       &lt;use x="95.410156" xlink:href="#DejaVuSans-50"&gt;&lt;/use&gt;
+       &lt;use x="159.033203" xlink:href="#DejaVuSans-53"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+    &lt;/g&gt;
+    &lt;g id="ytick_7"&gt;
+     &lt;g id="line2d_13"&gt;
+      &lt;g&gt;
+       &lt;use style="stroke:#000000;stroke-width:0.8;" x="44.845313" xlink:href="#m09e48d8de0" y="66.565114"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+     &lt;g id="text_13"&gt;
+      &lt;!-- 0.50 --&gt;
+      &lt;g transform="translate(15.579688 70.364333)scale(0.1 -0.1)"&gt;
+       &lt;use xlink:href="#DejaVuSans-48"&gt;&lt;/use&gt;
+       &lt;use x="63.623047" xlink:href="#DejaVuSans-46"&gt;&lt;/use&gt;
+       &lt;use x="95.410156" xlink:href="#DejaVuSans-53"&gt;&lt;/use&gt;
+       &lt;use x="159.033203" xlink:href="#DejaVuSans-48"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+    &lt;/g&gt;
+    &lt;g id="ytick_8"&gt;
+     &lt;g id="line2d_14"&gt;
+      &lt;g&gt;
+       &lt;use style="stroke:#000000;stroke-width:0.8;" x="44.845313" xlink:href="#m09e48d8de0" y="41.803259"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+     &lt;g id="text_14"&gt;
+      &lt;!-- 0.75 --&gt;
+      &lt;g transform="translate(15.579688 45.602477)scale(0.1 -0.1)"&gt;
+       &lt;use xlink:href="#DejaVuSans-48"&gt;&lt;/use&gt;
+       &lt;use x="63.623047" xlink:href="#DejaVuSans-46"&gt;&lt;/use&gt;
+       &lt;use x="95.410156" xlink:href="#DejaVuSans-55"&gt;&lt;/use&gt;
+       &lt;use x="159.033203" xlink:href="#DejaVuSans-53"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+    &lt;/g&gt;
+    &lt;g id="ytick_9"&gt;
+     &lt;g id="line2d_15"&gt;
+      &lt;g&gt;
+       &lt;use style="stroke:#000000;stroke-width:0.8;" x="44.845313" xlink:href="#m09e48d8de0" y="17.041403"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+     &lt;g id="text_15"&gt;
+      &lt;!-- 1.00 --&gt;
+      &lt;g transform="translate(15.579688 20.840622)scale(0.1 -0.1)"&gt;
+       &lt;use xlink:href="#DejaVuSans-49"&gt;&lt;/use&gt;
+       &lt;use x="63.623047" xlink:href="#DejaVuSans-46"&gt;&lt;/use&gt;
+       &lt;use x="95.410156" xlink:href="#DejaVuSans-48"&gt;&lt;/use&gt;
+       &lt;use x="159.033203" xlink:href="#DejaVuSans-48"&gt;&lt;/use&gt;
+      &lt;/g&gt;
+     &lt;/g&gt;
+    &lt;/g&gt;
+   &lt;/g&gt;
+   &lt;g id="line2d_16"&gt;
+    &lt;path clip-path="url(#pfcb5fb6dd8)" d="M 60.063494 116.088826 
+L 66.274997 96.411141 
+L 72.4865 77.517943 
+L 78.698003 60.162444 
+L 84.909505 45.036554 
+L 91.121008 32.743293 
+L 97.332511 23.772756 
+L 103.544014 18.48257 
+L 109.755517 17.083636 
+L 115.967019 19.631728 
+L 122.178522 26.025259 
+L 128.390025 36.009341 
+L 134.601528 49.185939 
+L 140.81303 65.029744 
+L 147.024533 82.909113 
+L 153.236036 102.111253 
+L 159.447539 121.870635 
+L 165.659042 141.399514 
+L 171.870544 159.919336 
+L 178.082047 176.691774 
+L 184.29355 191.048163 
+L 190.505053 202.41616 
+L 196.716556 210.342559 
+L 202.928058 214.511359 
+L 209.139561 214.756364 
+L 215.351064 211.067804 
+L 221.562567 203.592733 
+L 227.774069 192.629157 
+L 233.985572 178.61416 
+L 240.197075 162.106475 
+L 246.408578 143.764211 
+L 252.620081 124.318617 
+L 258.831583 104.544928 
+L 265.043086 85.231457 
+L 271.254589 67.148172 
+L 277.466092 51.015996 
+L 283.677595 37.478069 
+L 289.889097 27.074105 
+L 296.1006 20.218877 
+L 302.312103 17.185681 
+L 308.523606 18.095441 
+L 314.735108 22.911888 
+L 320.946611 31.443006 
+L 327.158114 43.348686 
+L 333.369617 58.154285 
+L 339.58112 75.269552 
+L 345.792622 94.012154 
+L 352.004125 113.634884 
+L 358.215628 133.355445 
+L 364.427131 152.387639 
+" style="fill:none;stroke:#1f77b4;stroke-linecap:square;stroke-width:1.5;"&gt;&lt;/path&gt;
+   &lt;/g&gt;
+   &lt;g id="patch_3"&gt;
+    &lt;path d="M 44.845313 224.64 
+L 44.845313 7.2 
+" style="fill:none;stroke:#000000;stroke-linecap:square;stroke-linejoin:miter;stroke-width:0.8;"&gt;&lt;/path&gt;
+   &lt;/g&gt;
+   &lt;g id="patch_4"&gt;
+    &lt;path d="M 379.645313 224.64 
+L 379.645313 7.2 
+" style="fill:none;stroke:#000000;stroke-linecap:square;stroke-linejoin:miter;stroke-width:0.8;"&gt;&lt;/path&gt;
+   &lt;/g&gt;
+   &lt;g id="patch_5"&gt;
+    &lt;path d="M 44.845313 224.64 
+L 379.645313 224.64 
+" style="fill:none;stroke:#000000;stroke-linecap:square;stroke-linejoin:miter;stroke-width:0.8;"&gt;&lt;/path&gt;
+   &lt;/g&gt;
+   &lt;g id="patch_6"&gt;
+    &lt;path d="M 44.845313 7.2 
+L 379.645313 7.2 
+" style="fill:none;stroke:#000000;stroke-linecap:square;stroke-linejoin:miter;stroke-width:0.8;"&gt;&lt;/path&gt;
+   &lt;/g&gt;
+  &lt;/g&gt;
+ &lt;/g&gt;
+ &lt;defs&gt;
+  &lt;clippath id="pfcb5fb6dd8"&gt;
+   &lt;rect height="217.44" width="334.8" x="44.845313" y="7.2"&gt;&lt;/rect&gt;
+  &lt;/clippath&gt;
+ &lt;/defs&gt;
+&lt;/svg&gt;
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [ ]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt; 
+&lt;/pre&gt;&lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;&lt;/div&gt;</description><category>matplot</category><category>python</category><guid>https://AbdulSayyed.github.io/notebooks/matplot-001/</guid><pubDate>Thu, 30 Jul 2020 05:22:01 GMT</pubDate></item></channel></rss>

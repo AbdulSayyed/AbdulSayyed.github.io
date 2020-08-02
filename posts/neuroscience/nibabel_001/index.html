@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#
+" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>nibabel_001 | Sayyed's blog</title>
+<link href="../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link href="../../../assets/css/ipython.min.css" rel="stylesheet" type="text/css">
+<link href="../../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../../rss.xml">
+<link rel="canonical" href="https://AbdulSayyed.github.io/posts/neuroscience/nibabel_001/">
+<!--[if lt IE 9]><script src="../../../assets/js/html5.js"></script><![endif]--><link href="../../assets/css/custom.css" rel="stylesheet" type="text/css">
+<!-- Font Awesome --><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+<meta name="author" content="Abdul Sayyed">
+<link rel="prev" href="../../../notebooks/matplot-001/" title="Introduction to matplot" type="text/html">
+<meta property="og:site_name" content="Sayyed's blog">
+<meta property="og:title" content="nibabel_001">
+<meta property="og:url" content="https://AbdulSayyed.github.io/posts/neuroscience/nibabel_001/">
+<meta property="og:description" content="NiBabel
+Installation
+Installation Testing
+
+
+Testing as usual with import nibabel;print(success);nibabel.test()
+
+
+import nibabel; print('Success!');nibabel.test()
+
+
+
+Note: Before running advanced tests">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2020-08-01T10:33:59+01:00">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-expand-md static-top mb-4
+navbar-dark bg-dark
+"><div class="container">
+<!-- This keeps the margins nice -->
+        <a class="navbar-brand" href="../../../">
+
+            <span id="blog-title">Sayyed's blog</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="bs-navbar">
+            <ul class="navbar-nav mr-auto">
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My Blogs</a>
+            <div class="dropdown-menu">
+                    <a href="../../../categories/cat_python/" class="dropdown-item">Python</a>
+                    <a href="../../../categories/cat_neuroscience/" class="dropdown-item">Neuroscience</a>
+                    <a href="../../../categories/cat_nipype/" class="dropdown-item">Neuroimaging in Python</a>
+                    <a href="../../../categories/cat_nikola/" class="dropdown-item">Nikola</a>
+                    <a href="../../../categories/cat_nilearn/" class="dropdown-item">Neuro-Imaging with machine Learning</a>
+                    <a href="../../../categories/cat_nibabel/" class="dropdown-item">Nibabel, Reading and Writing to images</a>
+            </div>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About</a>
+            <div class="dropdown-menu">
+                    <a href="../../../pages/aboutme/" class="dropdown-item">About</a>
+                    <a href="../../../pages/publication/" class="dropdown-item">Publications</a>
+            </div>
+                </li>
+<li class="nav-item">
+<a href="../../../archive/" class="nav-link">Archives</a>
+                </li>
+<li class="nav-item">
+<a href="../../../rss.xml" class="nav-link">RSS feed</a>
+                </li>
+<li class="nav-item">
+<a href="../../../categories/index.html" class="nav-link">Tags</a>
+
+                
+            </li>
+</ul>
+<form method="get" action="https://www.google.com/search" class="form-inline my-2 my-lg-0" role="search">
+ <div class="form-group">
+ <input type="text" name="q" class="form-control mr-sm-2" placeholder="Search">
+</div>
+ <button type="submit" class="btn btn-secondary my-2 my-sm-0">
+    <i class="fas fa-search"></i></button>
+ 
+ <input type="hidden" name="sitesearch" value="https://AbdulSayyed.github.io/">
+</form>
+
+
+            <ul class="navbar-nav navbar-right"></ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        
+        
+        
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">nibabel_001</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">
+                    <a class="u-url" href="../../../authors/abdul-sayyed/">Abdul Sayyed</a>
+            </span></p>
+            <p class="dateline">
+            <a href="." rel="bookmark">
+            <time class="published dt-published" datetime="2020-08-01T10:33:59+01:00" itemprop="datePublished" title="2020-08-01">2020-08-01</time></a>
+            </p>
+                <p class="commentline">
+        
+
+
+            
+
+        </p>
+</div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<h3><a href="https://nipy.org/nibabel/installation.html#installer-and-packages"><code>NiBabel</code></a></h3>
+<h4>Installation</h4>
+<h4>Installation Testing</h4>
+<ol>
+<li>
+<p>Testing as usual with <code>import nibabel;print(success);nibabel.test()</code></p>
+</li>
+<li>
+<p>import nibabel; print('Success!');nibabel.test()</p>
+</li>
+</ol>
+<blockquote>
+<p>Note: Before running advanced tests, please update all submodules of nibabel, by running git submodule update --init</p>
+</blockquote>
+<p>I am running a simpple test, not the advanced one it ran for 15 minutes and gave me long listing. In the end it gave me error about Freesurfer other wise the rest test is passed.</p>
+<pre class="code literal-block"><span></span><code><span class="err">-- Docs: https://docs.pytest.org/en/latest/warnings.html</span>
+<span class="err">=========================== short test summary info ============================</span>
+<span class="err">FAILED freesurfer/tests/test_io.py::test_geometry - assert False</span>
+<span class="err">FAILED freesurfer/tests/test_io.py::test_write_annot_fill_ctab - assert False</span>
+<span class="err">FAILED streamlines/tests/test_streamlines.py::TestLoadSave::test_save_complex_file</span>
+<span class="err">FAILED streamlines/tests/test_streamlines.py::TestLoadSave::test_save_tractogram_file</span>
+<span class="err">FAILED streamlines/tests/test_tck.py::TestTCK::test_load_file_with_wrong_information</span>
+<span class="err">FAILED streamlines/tests/test_trk.py::TestTRK::test_load_file_with_wrong_information</span>
+<span class="err">FAILED streamlines/tests/test_trk.py::TestTRK::test_load_trk_version_1 - Asse...</span>
+<span class="err">FAILED tests/test_deprecated.py::test_futurewarning_mixin - IndexError: pop f...</span>
+<span class="err">FAILED tests/test_nifti1.py::test_extension_io - assert 0 == 1</span>
+<span class="err">FAILED tests/test_parrec.py::test_truncated_load - assert 0 == 1</span>
+<span class="err">FAILED tests/test_parrec.py::test_truncations - assert 0 == 1</span>
+<span class="err">FAILED tests/test_parrec.py::test_ADC_map - assert 0 == 2</span>
+<span class="err">FAILED tests/test_testing.py::test_clear_and_catch_warnings - assert 1 == 2</span>
+<span class="err">= 13 failed, 4648 passed, 105 skipped, 6 xfailed, 1 warning in 829.54s (0:13:49) =</span>
+</code></pre>
+
+
+<h4>What is this pakcage ?</h4>
+<ul>
+<li>It provides read write acees to commonly used Neuroimaging files which includes following format  Description</li>
+</ul>
+<table>
+<thead><tr>
+<th>type</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Gifti</td>
+<td>NifTI</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4>Start working</h4>
+<ul>
+<li>
+<p>Import and use its exposed version <code>nibabel.(__version__)</code></p>
+</li>
+<li>
+<p>Reading a nifti file. <code>nibabel.load(&lt;filename&gt;)</code></p>
+</li>
+<li>
+<p>A file that is read is used in a variabel say <code>anat_img = nibabel.load('sample.nii.gz')</code>. This object knows the file <code>shape</code>  and image affine ( array matrix) shape. Another attribute is <code>dataobj</code> that gives you the detail of where this object is pointing to.</p>
+</li>
+<li>
+<p>The ouput of <code>nibabel</code> loaded object is an instance of <code>nibabel.nifti1.Nifti1Image</code> which get read in a memory. When it is printed it gives you the address as well for example <code>0x7fdbdc86b2e0.</code>.</p>
+</li>
+<li>
+<p>One can see that the super class is of <code>nibabel.nifti1</code>. This class exposes number of ...file</p>
+</li>
+<li>
+<p>The <code>nibabel</code> attribute <code>dataobj</code> is an object that point to an image array that get loaded.,it is of <code>nibabel.arrayproxy.ArrayProxy ojbect</code>.</p>
+</li>
+<li>
+<p><code>Array proxies and proxy images</code> are the techniques <code>nibabel</code> uses to load an image from disk, an array <code>proxy</code> is not the array itself but something that represents the array and can provide the array when we load it. It allows us to create the image object withou immediately loading all the array data from sik.</p>
+</li>
+<li>
+<p>Proxy is used rightly because images with an <code>proxy object</code> like this one are called <code>proxy images</code> because the <code>image data</code> is the proxy points to the array data on disk.</p>
+</li>
+<li>
+<p>To check if it is a proxy, <code>nib.is_proxy(anat_img)</code></p>
+</li>
+<li>
+<p>Image shape and affine shape can be found out using <code>numpy object</code> and to do so you need to get an object that points to an image.</p>
+</li>
+<li>
+<p>And it is done using <code>img_data = anat_img.get_fdata())</code>. This method returns a numpy array object. Its <code>shape</code> attribute will give the same result as <code>nibiabel</code> object.</p>
+</li>
+<li>
+<p>Following is done and shown below</p>
+</li>
+</ul>
+<pre class="code literal-block"><span></span><code><span class="kn">import</span> <span class="nn">nibable</span> <span class="kn">as</span> <span class="nn">nb</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">nb</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
+
+<span class="n">anat_img</span> <span class="o">=</span> <span class="n">nibabel</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">'sample.nii.gz'</span><span class="p">)</span>
+<span class="n">anat_img</span><span class="o">.</span><span class="n">shape</span>           <span class="c1"># ()</span>
+<span class="n">anat_img</span><span class="o">.</span><span class="n">affine</span><span class="o">.</span><span class="n">sahpe</span>   <span class="c1">#</span>
+<span class="n">anat_img</span><span class="o">.</span><span class="n">header</span>         <span class="c1"># </span>
+
+<span class="n">file_data</span> <span class="o">=</span> <span class="n">anat_img</span><span class="o">.</span><span class="n">get_fdata</span><span class="p">()</span>
+<span class="n">file_data</span><span class="o">.</span><span class="n">shape</span>
+<span class="n">file_data</span><span class="o">.</span><span class="n">affine</span><span class="o">.</span><span class="n">shape</span> <span class="err">?</span>
+</code></pre>
+
+
+<h4>Commonly used functions</h4>
+<ul>
+<li>
+<p>nibable.load()</p>
+</li>
+<li>
+<p>nibable.shape # a loaded object represents the image that knows its shape.</p>
+</li>
+<li>
+<p>nibable.affine.shape #</p>
+</li>
+</ul>
+<h4>Working directory</h4>
+<ul>
+<li>There is not need to have or set a working directory but it is better to set a data directroy do avoid platfrom specific details.</li>
+</ul>
+<h4>Nibabel Images and its image object</h4>
+<ul>
+<li>
+<p>It is composed of 3 items:</p>
+</li>
+<li>
+<p>an N-D array containing the  image data;</p>
+</li>
+<li>a (4, 4) affine matrix mapping array coordinates to coordinates in some <code>RAS+ world coordinate space (Coordinate systems and affines);</code>
+</li>
+<li>image metadata in the form of a header.</li>
+</ul>
+<blockquote>
+<p>The word affine is used frequently in image transformation, subsquently the word <code>affine array</code> represents an array that is accessed by another array in a loop. Another term is affine transformation like linear transformation and it is used to correct image transoformation in image related works.</p>
+</blockquote>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul class="pager hidden-print">
+<li class="previous">
+                <a href="../../../notebooks/matplot-001/" rel="prev" title="Introduction to matplot">Previous post</a>
+            </li>
+        </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
+        
+        
+
+
+        </section></article><!--End of body content--><footer id="footer"><center>
+<br>
+Contents © 2020 <a href="mailto:neuro.sayyed@gmail.com">Abdul Sayyed</a> '
+</center>
+<br></footer>
+</div>
+</div>
+
+
+        <script src="../../../assets/js/all-nocdn.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script>
+</body>
+</html>

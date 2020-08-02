@@ -15,8 +15,8 @@
 <!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><link href="../../assets/css/custom.css" rel="stylesheet" type="text/css">
 <!-- Font Awesome --><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 <meta name="author" content="Abdul Sayyed">
-<link rel="prev" href="../004-intro/" title="001-intro" type="text/html">
-<link rel="next" href="../002_basics/" title="002_basics" type="text/html">
+<link rel="prev" href="../../posts/python/Third-Post/" title="Python Virtual Enviorenment" type="text/html">
+<link rel="next" href="../002-nipype/" title="Checking-nipype-Installation" type="text/html">
 <meta property="og:site_name" content="Sayyed's blog">
 <meta property="og:title" content="001_intro">
 <meta property="og:url" content="https://AbdulSayyed.github.io/notebooks/001_intro/">
@@ -84,6 +84,8 @@ navbar-dark bg-dark
                     <a href="../../categories/cat_neuroscience/" class="dropdown-item">Neuroscience</a>
                     <a href="../../categories/cat_nipype/" class="dropdown-item">Neuroimaging in Python</a>
                     <a href="../../categories/cat_nikola/" class="dropdown-item">Nikola</a>
+                    <a href="../../categories/cat_nilearn/" class="dropdown-item">Neuro-Imaging with machine Learning</a>
+                    <a href="../../categories/cat_nibabel/" class="dropdown-item">Nibabel, Reading and Writing to images</a>
             </div>
             </li>
 <li class="nav-item dropdown">
@@ -197,6 +199,118 @@ navbar-dark bg-dark
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
+<div class="prompt input_prompt">In [1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">npm</span><span class="o">.</span><span class="n">install</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-1-c09f0e0ad088&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>npm<span class="ansi-blue-fg">.</span>install<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">NameError</span>: name 'npm' is not defined</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Running-code-from-different-kernel">Running code from different kernel<a class="anchor-link" href="#Running-code-from-different-kernel">¶</a>
+</h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span>%%bash
+which bash
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>/usr/bin/bash
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%HTML</span>
+<span class="p">&lt;</span><span class="nt">h4</span><span class="p">&gt;</span>This is html 4 heading <span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<h5>This is html 4 heading </h5>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
     <div class="input_area">
@@ -217,10 +331,10 @@ navbar-dark bg-dark
         </ul>
 <ul class="pager hidden-print">
 <li class="previous">
-                <a href="../004-intro/" rel="prev" title="001-intro">Previous post</a>
+                <a href="../../posts/python/Third-Post/" rel="prev" title="Python Virtual Enviorenment">Previous post</a>
             </li>
             <li class="next">
-                <a href="../002_basics/" rel="next" title="002_basics">Next post</a>
+                <a href="../002-nipype/" rel="next" title="Checking-nipype-Installation">Next post</a>
             </li>
         </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
         

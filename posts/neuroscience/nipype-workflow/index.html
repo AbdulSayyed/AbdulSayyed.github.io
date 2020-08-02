@@ -15,16 +15,15 @@
 <!--[if lt IE 9]><script src="../../../assets/js/html5.js"></script><![endif]--><link href="../../assets/css/custom.css" rel="stylesheet" type="text/css">
 <!-- Font Awesome --><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 <meta name="author" content="Abdul Sayyed">
-<link rel="prev" href="../../../notebooks/005-intro/" title="Nipype introduction" type="text/html">
+<link rel="prev" href="../../../notebooks/001-intro/" title="Nipype introduction" type="text/html">
+<link rel="next" href="../../../notebooks/nilearn-001/" title="Neuro Imagin with Machine Learning" type="text/html">
 <meta property="og:site_name" content="Sayyed's blog">
 <meta property="og:title" content="nipype-workflow">
 <meta property="og:url" content="https://AbdulSayyed.github.io/posts/neuroscience/nipype-workflow/">
 <meta property="og:description" content="My setup of nipype
 
-I have successfully created a conda environment for nipype. it is located here ().
-The directory I have chosen to work is /nikol/ the listing is given as below.
-
-⋊&gt; ~/n/p/nikola ll">
+I have successfully created a conda environment for nipype. it is located here (/home/sayyed/anaconda3/envs/nipype).
+The directory I have chosen to work is /home/sayyed/neuro-scien">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2020-07-21T18:24:13+01:00">
 </head>
@@ -54,6 +53,8 @@ navbar-dark bg-dark
                     <a href="../../../categories/cat_neuroscience/" class="dropdown-item">Neuroscience</a>
                     <a href="../../../categories/cat_nipype/" class="dropdown-item">Neuroimaging in Python</a>
                     <a href="../../../categories/cat_nikola/" class="dropdown-item">Nikola</a>
+                    <a href="../../../categories/cat_nilearn/" class="dropdown-item">Neuro-Imaging with machine Learning</a>
+                    <a href="../../../categories/cat_nibabel/" class="dropdown-item">Nibabel, Reading and Writing to images</a>
             </div>
             </li>
 <li class="nav-item dropdown">
@@ -121,8 +122,58 @@ navbar-dark bg-dark
     <div>
 <h3>My setup of nipype</h3>
 <ul>
-<li>I have successfully created a conda environment for <code>nipype</code>. it is located here ().</li>
-<li>The directory I have chosen to work is <code>/nikol/</code> the listing is given as below.</li>
+<li>I have successfully created a conda environment for <code>nipype</code>. it is located here (/home/sayyed/anaconda3/envs/nipype).</li>
+<li>The directory I have chosen to work is <code>/home/sayyed/neuro-science/projects/nikola</code> the listing is given as below.</li>
+<li>Since this package works with all existing neuroimaging software, it is recomended that it is installed on a machine where all other software can be installed and configured properly to work with <code>nipype</code>.</li>
+<li>Once it is installed using <code>conda install --channel conda-forge nipype</code>. Its <code>.yml</code> file can be created using <code>conda list --explicit &gt; nipype.txt</code>
+</li>
+<li>Though the list is long but it does not install <code>ipython</code> or say a kernel so theat we can workwith jupyterlab. If ipython is installed , one can start the interactive shell and start working from terminal or command prompt. In reality <code>ipython</code> is not necessary as <code>nipype</code> install <code>python</code> packeage to srat with.</li>
+<li>
+<code>ipython</code> is  only necessary if you decide to work with <code>Jupyter</code>. It is same as python that is an interpreter but works interactively with Jupyter environment and hence knows as Python execusiton background in Jupyter environment. </li>
+<li>Having said that <code>ipykernel</code> can still be installed in nipype environment using <code>conda istall ipykernel</code>. This will also install <code>jupyter_cliend, core and other necessary packages. Once installed, ipython can be started from terminal and the availablity of</code>nipype<code>package can be checked using</code>import nipype as ny<code>and</code>ny.get_info()`.</li>
+<li>To check the proper installtion when the command was run it produced an error that <code>pytest</code> is not instlled use pip to install. So I did then ran a test.</li>
+<li>When installation was tested using given instructions, it complained about the <code>Sphinix extension documenter not found</code>.</li>
+<li>Furthermore, when example was started I encountered an error saying <code>nilearn</code> is not installed so I installed it as well.</li>
+<li>today on 24 July 2020, I again encountered some problems so I read the instructions again and found that I need to install <code>scikit-learning</code> as well. So I installed it using <code>conda -install scikit-learning</code>. Aslo checked <code>nilearn</code> again and install it using <code>conda install nilearn</code> and one package was installed. It happened with <code>nilearn</code> as well all other dependencies were installed only this one was left.</li>
+<li>To download data nipype uses a pyton module called <code>datalad</code>, use <code>pip install datalad</code>.</li>
+<li>When working in notebook, I frequently encountered a problem with traversing the file path.</li>
+<li>So I open the evironment in spyder but it says you need to install sypder kernel in your evnironment. so I did using <code>pip install spyder-kernel</code>. Then use `python -c "import sys; print(sys.executable)"</li>
+<li>Once done you can open spyder from base environment and then using <code>Preferences -&gt; Python Interpreter -&gt; select the python</code>
+</li>
+<li>While starting to work with given examples again encounter a problem so I ran a test <code>nipype.test()</code> and it said <code>VTK</code> was no found and nipype.interface WARNING: tvtk wasn't found<code>, upgrade</code>DIPY` verson.</li>
+<li>Tried to upgrade and found that it is not installed so I installed using <code>conda install DIPY</code>. Then got thewarning <code>Nipype 1 wrokflows have been moved to the niflow-nipype1-wrokflows padkage.</code> <code>pip install niflow-nipype1-wrokflows</code>.</li>
+<li>Got error about <code>sphinix</code> installed <code>conda intall sphinx</code>
+</li>
+<li>Still getting an error about <code>sphinxcontrib napoleon</code>, using <code>pip install sphinxcontrib-anpoleon</code> though it said requirment already installed and instlled `pockets, shpinxcontrib-anpoleaon.</li>
+<li>And finally <code>import nipype; nipype.test()</code> scucceded to run, it took 10 minutes or more to run and utilize all 8 processors, all memory and Gpu 3d up to 54%.</li>
+<li>In the end one error I recieved and it was about workflow.</li>
+<li>Today I ran another test using the following as mentioned in dcoument:</li>
+</ul>
+<pre class="code literal-block"><span></span><code><span class="c1"># Import the nipype module</span>
+
+<span class="kn">import</span> <span class="nn">nipype</span>
+
+<span class="c1"># Optional: Use the following lines to increase verbosity of output</span>
+
+<span class="n">nipype</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s1">'logging'</span><span class="p">,</span> <span class="s1">'workflow_level'</span><span class="p">,</span> <span class="s1">'CRITICAL'</span><span class="p">)</span>
+<span class="n">nipype</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s1">'logging'</span><span class="p">,</span> <span class="s1">'interface_level'</span><span class="p">,</span> <span class="s1">'CRITICAL'</span><span class="p">)</span>
+<span class="n">nipype</span><span class="o">.</span><span class="n">logging</span><span class="o">.</span><span class="n">update_logging</span><span class="p">(</span><span class="n">nipype</span><span class="o">.</span><span class="n">config</span><span class="p">)</span>
+
+<span class="c1"># Run the test: Increase verbosity parameter for more info</span>
+<span class="n">nipype</span><span class="o">.</span><span class="n">test</span><span class="p">(</span><span class="n">doctests</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+</code></pre>
+
+
+<ul>
+<li>
+<p>No this tiem I get this erro: ERROR: usage: ipykernel_launcher.py [options] [file_or_dir] [file_or_dir] [...]
+ipykernel_launcher.py: error: unrecognized arguments: --doctest-modules
+  inifile: /home/sayyed/anaconda3/envs/nipype/lib/python3.8/site-packages/nipype/pytest.ini
+  rootdir: /home/sayyed/anaconda3/envs/nipype/lib/python3.8/site-packages/nipype</p>
+</li>
+<li>
+<p>This time again using <code>conda install doctest</code> installed a new packgage called <code>doctest-2.4.0....</code> but the test did not suceeded.</p>
+</li>
 </ul>
 <pre class="code literal-block"><span></span><code><span class="err">⋊</span><span class="o">&gt;</span> <span class="o">~/</span><span class="n">n</span><span class="o">/</span><span class="n">p</span><span class="o">/</span><span class="n">nikola</span> <span class="n">ll</span>                                                                                                         <span class="p">(</span><span class="n">base</span><span class="p">)</span> <span class="mi">17</span><span class="p">:</span><span class="mi">32</span><span class="p">:</span><span class="mi">36</span>
 <span class="n">total</span> <span class="mi">52</span><span class="n">K</span>
@@ -194,11 +245,94 @@ navbar-dark bg-dark
 <li>They can all be opened from one place and knows which environment they are to be used as in their meta contents this information is saved.</li>
 <li>If not the right kernel can be opened from the right corner.</li>
 </ol>
+<h4>Running code from different kernels</h4>
+<ul>
+<li>It is possible to run code from different kernel or executional environment in one note book.</li>
+<li>Use <code>%%bash</code> or <code>%%HTML</code> or <code>%%</code> and run the particular command to execute it.</li>
+</ul>
+<h4>How this repo is committed</h4>
+<ol>
+<li>Since I am using nikola, whatever I do I keep the work under <code>mysite</code> folder so that it is also published as well.</li>
+<li>I always work in dev branch. To publish my site , I switched to <code>src</code> by using <code>git checkout src</code> from here I use <code>nikola github_deploy</code>. This takes care of eveything and only deploy the output folder and whatever is necessary to produce a websit.</li>
+<li>I also wanted to be able to use my repo with windows so I cloned it to my windwos environment but realised that it does not have any contents, it is only a publish html file repo. No markdown contents.</li>
+<li>To resolve this issue I had to create a new repo which I named <code>https://github.com/AbdulSayyed/nikola-website</code> and added a remote in my local <code>dev</code> branch where I usually work from.</li>
+<li>To add a new remote to a same repo I used this command <code>git remote add niksrc https://github.com/AbdulSayyed/nikola-website.git</code> as shown below. Now I have my dev branch set to a remote repo name <code>nikola-website.git</code>. This branch is added or referenced in my config file as <code>niksrc</code>. To pus or pull I would use <code>git push niksrc dev</code> or <code>git pull niksrc dev</code>
+</li>
+</ol>
+<pre class="code literal-block"><span></span><code> <span class="o">~/</span><span class="n">n</span><span class="o">/</span><span class="n">p</span><span class="o">/</span><span class="n">n</span><span class="o">/</span><span class="n">mysite</span> <span class="n">on</span> <span class="n">dev</span>  <span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">niksrc</span> <span class="nl">https</span><span class="p">:</span><span class="c1">//github.com/AbdulSayyed/nikola-website.git                      (nikola) 12:59:21</span>
+<span class="err">⋊</span><span class="o">&gt;</span> <span class="o">~/</span><span class="n">n</span><span class="o">/</span><span class="n">p</span><span class="o">/</span><span class="n">n</span><span class="o">/</span><span class="n">mysite</span> <span class="n">on</span> <span class="n">dev</span>  <span class="n">git</span> <span class="n">remote</span> <span class="o">-</span><span class="n">v</span>                                                                                <span class="p">(</span><span class="n">nikola</span><span class="p">)</span> <span class="mi">12</span><span class="o">:</span><span class="mi">59</span><span class="o">:</span><span class="mi">43</span>
+<span class="n">niksrc</span>  <span class="nl">https</span><span class="p">:</span><span class="c1">//github.com/AbdulSayyed/nikola-website.git (fetch)</span>
+<span class="n">niksrc</span>  <span class="nl">https</span><span class="p">:</span><span class="c1">//github.com/AbdulSayyed/nikola-website.git (push)</span>
+<span class="n">origin</span>  <span class="nl">https</span><span class="p">:</span><span class="c1">//github.com/AbdulSayyed/AbdulSayyed.github.io.git (fetch)</span>
+<span class="n">origin</span>  <span class="nl">https</span><span class="p">:</span><span class="c1">//github.com/AbdulSayyed/AbdulSayyed.github.io.git (push)</span>
+<span class="err">⋊</span><span class="o">&gt;</span> <span class="o">~/</span><span class="n">n</span><span class="o">/</span><span class="n">p</span><span class="o">/</span><span class="n">n</span><span class="o">/</span><span class="n">mysite</span> <span class="n">on</span> <span class="n">dev</span>  <span class="n">git</span> <span class="n">status</span>                                                                                   <span class="p">(</span><span class="n">nikola</span><span class="p">)</span> <span class="mi">12</span><span class="o">:</span><span class="mi">59</span><span class="o">:</span><span class="mi">49</span>
+<span class="n">On</span> <span class="n">branch</span> <span class="n">dev</span>
+<span class="n">nothing</span> <span class="n">to</span> <span class="n">commit</span><span class="p">,</span> <span class="n">working</span> <span class="n">tree</span> <span class="n">clean</span>
+<span class="err">⋊</span><span class="o">&gt;</span> <span class="o">~/</span><span class="n">n</span><span class="o">/</span><span class="n">p</span><span class="o">/</span><span class="n">n</span><span class="o">/</span><span class="n">mysite</span> <span class="n">on</span> <span class="n">dev</span>  <span class="n">git</span> <span class="n">push</span> <span class="o">-</span><span class="n">u</span> <span class="n">niksrc</span> <span class="n">dev</span>                                                                       <span class="p">(</span><span class="n">nikola</span><span class="p">)</span> <span class="mi">13</span><span class="o">:</span><span class="mo">00</span><span class="o">:</span><span class="mi">10</span>
+<span class="n">Username</span> <span class="k">for</span> <span class="err">'</span><span class="nl">https</span><span class="p">:</span><span class="c1">//github.com': Abdulsayyed</span>
+<span class="n">Password</span> <span class="k">for</span> <span class="err">'</span><span class="nl">https</span><span class="p">:</span><span class="c1">//Abdulsayyed@github.com': </span>
+<span class="n">Enumerating</span> <span class="nl">objects</span><span class="p">:</span> <span class="mi">111</span><span class="p">,</span> <span class="n">done</span><span class="p">.</span>
+<span class="n">Counting</span> <span class="nl">objects</span><span class="p">:</span> <span class="mi">100</span><span class="o">%</span> <span class="p">(</span><span class="mi">111</span><span class="o">/</span><span class="mi">111</span><span class="p">),</span> <span class="n">done</span><span class="p">.</span>
+<span class="n">Delta</span> <span class="n">compression</span> <span class="n">using</span> <span class="n">up</span> <span class="n">to</span> <span class="mi">8</span> <span class="n">threads</span>
+<span class="n">Compressing</span> <span class="nl">objects</span><span class="p">:</span> <span class="mi">100</span><span class="o">%</span> <span class="p">(</span><span class="mi">97</span><span class="o">/</span><span class="mi">97</span><span class="p">),</span> <span class="n">done</span><span class="p">.</span>
+<span class="n">Writing</span> <span class="nl">objects</span><span class="p">:</span> <span class="mi">100</span><span class="o">%</span> <span class="p">(</span><span class="mi">111</span><span class="o">/</span><span class="mi">111</span><span class="p">),</span> <span class="mf">259.39</span> <span class="n">KiB</span> <span class="o">|</span> <span class="mf">7.63</span> <span class="n">MiB</span><span class="o">/</span><span class="n">s</span><span class="p">,</span> <span class="n">done</span><span class="p">.</span>
+<span class="n">Total</span> <span class="mi">111</span> <span class="p">(</span><span class="n">delta</span> <span class="mi">41</span><span class="p">),</span> <span class="n">reused</span> <span class="mi">6</span> <span class="p">(</span><span class="n">delta</span> <span class="mi">0</span><span class="p">),</span> <span class="n">pack</span><span class="o">-</span><span class="n">reused</span> <span class="mi">0</span>
+<span class="nl">remote</span><span class="p">:</span> <span class="n">Resolving</span> <span class="nl">deltas</span><span class="p">:</span> <span class="mi">100</span><span class="o">%</span> <span class="p">(</span><span class="mi">41</span><span class="o">/</span><span class="mi">41</span><span class="p">),</span> <span class="n">done</span><span class="p">.</span>
+<span class="n">To</span> <span class="nl">https</span><span class="p">:</span><span class="c1">//github.com/AbdulSayyed/nikola-website.git</span>
+ <span class="o">*</span> <span class="p">[</span><span class="n">new</span> <span class="n">branch</span><span class="p">]</span>      <span class="n">dev</span> <span class="o">-&gt;</span> <span class="n">dev</span>
+<span class="n">Branch</span> <span class="err">'</span><span class="n">dev</span><span class="err">'</span> <span class="n">set</span> <span class="n">up</span> <span class="n">to</span> <span class="n">track</span> <span class="n">remote</span> <span class="n">branch</span> <span class="err">'</span><span class="n">dev</span><span class="err">'</span> <span class="n">from</span> <span class="err">'</span><span class="n">niksrc</span><span class="err">'</span><span class="p">.</span>
+<span class="err">⋊</span><span class="o">&gt;</span> <span class="o">~/</span><span class="n">n</span><span class="o">/</span><span class="n">p</span><span class="o">/</span><span class="n">n</span><span class="o">/</span><span class="n">mysite</span> <span class="n">on</span> <span class="n">dev</span> <span class="err">◦</span> <span class="n">git</span> <span class="n">remote</span> <span class="o">-</span><span class="n">v</span>                                                                               <span class="p">(</span><span class="n">nikola</span><span class="p">)</span> <span class="mi">13</span><span class="o">:</span><span class="mo">01</span><span class="o">:</span><span class="mi">08</span>
+<span class="n">niksrc</span>  <span class="nl">https</span><span class="p">:</span><span class="c1">//github.com/AbdulSayyed/nikola-website.git (fetch)</span>
+<span class="n">niksrc</span>  <span class="nl">https</span><span class="p">:</span><span class="c1">//github.com/AbdulSayyed/nikola-website.git (push)</span>
+<span class="n">origin</span>  <span class="nl">https</span><span class="p">:</span><span class="c1">//github.com/AbdulSayyed/AbdulSayyed.github.io.git (fetch)</span>
+<span class="n">origin</span>  <span class="nl">https</span><span class="p">:</span><span class="c1">//github.com/AbdulSayyed/AbdulSayyed.github.io.git (push)</span>
+<span class="err">⋊</span><span class="o">&gt;</span> <span class="o">~/</span><span class="n">n</span><span class="o">/</span><span class="n">p</span><span class="o">/</span><span class="n">n</span><span class="o">/</span><span class="n">mysite</span> <span class="n">on</span> <span class="n">dev</span> <span class="err">◦</span>    
+</code></pre>
+
+
+<blockquote>
+<p>The reason it was done because I was having difficulty with shared folder with VBox and Ubuntu 20.04. As there are some material, especially some images that I wanted to use with nikola site.</p>
+</blockquote>
+<ul>
+<li>Though I have started working from both machine, I need to understand that I can only work or update the contents from one machine, push it to the remote. And then when starting to work again in another machine I need to pull a repo and started woking with it. I can not start to wrok in both machine with the same repo as it would created confilicts and I will loose my work.</li>
+</ul>
+<h4>Problems faced with working nipype.</h4>
+<ul>
+<li>It has been a week I have not been able to solve the issue with an error I recieved, it comes when this package tries to read the bids file. It does not give any error when reading but it doe when I use <code>BET</code> and tries to output.</li>
+<li>I can not run nipype on windows.</li>
+</ul>
+<h4>When looking at the examples of nipype I found a new term <code>BET</code>
+</h4>
+<ul>
+<li>
+<p>As I have not worked with <a href="../../../files/WhyNhow_FSL_final-WEB.pdf"><code>FSL</code></a> software but here is an overview of <code>FSL</code> software</p>
+</li>
+<li>
+<p>Tools used in FSL:[Taken from FSL oxford]</p>
+</li>
+<li>
+<p>fMRI:<code>FEAT, MELODIC,FABBER, BASIL,VERBENA</code></p>
+</li>
+<li>sMRI: <code>BET,FAST,FIRST,FLIRT, FNIRT, FSLVBM,SIENA, DIENAX,fsl_anat</code>
+</li>
+<li>dMRI: <code>FDT,TBSS, eddy,topup</code>
+</li>
+<li>GLM/ Stats:.</li>
+<li>
+<p>other tools: <code>FSLView, Fslutils,Atlases, Atlasquery, etc</code></p>
+</li>
+<li>
+<p><code>BET</code> or Brain Extaction Tool is uses to delete non-brain tissu from an image of the whle head. It is used to estimate the inner and outer cell surfaces and outer scapl surface out of T1 and T2 images.</p>
+</li>
+</ul>
 </div>
     </div>
     <aside class="postpromonav"><nav><ul class="pager hidden-print">
 <li class="previous">
-                <a href="../../../notebooks/005-intro/" rel="prev" title="Nipype introduction">Previous post</a>
+                <a href="../../../notebooks/001-intro/" rel="prev" title="Nipype introduction">Previous post</a>
+            </li>
+            <li class="next">
+                <a href="../../../notebooks/nilearn-001/" rel="next" title="Neuro Imagin with Machine Learning">Next post</a>
             </li>
         </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
         

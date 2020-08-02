@@ -1,0 +1,688 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sayyed's blog (Posts about nibabel)</title><link>https://AbdulSayyed.github.io/</link><description></description><atom:link href="https://AbdulSayyed.github.io/categories/cat_nibabel.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:neuro.sayyed@gmail.com"&gt;Abdul Sayyed&lt;/a&gt; </copyright><lastBuildDate>Sun, 02 Aug 2020 21:25:38 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>nibabel_001</title><link>https://AbdulSayyed.github.io/posts/neuroscience/nibabel_001/</link><dc:creator>Abdul Sayyed</dc:creator><description>&lt;div&gt;&lt;h3&gt;&lt;a href="https://nipy.org/nibabel/installation.html#installer-and-packages"&gt;&lt;code&gt;NiBabel&lt;/code&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;h4&gt;Installation&lt;/h4&gt;
+&lt;h4&gt;Installation Testing&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Testing as usual with &lt;code&gt;import nibabel;print(success);nibabel.test()&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;import nibabel; print('Success!');nibabel.test()&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Note: Before running advanced tests, please update all submodules of nibabel, by running git submodule update --init&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I am running a simpple test, not the advanced one it ran for 15 minutes and gave me long listing. In the end it gave me error about Freesurfer other wise the rest test is passed.&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;-- Docs: https://docs.pytest.org/en/latest/warnings.html&lt;/span&gt;
+&lt;span class="err"&gt;=========================== short test summary info ============================&lt;/span&gt;
+&lt;span class="err"&gt;FAILED freesurfer/tests/test_io.py::test_geometry - assert False&lt;/span&gt;
+&lt;span class="err"&gt;FAILED freesurfer/tests/test_io.py::test_write_annot_fill_ctab - assert False&lt;/span&gt;
+&lt;span class="err"&gt;FAILED streamlines/tests/test_streamlines.py::TestLoadSave::test_save_complex_file&lt;/span&gt;
+&lt;span class="err"&gt;FAILED streamlines/tests/test_streamlines.py::TestLoadSave::test_save_tractogram_file&lt;/span&gt;
+&lt;span class="err"&gt;FAILED streamlines/tests/test_tck.py::TestTCK::test_load_file_with_wrong_information&lt;/span&gt;
+&lt;span class="err"&gt;FAILED streamlines/tests/test_trk.py::TestTRK::test_load_file_with_wrong_information&lt;/span&gt;
+&lt;span class="err"&gt;FAILED streamlines/tests/test_trk.py::TestTRK::test_load_trk_version_1 - Asse...&lt;/span&gt;
+&lt;span class="err"&gt;FAILED tests/test_deprecated.py::test_futurewarning_mixin - IndexError: pop f...&lt;/span&gt;
+&lt;span class="err"&gt;FAILED tests/test_nifti1.py::test_extension_io - assert 0 == 1&lt;/span&gt;
+&lt;span class="err"&gt;FAILED tests/test_parrec.py::test_truncated_load - assert 0 == 1&lt;/span&gt;
+&lt;span class="err"&gt;FAILED tests/test_parrec.py::test_truncations - assert 0 == 1&lt;/span&gt;
+&lt;span class="err"&gt;FAILED tests/test_parrec.py::test_ADC_map - assert 0 == 2&lt;/span&gt;
+&lt;span class="err"&gt;FAILED tests/test_testing.py::test_clear_and_catch_warnings - assert 1 == 2&lt;/span&gt;
+&lt;span class="err"&gt;= 13 failed, 4648 passed, 105 skipped, 6 xfailed, 1 warning in 829.54s (0:13:49) =&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;h4&gt;What is this pakcage ?&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;It provides read write acees to commonly used Neuroimaging files which includes following format  Description&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;type&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Gifti&lt;/td&gt;
+&lt;td&gt;NifTI&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4&gt;Start working&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Import and use its exposed version &lt;code&gt;nibabel.(__version__)&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Reading a nifti file. &lt;code&gt;nibabel.load(&amp;lt;filename&amp;gt;)&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;A file that is read is used in a variabel say &lt;code&gt;anat_img = nibabel.load('sample.nii.gz')&lt;/code&gt;. This object knows the file &lt;code&gt;shape&lt;/code&gt;  and image affine ( array matrix) shape. Another attribute is &lt;code&gt;dataobj&lt;/code&gt; that gives you the detail of where this object is pointing to.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The ouput of &lt;code&gt;nibabel&lt;/code&gt; loaded object is an instance of &lt;code&gt;nibabel.nifti1.Nifti1Image&lt;/code&gt; which get read in a memory. When it is printed it gives you the address as well for example &lt;code&gt;0x7fdbdc86b2e0.&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;One can see that the super class is of &lt;code&gt;nibabel.nifti1&lt;/code&gt;. This class exposes number of ...file&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The &lt;code&gt;nibabel&lt;/code&gt; attribute &lt;code&gt;dataobj&lt;/code&gt; is an object that point to an image array that get loaded.,it is of &lt;code&gt;nibabel.arrayproxy.ArrayProxy ojbect&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Array proxies and proxy images&lt;/code&gt; are the techniques &lt;code&gt;nibabel&lt;/code&gt; uses to load an image from disk, an array &lt;code&gt;proxy&lt;/code&gt; is not the array itself but something that represents the array and can provide the array when we load it. It allows us to create the image object withou immediately loading all the array data from sik.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Proxy is used rightly because images with an &lt;code&gt;proxy object&lt;/code&gt; like this one are called &lt;code&gt;proxy images&lt;/code&gt; because the &lt;code&gt;image data&lt;/code&gt; is the proxy points to the array data on disk.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;To check if it is a proxy, &lt;code&gt;nib.is_proxy(anat_img)&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Image shape and affine shape can be found out using &lt;code&gt;numpy object&lt;/code&gt; and to do so you need to get an object that points to an image.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;And it is done using &lt;code&gt;img_data = anat_img.get_fdata())&lt;/code&gt;. This method returns a numpy array object. Its &lt;code&gt;shape&lt;/code&gt; attribute will give the same result as &lt;code&gt;nibiabel&lt;/code&gt; object.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Following is done and shown below&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;nibable&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;nb&lt;/span&gt;
+
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;nb&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;__version__&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;anat_img&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;nibabel&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;load&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'sample.nii.gz'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;anat_img&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;shape&lt;/span&gt;           &lt;span class="c1"&gt;# ()&lt;/span&gt;
+&lt;span class="n"&gt;anat_img&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;affine&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sahpe&lt;/span&gt;   &lt;span class="c1"&gt;#&lt;/span&gt;
+&lt;span class="n"&gt;anat_img&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;header&lt;/span&gt;         &lt;span class="c1"&gt;# &lt;/span&gt;
+
+&lt;span class="n"&gt;file_data&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;anat_img&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get_fdata&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;file_data&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;shape&lt;/span&gt;
+&lt;span class="n"&gt;file_data&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;affine&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;shape&lt;/span&gt; &lt;span class="err"&gt;?&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;h4&gt;Commonly used functions&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;nibable.load()&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;nibable.shape # a loaded object represents the image that knows its shape.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;nibable.affine.shape #&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Working directory&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;There is not need to have or set a working directory but it is better to set a data directroy do avoid platfrom specific details.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Nibabel Images and its image object&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;It is composed of 3 items:&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;an N-D array containing the  image data;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;a (4, 4) affine matrix mapping array coordinates to coordinates in some &lt;code&gt;RAS+ world coordinate space (Coordinate systems and affines);&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;image metadata in the form of a header.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The word affine is used frequently in image transformation, subsquently the word &lt;code&gt;affine array&lt;/code&gt; represents an array that is accessed by another array in a loop. Another term is affine transformation like linear transformation and it is used to correct image transoformation in image related works.&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/div&gt;</description><guid>https://AbdulSayyed.github.io/posts/neuroscience/nibabel_001/</guid><pubDate>Sat, 01 Aug 2020 09:33:59 GMT</pubDate></item><item><title>Reading and Writing Access using Nibabel</title><link>https://AbdulSayyed.github.io/notebooks/nibabel-001/</link><dc:creator>Abdul Sayyed</dc:creator><description>&lt;div&gt;&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h3 id="What-is-this-pakcage-?"&gt;What is this pakcage ?&lt;a class="anchor-link" href="https://AbdulSayyed.github.io/notebooks/nibabel-001/#What-is-this-pakcage-?"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;It provides read write acees to commonly used Neuroimaging files which includes many formats&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h3 id="Installation"&gt;Installation&lt;a class="anchor-link" href="https://AbdulSayyed.github.io/notebooks/nibabel-001/#Installation"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Use &lt;code&gt;pip install nibabel&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="Test-installaiton"&gt;Test installaiton&lt;a class="anchor-link" href="https://AbdulSayyed.github.io/notebooks/nibabel-001/#Test-installaiton"&gt;¶&lt;/a&gt;&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;Use &lt;code&gt;import nibabel; nibabel.(__version__);print('succeeded!')&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="Run-builtin-test"&gt;Run builtin test&lt;a class="anchor-link" href="https://AbdulSayyed.github.io/notebooks/nibabel-001/#Run-builtin-test"&gt;¶&lt;/a&gt;&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;import nibabel; nibabel.test()&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h4 id="Start-working"&gt;Start working&lt;a class="anchor-link" href="https://AbdulSayyed.github.io/notebooks/nibabel-001/#Start-working"&gt;¶&lt;/a&gt;&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Import and use its exposed version &lt;code&gt;nibabel.(__version__)&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Reading a nifti file. &lt;code&gt;nibabel.load(&amp;lt;filename&amp;gt;)&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;A file that is read is used in a variabel say &lt;code&gt;anat_img = nibabel.load('sample.nii.gz')&lt;/code&gt;. This object knows the file &lt;code&gt;shape&lt;/code&gt;  and image affine ( array matrix) shape. Another attribute is &lt;code&gt;dataobj&lt;/code&gt; that gives you the detail of where this object is pointing to.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;The ouput of &lt;code&gt;nibabel&lt;/code&gt; loaded object is an instance of &lt;code&gt;nibabel.nifti1.Nifti1Image&lt;/code&gt; which get read in a memory. When it is printed it gives you the address as well for example &lt;code&gt;0x7fdbdc86b2e0.&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;One can see that the super class is of &lt;code&gt;nibabel.nifti1&lt;/code&gt;. This class exposes number of ...file&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The &lt;code&gt;nibabel&lt;/code&gt; attribute &lt;code&gt;dataobj&lt;/code&gt; is an object that point to an image array that get loaded.,it is of &lt;code&gt;nibabel.arrayproxy.ArrayProxy ojbect&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;Array proxies and proxy images&lt;/code&gt; are the techniques &lt;code&gt;nibabel&lt;/code&gt; uses to load an image from disk, an array &lt;code&gt;proxy&lt;/code&gt; is not the array itself but something that represents the array and can provide the array when we load it. It allows us to create the image object withou immediately loading all the array data from sik.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Proxy is used rightly because images with an &lt;code&gt;proxy object&lt;/code&gt; like this one are called &lt;code&gt;proxy images&lt;/code&gt; because the &lt;code&gt;image data&lt;/code&gt; is the proxy points to the array data on disk.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;To check if it is a proxy, &lt;code&gt;nib.is_proxy(anat_img)&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Image shape and affine shape can be found out using &lt;code&gt;numpy object&lt;/code&gt; and to do so you need to get an object that points to an image.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;And it is done using &lt;code&gt;img_data = anat_img.get_fdata())&lt;/code&gt;. This method returns a numpy array object. Its &lt;code&gt;shape&lt;/code&gt; attribute will give the same result as &lt;code&gt;nibiabel&lt;/code&gt; object.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h3 id="Start-reading-(-loading-)-an-image."&gt;Start reading ( loading ) an image.&lt;a class="anchor-link" href="https://AbdulSayyed.github.io/notebooks/nibabel-001/#Start-reading-(-loading-)-an-image."&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [7]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;nibabel&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;nib&lt;/span&gt; 
+&lt;span class="n"&gt;img&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;nib&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;load&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'data/oxf/ExBox1/STRUCT0001.nii.gz'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c1"&gt;# gets its attribute&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;img&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;shape&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;            &lt;span class="c1"&gt;# it will use (img.header.get_data_shape())&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;img&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;affine&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;shape&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;    &lt;span class="c1"&gt;# &lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;img&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dataobj&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;header&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;img&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;header&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;header&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;header&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get_data_shape&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;header&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get_data_dtype&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;header&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get_zooms&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt; &lt;span class="c1"&gt;# voxel in milimiter, and the time between scans in ms, it is the lst value.&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+
+    &lt;div class="prompt"&gt;&lt;/div&gt;
+
+
+&lt;div class="output_subarea output_stream output_stdout output_text"&gt;
+&lt;pre&gt;(192, 256, 256)
+(4, 4)
+&amp;lt;nibabel.arrayproxy.ArrayProxy object at 0x7f1493ccc2b0&amp;gt;
+&amp;lt;class 'nibabel.nifti1.Nifti1Header'&amp;gt; object, endian='&amp;lt;'
+sizeof_hdr      : 348
+data_type       : b''
+db_name         : b''
+extents         : 0
+session_error   : 0
+regular         : b'r'
+dim_info        : 0
+dim             : [  3 192 256 256   1   1   1   1]
+intent_p1       : 0.0
+intent_p2       : 0.0
+intent_p3       : 0.0
+intent_code     : none
+datatype        : int16
+bitpix          : 16
+slice_start     : 0
+pixdim          : [-1.         1.0500001  1.         1.         5.         0.
+  0.         0.       ]
+vox_offset      : 0.0
+scl_slope       : nan
+scl_inter       : nan
+slice_end       : 0
+slice_code      : unknown
+xyzt_units      : 10
+cal_max         : 1218.0
+cal_min         : 0.0
+slice_duration  : 0.0
+toffset         : 0.0
+glmax           : 0
+glmin           : 0
+descrip         : b'5.0.10'
+aux_file        : b''
+qform_code      : scanner
+sform_code      : scanner
+quatern_b       : 0.0
+quatern_c       : 1.0
+quatern_d       : 0.0
+qoffset_x       : 103.30165
+qoffset_y       : -119.3996
+qoffset_z       : -128.21066
+srow_x          : [ -1.0500001   0.          0.        103.30165  ]
+srow_y          : [   0.        1.        0.     -119.3996]
+srow_z          : [   0.         0.         1.      -128.21066]
+intent_name     : b''
+magic           : b'n+1'
+(192, 256, 256)
+int16
+(1.0500001, 1.0, 1.0)
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [ ]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;Most&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;header&lt;/span&gt; &lt;span class="n"&gt;information&lt;/span&gt; &lt;span class="n"&gt;are&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="n"&gt;directly&lt;/span&gt; &lt;span class="n"&gt;accessebile&lt;/span&gt; &lt;span class="n"&gt;but&lt;/span&gt; &lt;span class="n"&gt;retrieved&lt;/span&gt;  &lt;span class="n"&gt;by&lt;/span&gt; &lt;span class="n"&gt;using&lt;/span&gt;  &lt;span class="n"&gt;getter&lt;/span&gt; &lt;span class="err"&gt;`&lt;/span&gt;&lt;span class="n"&gt;obj&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get_dtype&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="err"&gt;`&lt;/span&gt; &lt;span class="n"&gt;etc&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h3 id="Image-data"&gt;Image data&lt;a class="anchor-link" href="https://AbdulSayyed.github.io/notebooks/nibabel-001/#Image-data"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;An image array can also be stored in the image object as numpy array.&lt;/li&gt;
+&lt;li&gt;To get more about image data, we can get a handle to &lt;code&gt;dataobj&lt;/code&gt; that is returned by this function &lt;code&gt;image_data = img.get-fdata()&lt;/code&gt;. It is a &lt;code&gt;numpy.ndarray&lt;/code&gt; object that represents the data object.&lt;/li&gt;
+&lt;li&gt;Image data object contains all the information that we can directly retrieved by using an image &lt;code&gt;header&lt;/code&gt; object. It is another way to represent the data. For example &lt;code&gt;header.get_dtype()&lt;/code&gt; will give same result as &lt;code&gt;img_data.dtype&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [12]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;nibabel&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;nib&lt;/span&gt;
+&lt;span class="n"&gt;anat_img&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;nib&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;load&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'data/oxf/ExBox1/STRUCT0001.nii.gz'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;anat_img_data&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;anat_img&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get_fdata&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;type&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;anat_img_data&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"*********************************"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;anat_img_data&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"*********************************"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;anat_img_data&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;shape&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;anat_img_data&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dtype&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+
+    &lt;div class="prompt"&gt;&lt;/div&gt;
+
+
+&lt;div class="output_subarea output_stream output_stdout output_text"&gt;
+&lt;pre&gt;&amp;lt;class 'numpy.ndarray'&amp;gt;
+*********************************
+[[[33. 27. 17. ...  1.  0.  0.]
+  [19.  0.  2. ...  0.  0.  0.]
+  [29.  4.  5. ...  0.  0.  0.]
+  ...
+  [17.  2.  5. ...  1.  1.  0.]
+  [10.  5. 11. ...  1.  1.  0.]
+  [ 0.  0.  0. ...  0.  0.  0.]]
+
+ [[11. 20.  7. ...  1.  0.  0.]
+  [11. 18. 10. ...  0.  0.  0.]
+  [10.  4.  5. ...  1.  1.  0.]
+  ...
+  [14. 15.  7. ...  0.  1.  0.]
+  [ 7. 12. 11. ...  1.  1.  0.]
+  [ 0.  0.  0. ...  0.  0.  0.]]
+
+ [[ 7.  4. 18. ...  1.  0.  0.]
+  [ 3.  4. 20. ...  1.  1.  0.]
+  [ 9.  7. 22. ...  0.  1.  0.]
+  ...
+  [14. 13.  9. ...  1.  1.  0.]
+  [ 5.  5. 15. ...  1.  0.  0.]
+  [ 0.  0.  0. ...  0.  0.  0.]]
+
+ ...
+
+ [[16. 17.  9. ...  0.  0.  0.]
+  [19. 14.  8. ...  1.  0.  0.]
+  [30. 15. 15. ...  1.  0.  0.]
+  ...
+  [ 0.  9.  5. ...  0.  0.  0.]
+  [ 0.  6. 10. ...  1.  0.  0.]
+  [ 0.  0.  0. ...  0.  0.  0.]]
+
+ [[23. 16. 16. ...  1.  0.  0.]
+  [10. 28. 24. ...  0.  0.  0.]
+  [ 1. 12. 15. ...  0.  1.  0.]
+  ...
+  [ 7. 11. 16. ...  1.  1.  0.]
+  [11.  1.  5. ...  0.  1.  0.]
+  [ 0.  0.  0. ...  0.  0.  0.]]
+
+ [[20. 27.  3. ...  1.  0.  0.]
+  [21. 22. 24. ...  0.  0.  0.]
+  [ 0. 19. 44. ...  0.  0.  0.]
+  ...
+  [15.  4.  7. ...  0.  0.  0.]
+  [12.  4.  4. ...  1.  0.  0.]
+  [ 0.  0.  0. ...  0.  0.  0.]]]
+*********************************
+(192, 256, 256)
+float64
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [32]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# As we saw, that the retruned data object is of `numpy.ndarry `. We can also create an image of `numpy arrays` &lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt;
+&lt;span class="n"&gt;array_data&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;arange&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;24&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;dtype&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;int16&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;array_data&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="nb"&gt;print&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"*------------------------*"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;array_data&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;array_data&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;reshape&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;array_data&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"*------------------------*"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;affine&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;diag&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;affine&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;array_img&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;nib&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Nifti1Image&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;array_data&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;affine&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;array_img&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;array_img&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dataobj&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+
+    &lt;div class="prompt"&gt;&lt;/div&gt;
+
+
+&lt;div class="output_subarea output_stream output_stdout output_text"&gt;
+&lt;pre&gt;[ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23]
+*------------------------*
+[[[ 0  1  2  3]
+  [ 4  5  6  7]
+  [ 8  9 10 11]]
+
+ [[12 13 14 15]
+  [16 17 18 19]
+  [20 21 22 23]]]
+*------------------------*
+[[1 0 0 0]
+ [0 2 0 0]
+ [0 0 3 0]
+ [0 0 0 1]]
+&amp;lt;class 'nibabel.nifti1.Nifti1Image'&amp;gt;
+data shape (2, 3, 4)
+affine: 
+[[1. 0. 0. 0.]
+ [0. 2. 0. 0.]
+ [0. 0. 3. 0.]
+ [0. 0. 0. 1.]]
+metadata:
+&amp;lt;class 'nibabel.nifti1.Nifti1Header'&amp;gt; object, endian='&amp;lt;'
+sizeof_hdr      : 348
+data_type       : b''
+db_name         : b''
+extents         : 0
+session_error   : 0
+regular         : b''
+dim_info        : 0
+dim             : [3 2 3 4 1 1 1 1]
+intent_p1       : 0.0
+intent_p2       : 0.0
+intent_p3       : 0.0
+intent_code     : none
+datatype        : int16
+bitpix          : 16
+slice_start     : 0
+pixdim          : [1. 1. 2. 3. 1. 1. 1. 1.]
+vox_offset      : 0.0
+scl_slope       : nan
+scl_inter       : nan
+slice_end       : 0
+slice_code      : unknown
+xyzt_units      : 0
+cal_max         : 0.0
+cal_min         : 0.0
+slice_duration  : 0.0
+toffset         : 0.0
+glmax           : 0
+glmin           : 0
+descrip         : b''
+aux_file        : b''
+qform_code      : unknown
+sform_code      : aligned
+quatern_b       : 0.0
+quatern_c       : 0.0
+quatern_d       : 0.0
+qoffset_x       : 0.0
+qoffset_y       : 0.0
+qoffset_z       : 0.0
+srow_x          : [1. 0. 0. 0.]
+srow_y          : [0. 2. 0. 0.]
+srow_z          : [0. 0. 3. 0.]
+intent_name     : b''
+magic           : b'n+1'
+[[[ 0  1  2  3]
+  [ 4  5  6  7]
+  [ 8  9 10 11]]
+
+ [[12 13 14 15]
+  [16 17 18 19]
+  [20 21 22 23]]]
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [ ]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h4 id="checking-the-data-type"&gt;checking the data type&lt;a class="anchor-link" href="https://AbdulSayyed.github.io/notebooks/nibabel-001/#checking-the-data-type"&gt;¶&lt;/a&gt;&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;An image data object can be of &lt;code&gt;array_img.dataobject&lt;/code&gt;, &lt;code&gt;farray_img.dataobj&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [14]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;anat_img_data&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="n"&gt;array_img&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dataobj&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"It is of array_img.dataobj"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="n"&gt;anat_img_data&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="n"&gt;farray_img&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dataobj&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"It is of arry_img.dataob"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"unknown data dyte"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+
+    &lt;div class="prompt"&gt;&lt;/div&gt;
+
+
+&lt;div class="output_subarea output_text output_error"&gt;
+&lt;pre&gt;
+&lt;span class="ansi-red-fg"&gt;---------------------------------------------------------------------------&lt;/span&gt;
+&lt;span class="ansi-red-fg"&gt;NameError&lt;/span&gt;                                 Traceback (most recent call last)
+&lt;span class="ansi-green-fg"&gt;&amp;lt;ipython-input-14-4c9ab58e1037&amp;gt;&lt;/span&gt; in &lt;span class="ansi-cyan-fg"&gt;&amp;lt;module&amp;gt;&lt;/span&gt;
+&lt;span class="ansi-green-fg"&gt;----&amp;gt; 1&lt;/span&gt;&lt;span class="ansi-red-fg"&gt; &lt;/span&gt;&lt;span class="ansi-green-fg"&gt;if&lt;/span&gt; anat_img_data &lt;span class="ansi-green-fg"&gt;is&lt;/span&gt; array_img&lt;span class="ansi-blue-fg"&gt;.&lt;/span&gt;dataobj&lt;span class="ansi-blue-fg"&gt;:&lt;/span&gt;
+&lt;span class="ansi-green-intense-fg ansi-bold"&gt;      2&lt;/span&gt;     print&lt;span class="ansi-blue-fg"&gt;(&lt;/span&gt;&lt;span class="ansi-blue-fg"&gt;"It is of array_img.dataobj"&lt;/span&gt;&lt;span class="ansi-blue-fg"&gt;)&lt;/span&gt;
+&lt;span class="ansi-green-intense-fg ansi-bold"&gt;      3&lt;/span&gt; &lt;span class="ansi-green-fg"&gt;elif&lt;/span&gt; anat_img_data &lt;span class="ansi-green-fg"&gt;is&lt;/span&gt; farray_img&lt;span class="ansi-blue-fg"&gt;.&lt;/span&gt;dataobj&lt;span class="ansi-blue-fg"&gt;:&lt;/span&gt;
+&lt;span class="ansi-green-intense-fg ansi-bold"&gt;      4&lt;/span&gt;     print&lt;span class="ansi-blue-fg"&gt;(&lt;/span&gt;&lt;span class="ansi-blue-fg"&gt;"It is of arry_img.dataob"&lt;/span&gt;&lt;span class="ansi-blue-fg"&gt;)&lt;/span&gt;
+&lt;span class="ansi-green-intense-fg ansi-bold"&gt;      5&lt;/span&gt; &lt;span class="ansi-green-fg"&gt;else&lt;/span&gt;&lt;span class="ansi-blue-fg"&gt;:&lt;/span&gt;
+
+&lt;span class="ansi-red-fg"&gt;NameError&lt;/span&gt;: name 'array_img' is not defined&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [ ]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;### Image slicing&lt;/span&gt;
+
+&lt;span class="o"&gt;-&lt;/span&gt;
+
+&lt;span class="c1"&gt;### Loading and Saving&lt;/span&gt;
+
+&lt;span class="o"&gt;-&lt;/span&gt; 
+&lt;/pre&gt;&lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [ ]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;plt&lt;/span&gt; 
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;show_slices&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;slices&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="sd"&gt;''' Function to desplay row of image slices '''&lt;/span&gt;
+    &lt;span class="n"&gt;fig&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;axes&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;subplots&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;slices&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;slice&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;enumerate&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;slices&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="n"&gt;axes&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;imshow&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;slice&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;T&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;cmap&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"gray"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;origin&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"lower"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    
+&lt;span class="n"&gt;slice_0&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;epi_img_data&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;96&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;:,&lt;/span&gt; &lt;span class="p"&gt;:]&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;slice_0&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="n"&gt;slice_1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;epi_img_data&lt;/span&gt;&lt;span class="p"&gt;[:,&lt;/span&gt; &lt;span class="mi"&gt;128&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;:]&lt;/span&gt;
+&lt;span class="n"&gt;slice_2&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;epi_img_data&lt;/span&gt;&lt;span class="p"&gt;[:,&lt;/span&gt; &lt;span class="p"&gt;:,&lt;/span&gt; &lt;span class="mi"&gt;128&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;show_slices&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="n"&gt;slice_0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;slice_1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;slice_2&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;suptitle&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"Center slices for EPI image"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [ ]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt; 
+&lt;/pre&gt;&lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [ ]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt; 
+&lt;/pre&gt;&lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [ ]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Get the header of the data&lt;/span&gt;
+&lt;span class="n"&gt;cwd&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getcwd&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;data_dir&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;cwd&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s2"&gt;"/data/ds000114/"&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;data_dir&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="c1"&gt;#print("file header only" + header)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;&lt;/div&gt;</description><guid>https://AbdulSayyed.github.io/notebooks/nibabel-001/</guid><pubDate>Wed, 29 Jul 2020 19:18:36 GMT</pubDate></item></channel></rss>
